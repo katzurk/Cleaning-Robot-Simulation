@@ -31,14 +31,14 @@ Alesia Filinkova
 Katarzyna Kanicka
 
 ## Responsibilities
+1. Weronika Maślana
 points: 1.1(Robot)
-Weronika Maślana
 
+2. Alesia Filinkova
 points: 1.2(Room)
-Alesia Filinkova
 
+3. Katarzyna Kanicka
 points: 1.3(Visualiser)
-Katarzyna Kanicka
 
 ## Architecture
 
