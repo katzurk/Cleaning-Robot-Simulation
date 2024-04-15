@@ -1,6 +1,6 @@
 #include "furniture.h"
 
-Furniture::Furniture(std::string name, std::vector<int> size, std::vector<int> coordinates):
+Furniture::Furniture(std::string name, std::vector<int> size, std::vector<int> coordinates) :
     name(name), size(size), coordinates(coordinates) {
     is_valid();
 };
