@@ -1,3 +1,10 @@
+/*
+   autor: Alesia Filinkova
+*/
+
+#ifndef FURNITURE_H
+#define FURNITURE_H
+
 #include <iostream>
 #include <vector>
 #include <sstream>
@@ -24,3 +31,5 @@ public:
     void setWidth(int width) { this->size[1] = width; }
     void set_coordinates(const std::vector <int> new_coordinates);
 };
+
+#endif
