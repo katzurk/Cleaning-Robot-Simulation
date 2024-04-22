@@ -16,8 +16,8 @@ class Robot{
 
     public:
         Robot(std::vector <int> coordinates, int size);
-        int get_size();
-        std::vector <int> get_coordinates();
+        int get_size() const;
+        std::vector <int> get_coordinates() const;
         void set_size(int new_size);
         void set_coordinates(std::vector <int> new_coordinates);
 };
