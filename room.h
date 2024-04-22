@@ -21,7 +21,7 @@ private:
     
 
 public:
-    Room(std::vector <int> room_size = { 0, 0 });
+    Room(std::vector <int> room_size = { 1, 1 });
 
     // Getters
     int getLength() const { return room_size[0]; }

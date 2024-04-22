@@ -25,11 +25,11 @@ Robot::Robot(std::vector <int> coordinates = {0,0}, int size=10)
     is_valid();
 }
 
-int Robot::get_size(){
+int Robot::get_size() const{
     return size;
 }
 
-std::vector <int> Robot::get_coordinates(){
+std::vector <int> Robot::get_coordinates() const{
     return coordinates;
 }
 

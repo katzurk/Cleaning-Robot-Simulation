@@ -5,6 +5,14 @@ project(209.1-ROBOT-SPRZATAJACY)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+find_package(Qt6 COMPONENTS
+        Core
+        Gui
+        Widgets
+        REQUIRED)
+
+set(CMAKE_AUTOMOC ON)
+
 include(FetchContent)
 FetchContent_Declare(
   googletest
@@ -22,12 +30,18 @@ enable_testing() #to  discover tests in test explorer
 
 # include_directories(googletest/include) # this is so we can #include <gtest/gtest.h>
 
-add_executable(main main.cpp robot.cpp room.cpp furniture.cpp) # add this executable
+add_executable(main main.cpp robot.cpp room.cpp furniture.cpp visualiser.cpp) # add this executable
 
 add_executable(robot_test robot.cpp robot_test.cc) # add this executable
 add_test(robot_test robot_test)
 
 target_link_libraries(robot_test GTest::gtest_main) # link google test to this executable
+target_link_libraries(main
+        Qt::Core
+        Qt::Gui
+        Qt::Widgets
+        )
+
 
 include(GoogleTest)
 # gtest_discover_tests(robot_test) # discovers tests by asking the compiled test executable to enumerate its tests
