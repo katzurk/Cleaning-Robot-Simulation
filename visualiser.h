@@ -1,3 +1,6 @@
+/*
+   autor: katarzyna Kanicka
+*/
 #ifndef VISUALIZER_H
 #define VISUALIZER_H
 

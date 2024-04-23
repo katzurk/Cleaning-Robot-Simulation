@@ -5,6 +5,7 @@ project(209.1-ROBOT-SPRZATAJACY)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# Download qt library then add the the qt path to environment PATH (example C:\Qt\6.7.0\msvc2019_64\bin)
 find_package(Qt6 COMPONENTS
         Core
         Gui
