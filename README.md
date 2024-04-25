@@ -10,15 +10,15 @@ symulator for choosing path to clean whole room and visualasing.
 
 
 ## Roadmap
-1. skeleton of Robot, Room and Visualiser.
-    - room constraction
+1. skeleton of Robot, Room, Furniture and Visualiser.
+    - room and furniture constraction
     - robot constraction
     - visualiser can show robot in room
 2. Robot can generate simple path in the room
     - robot movement algorithm
     - visualiser can show path and cleaned area
     - visualiser can show robot moving in room (simulation)
-3. adding Obstacles and Robot avoidance of obstacles
+3. adding Furniture and Robot avoidance of obstacles
     - obstacles constraction (rectangular)
     - visualiser can show obstacles
     - robot avoiding obstacles
@@ -35,7 +35,7 @@ Katarzyna Kanicka
 points: 1.1(Robot)
 
 2. Alesia Filinkova
-points: 1.2(Room)
+points: 1.2(Room, Furniture)
 
 3. Katarzyna Kanicka
 points: 1.3(Visualiser)

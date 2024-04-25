@@ -4,6 +4,7 @@ project(209.1-ROBOT-SPRZATAJACY)
 # GoogleTest requires at least C++14
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+list(APPEND CMAKE_PREFIX_PATH "~/Qt/6.7.0/gcc_64")
 
 find_package(Qt6 COMPONENTS
         Core

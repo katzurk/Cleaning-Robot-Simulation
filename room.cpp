@@ -22,10 +22,10 @@ void Room::is_valid() {
     }
 }
 
-bool Room::is_possible_to_add_object(const std::vector<int>& coordinates) 
+bool Room::is_possible_to_add_object(const std::vector<int>& coordinates)
 {
-    for (size_t i = 0; i < busy_places.size(); i++) {
-        if (busy_places[i] == coordinates) {
+    for (size_t i = 0; i < taken_places.size(); i++) {
+        if (taken_places[i] == coordinates) {
             return false;
         }
     }
@@ -52,13 +52,13 @@ void Room::setWidth(int width) {
 
 
 void Room::addFurniture(const Furniture& furniture) {
-    if (is_possible_to_add_object(furniture.get_coordinates()) || busy_places.size() == 0)
+    if (is_possible_to_add_object(furniture.get_coordinates()) || taken_places.size() == 0)
     {
         this->furniture.push_back(furniture);
         for (int i = 0; i <= furniture.getLength(); i++)
         {
             for (int j = 0; j <= furniture.getWidth(); j++) {
-                busy_places.push_back({ furniture.get_coordinates()[0] + i, furniture.get_coordinates()[1] + j });
+                taken_places.push_back({ furniture.get_coordinates()[0] + i, furniture.get_coordinates()[1] + j });
             }
         }
     }
@@ -71,16 +71,16 @@ void Room::addFurniture(const Furniture& furniture) {
 }
 
 void Room::deleteFurniture(const Furniture& furn) {
-    
+
     for (int i = 0; i <= furn.getLength(); i++)
     {
         for (int j = 0; j <= furn.getWidth(); j++)
         {
             std::vector<int> coordinate = { furn.get_coordinates()[0] + i, furn.get_coordinates()[1] + j };
-            for (int g = 0; g < busy_places.size(); g++)
+            for (int g = 0; g < taken_places.size(); g++)
             {
-                if (busy_places[g] == coordinate) {
-                    busy_places.erase(busy_places.begin() + g);
+                if (taken_places[g] == coordinate) {
+                    taken_places.erase(taken_places.begin() + g);
                 }
             }
         }
@@ -101,14 +101,14 @@ void Room::dust() {
     for (int i = 0; i < (rand() % (getLength() * getWidth())); i++)
     {
         std::vector<int> dust_coordinate = { rand() % getLength(), rand() % getWidth() };
-        bool empty_place = true;
-        for (size_t i = 0; i < busy_places.size(); i++) {
-            if (busy_places[i] == dust_coordinate) {
-                empty_place = false;
+        bool is_area_empty = true;
+        for (size_t i = 0; i < taken_places.size(); i++) {
+            if (taken_places[i] == dust_coordinate) {
+                is_area_empty = false;
             }
         }
-        if (empty_place) {
-            durty_places.push_back(dust_coordinate);
+        if (is_area_empty) {
+            dirty_places.push_back(dust_coordinate);
         }
     }
 }

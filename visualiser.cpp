@@ -22,6 +22,6 @@ void Visualizer::setRobot(const Robot& robot) {
     this->robot = robot;
     // Draw the robot
     scene->addRect(robot.get_coordinates()[0], robot.get_coordinates()[1],
-        robot.get_size(), robot.get_size(), QPen(Qt::black), QBrush(Qt::red));
+        robot.get_length(), robot.get_width(), QPen(Qt::black), QBrush(Qt::red));
     update(); // Trigger repaint
 }

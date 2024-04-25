@@ -7,9 +7,10 @@
 
 int main(int argc, char* argv[]) {
     try {
-        std::vector <int> pos = { 10,10 };
-        Robot rob{ pos, 20 };
-        std::cout << rob.get_size() << ", " << rob.get_coordinates()[0] << " " << rob.get_coordinates()[1] << std::endl;
+        std::vector <int> pos = { 50,10 };
+        std::vector <int> size = { 20, 20 };
+        Robot rob{ pos, size };
+        std::cout << rob.get_length() << " " << rob.get_width() << ", " << rob.get_coordinates()[0] << " " << rob.get_coordinates()[1] << std::endl;
         std::vector <int> room_size = { 120, 40 };
         Room room(room_size);
         room.setLength(800);
