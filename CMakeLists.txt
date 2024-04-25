@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 list(APPEND CMAKE_PREFIX_PATH "~/Qt/6.7.0/gcc_64")
 
+# Download qt library then add the the qt path to environment PATH (example C:\Qt\6.7.0\msvc2019_64\bin)
 find_package(Qt6 COMPONENTS
         Core
         Gui
