@@ -32,13 +32,13 @@ Katarzyna Kanicka
 
 ## Responsibilities
 1. Weronika Maślana
-points: 1.1(Robot)
+points: 1.1(Robot), 2.1(algorithm)
 
 2. Alesia Filinkova
-points: 1.2(Room, Furniture)
+points: 1.2(Room, Furniture), 2.2 (Showing path)
 
 3. Katarzyna Kanicka
-points: 1.3(Visualiser)
+points: 1.3(Visualiser), 2.3 (Simulation)
 
 ## Architecture
 
