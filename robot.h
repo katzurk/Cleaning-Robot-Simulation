@@ -7,6 +7,7 @@
 
 #include <vector>
 #include <string>
+#include "room.h"
 
 class Robot{
     private:
@@ -23,7 +24,11 @@ class Robot{
 
         void set_length(int length);
         void set_width(int width);
-        void set_coordinates(std::vector <int> new_coordinates);
+        void set_coordinate_x(int new_x);
+        void set_coordinate_y(int new_y);
+
+        std::vector<std::vector<int>> make_path(const Room &room);
+
 };
 
 #endif

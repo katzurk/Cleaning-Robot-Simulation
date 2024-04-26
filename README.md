@@ -50,3 +50,6 @@ points: 1.3(Visualiser)
 ### Helper object
 - **Obstacle in room** - has coordinates and obstacle
 - **Visualiser** - can show room, obstacles, robot, robots path
+
+### Methods
+- **make_path** - takes room, returns list of coordinates. It moves from left to right and top to bottom.

@@ -27,6 +27,14 @@ int main(int argc, char* argv[]) {
             std::cout << item.getName() << " " << item.getLength() << " " << item.getWidth() << " " << item.get_coordinates()[0] << " " << item.get_coordinates()[1] << std::endl;
         }
 
+        // path
+        std::cout << "----------------path-----------------" << std::endl;
+        std::vector<std::vector<int>> path = rob.make_path(room);
+        for (int i = 0; i < path.size(); i++) {
+            std::cout << "{" << path[i][0]  << ", " << path[i][1] << "}, ";
+        }
+        std::cout << std::endl;
+
         QApplication app(argc, argv);
         Visualizer visualizer;
         visualizer.setGeometry(100, 100, 800, 600);

@@ -61,16 +61,48 @@ void Robot::set_width(int new_width){
     size[1] = new_width;
 }
 
-void Robot::set_coordinates(std::vector <int> new_coordinates){
-    if(new_coordinates.size() != 2){
+void Robot::set_coordinate_x(int new_x){
+    if(new_x < 0){
         std::stringstream exeption_str;
-        exeption_str << "Invalid amount of new coordintates. Given " << new_coordinates.size();
+        exeption_str << "Invalid robot coordinate X to set " << new_x;
         throw std::invalid_argument(exeption_str.str());
     }
-    if(new_coordinates[0] < 0 || new_coordinates[1] < 0){
+    coordinates[0] = new_x;
+}
+
+void Robot::set_coordinate_y(int new_y){
+    if(new_y < 0){
         std::stringstream exeption_str;
-        exeption_str << "Invalid coordintates to set. Given {" << new_coordinates[0] << ", " << new_coordinates[1] << "}";
+        exeption_str << "Invalid robot coordinate Y to set " << new_y;
         throw std::invalid_argument(exeption_str.str());
     }
-    coordinates = new_coordinates;
+    coordinates[1] = new_y;
+}
+
+
+std::vector<std::vector<int>> Robot::make_path(const Room &room){
+    std::vector<std::vector<int>> path;
+
+    while (coordinates[1] < room.getWidth()){
+        while(coordinates[0] < room.getLength() - size[0]){
+            path.push_back(coordinates);
+            set_coordinate_x(coordinates[0] + size[0]);
+
+        }
+        path.push_back(coordinates);
+        set_coordinate_y(coordinates[1] + size[1]);
+
+        if(coordinates[1] < room.getWidth()){
+            break;
+        }
+
+        while(coordinates[0] > size[0]){
+            path.push_back(coordinates);
+            set_coordinate_x(coordinates[0] - size[0]);
+        }
+        path.push_back(coordinates);
+        set_coordinate_y(coordinates[1] + size[1]);
+
+    }
+    return path;
 }
