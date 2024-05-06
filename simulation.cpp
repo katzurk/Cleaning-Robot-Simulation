@@ -42,10 +42,21 @@ void Simulation::moveRobot() {
     const std::vector<int>& currentPosition = path[currentPositionId];
     int x = currentPosition[0];
     int y = currentPosition[1];
-    // Convert the integer coordinates to QPointF
-    QPointF targetPosition(x, y);
 
-    robotObject->setPos(targetPosition);
+    /*robotObject->setPos(x, y);*/
+    // ^ miscalculates the positions for some reason
+
+    // Delete the previous robotObject
+    if (robotObject != nullptr) {
+        removeItem(robotObject);
+        delete robotObject;
+        robotObject = nullptr;
+    }
+    // Create a new robotObject with new coordinates
+    robotObject = new QGraphicsRectItem(x, y, robot.get_length(), robot.get_width());
+    robotObject->setPen(QPen(Qt::black));
+    robotObject->setBrush(QBrush(Qt::red));
+    addItem(robotObject);
 
     currentPositionId++;
 }
