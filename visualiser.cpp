@@ -12,3 +12,7 @@ void Visualizer::setRoom(const Room& room) {
 void Visualizer::setRobot(const Robot& robot) {
     scene->setRobot(robot);
 }
+
+void Visualizer::generatePath() {
+    scene->generatePath();
+}

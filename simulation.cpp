@@ -3,7 +3,7 @@
 Simulation::Simulation(QObject* parent) : QGraphicsScene(parent), robotObject(nullptr), currentPositionId(0) {
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &Simulation::moveRobot);
-    timer->start(20);
+    timer->start(100);
 }
 
 void Simulation::setRoom(const Room& room) {
@@ -46,4 +46,6 @@ void Simulation::moveRobot() {
     QPointF targetPosition(x, y);
 
     robotObject->setPos(targetPosition);
+
+    currentPositionId++;
 }

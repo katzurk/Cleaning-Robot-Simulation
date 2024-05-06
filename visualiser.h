@@ -21,6 +21,7 @@ public:
     explicit Visualizer(QWidget* parent = nullptr);
     void setRoom(const Room& room);
     void setRobot(const Robot& robot);
+    void generatePath();
 
 private:
     Simulation* scene;
