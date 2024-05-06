@@ -20,11 +20,16 @@ public:
     explicit Simulation(QObject* parent = nullptr);
     void setRoom(const Room& room);
     void setRobot(const Robot& robot);
+    void generatePath();
+    void moveRobot();
 
 private:
     Room room;
     Robot robot;
     QGraphicsRectItem* robotObject;
+    QTimer* timer;
+    int currentPositionId;
+    std::vector<std::vector<int>> path;
 };
 
 #endif // SIMULATION_H

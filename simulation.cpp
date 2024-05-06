@@ -1,7 +1,9 @@
 #include "simulation.h"
 
-Simulation::Simulation(QObject* parent) : QGraphicsScene(parent), robotObject(nullptr) {
-    
+Simulation::Simulation(QObject* parent) : QGraphicsScene(parent), robotObject(nullptr), currentPositionId(0) {
+    timer = new QTimer(this);
+    connect(timer, &QTimer::timeout, this, &Simulation::moveRobot);
+    timer->start(20);
 }
 
 void Simulation::setRoom(const Room& room) {
@@ -24,4 +26,24 @@ void Simulation::setRobot(const Robot& robot) {
     robotObject->setPen(QPen(Qt::black));
     robotObject->setBrush(QBrush(Qt::red));
     addItem(robotObject);
+}
+
+void Simulation::generatePath() {
+    path = robot.make_path(room);
+}
+
+void Simulation::moveRobot() {
+    if (robotObject == nullptr || path.empty())
+        return;
+
+    if (currentPositionId < 0 || currentPositionId >= path.size())
+        return;
+
+    const std::vector<int>& currentPosition = path[currentPositionId];
+    int x = currentPosition[0];
+    int y = currentPosition[1];
+    // Convert the integer coordinates to QPointF
+    QPointF targetPosition(x, y);
+
+    robotObject->setPos(targetPosition);
 }
