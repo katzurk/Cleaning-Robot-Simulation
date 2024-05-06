@@ -1,8 +1,8 @@
 /*
    autor: katarzyna Kanicka
 */
-#ifndef VISUALIZER_H
-#define VISUALIZER_H
+#ifndef SIMULATION_H
+#define SIMULATION_H
 
 #include <QGraphicsView>
 #include <QGraphicsScene>
@@ -12,19 +12,19 @@
 #include "room.h"
 #include "robot.h"
 #include "furniture.h"
-#include "simulation.h"
 
-class Visualizer : public QGraphicsView {
+class Simulation : public QGraphicsScene {
     Q_OBJECT
 
 public:
-    explicit Visualizer(QWidget* parent = nullptr);
+    explicit Simulation(QObject* parent = nullptr);
     void setRoom(const Room& room);
     void setRobot(const Robot& robot);
 
 private:
-    Simulation* scene;
-
+    Room room;
+    Robot robot;
+    QGraphicsRectItem* robotObject;
 };
 
-#endif // VISUALIZER_H
+#endif // SIMULATION_H
