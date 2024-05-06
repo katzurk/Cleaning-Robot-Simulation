@@ -6,6 +6,7 @@
 
 #include <QGraphicsView>
 #include <QGraphicsScene>
+#include <vector>
 #include "room.h"
 #include "robot.h"
 #include "furniture.h"
@@ -22,6 +23,13 @@ private:
     QGraphicsScene* scene;
     Room room;
     Robot robot;
+    QGraphicsRectItem* robotObject;
+    QTimer* timer;
+    int currentPosition;
+    std::vector<std::vector<int>> path;
+
+public slots:
+    void moveToNextPosition();
 };
 
 #endif // VISUALIZER_H
