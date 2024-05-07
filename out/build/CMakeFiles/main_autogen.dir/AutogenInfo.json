@@ -315,6 +315,12 @@
 			null
 		],
 		[
+			"C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/simulation.h",
+			"Mu",
+			"EWIEGA46WW/moc_simulation.cpp",
+			null
+		],
+		[
 			"C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/visualiser.h",
 			"Mu",
 			"EWIEGA46WW/moc_visualiser.cpp",
@@ -393,6 +399,11 @@
 		],
 		[
 			"C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/room.cpp",
+			"Mu",
+			null
+		],
+		[
+			"C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/simulation.cpp",
 			"Mu",
 			null
 		],

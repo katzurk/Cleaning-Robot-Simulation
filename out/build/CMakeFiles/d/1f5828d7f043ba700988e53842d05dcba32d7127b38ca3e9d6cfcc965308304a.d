@@ -38,6 +38,7 @@ main_autogen/timestamp: \
   C:/Program\ Files/Microsoft\ Visual\ Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.28/Modules/Platform/Windows-MSVC.cmake \
   C:/Program\ Files/Microsoft\ Visual\ Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.28/Modules/Platform/Windows.cmake \
   C:/Program\ Files/Microsoft\ Visual\ Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake \
+  C:/Qt/6.7.0/msvc2019_64/include/QtCore/QTimer \
   C:/Qt/6.7.0/msvc2019_64/include/QtCore/q20functional.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtCore/q20memory.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtCore/q20type_traits.h \
@@ -51,6 +52,7 @@ main_autogen/timestamp: \
   C:/Qt/6.7.0/msvc2019_64/include/QtCore/qatomic.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtCore/qatomic_cxx11.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtCore/qbasicatomic.h \
+  C:/Qt/6.7.0/msvc2019_64/include/QtCore/qbasictimer.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtCore/qbindingstorage.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtCore/qbytearray.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtCore/qbytearrayalgorithms.h \
@@ -139,6 +141,7 @@ main_autogen/timestamp: \
   C:/Qt/6.7.0/msvc2019_64/include/QtCore/qtdeprecationmarkers.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtCore/qtenvironmentvariables.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtCore/qtextstream.h \
+  C:/Qt/6.7.0/msvc2019_64/include/QtCore/qtimer.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtCore/qtmetamacros.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtCore/qtnoop.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtCore/qtpreprocessorsupport.h \
@@ -168,6 +171,7 @@ main_autogen/timestamp: \
   C:/Qt/6.7.0/msvc2019_64/include/QtGui/qkeysequence.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtGui/qpaintdevice.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtGui/qpainter.h \
+  C:/Qt/6.7.0/msvc2019_64/include/QtGui/qpainterpath.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtGui/qpalette.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtGui/qpen.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtGui/qpixelformat.h \
@@ -183,10 +187,12 @@ main_autogen/timestamp: \
   C:/Qt/6.7.0/msvc2019_64/include/QtGui/qtransform.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.7.0/msvc2019_64/include/QtWidgets/QGraphicsRectItem \
   C:/Qt/6.7.0/msvc2019_64/include/QtWidgets/QGraphicsScene \
   C:/Qt/6.7.0/msvc2019_64/include/QtWidgets/QGraphicsView \
   C:/Qt/6.7.0/msvc2019_64/include/QtWidgets/qabstractscrollarea.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtWidgets/qframe.h \
+  C:/Qt/6.7.0/msvc2019_64/include/QtWidgets/qgraphicsitem.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtWidgets/qgraphicsscene.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtWidgets/qgraphicsview.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtWidgets/qscrollarea.h \
@@ -401,5 +407,8 @@ main_autogen/timestamp: \
   C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/robot_test.cc \
   C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/room.cpp \
   C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/room.h \
+  C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/room_test.cc \
+  C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/simulation.cpp \
+  C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/simulation.h \
   C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/visualiser.cpp \
   C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/visualiser.h

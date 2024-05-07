@@ -1,4 +1,4 @@
-C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/main_autogen/EWIEGA46WW/moc_visualiser.cpp: C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/visualiser.h \
+C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/main_autogen/EWIEGA46WW/moc_simulation.cpp: C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/simulation.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtCore/QTimer \
   C:/Qt/6.7.0/msvc2019_64/include/QtCore/q20functional.h \
   C:/Qt/6.7.0/msvc2019_64/include/QtCore/q20memory.h \
@@ -164,5 +164,4 @@ C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/main_autogen/EWIEG
   C:/Qt/6.7.0/msvc2019_64/include/QtWidgets/qwidget.h \
   C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/furniture.h \
   C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/robot.h \
-  C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/room.h \
-  C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/simulation.h
+  C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/room.h

@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "furniture_test.exe"
+			"path" : "room_test.exe"
 		},
 		{
-			"path" : "furniture_test.pdb"
+			"path" : "room_test.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -29,13 +29,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 41,
+				"line" : 45,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 43,
+				"line" : 47,
 				"parent" : 0
 			},
 			{
@@ -62,7 +62,7 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/furniture_test_autogen/include"
+					"path" : "C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/room_test_autogen/include"
 				},
 				{
 					"backtrace" : 2,
@@ -88,7 +88,8 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3
 			]
 		}
 	],
@@ -96,21 +97,21 @@
 	[
 		{
 			"backtrace" : 2,
-			"id" : "gtest_main::@1ea2dfc0605fe3ab2a3f"
-		},
-		{
-			"backtrace" : 2,
 			"id" : "gtest::@1ea2dfc0605fe3ab2a3f"
 		},
 		{
-			"id" : "furniture_test_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 2,
+			"id" : "gtest_main::@1ea2dfc0605fe3ab2a3f"
+		},
+		{
+			"id" : "room_test_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 0,
-			"id" : "furniture_test_autogen::@6890427a1f51a3e7e1df"
+			"id" : "room_test_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "furniture_test::@6890427a1f51a3e7e1df",
+	"id" : "room_test::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -140,8 +141,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "furniture_test",
-	"nameOnDisk" : "furniture_test.exe",
+	"name" : "room_test",
+	"nameOnDisk" : "room_test.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -155,21 +156,22 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				3
+				4
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				4
+				5
 			]
 		}
 	],
@@ -179,7 +181,13 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "out/build/furniture_test_autogen/mocs_compilation.cpp",
+			"path" : "out/build/room_test_autogen/mocs_compilation.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "room.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -191,19 +199,19 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "furniture_test.cc",
+			"path" : "room_test.cc",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "out/build/furniture_test_autogen/timestamp",
+			"path" : "out/build/room_test_autogen/timestamp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "out/build/furniture_test_autogen/timestamp.rule",
+			"path" : "out/build/room_test_autogen/timestamp.rule",
 			"sourceGroupIndex" : 2
 		}
 	],
