@@ -24,6 +24,9 @@ void Room::is_valid() {
 
 bool Room::is_possible_to_add_object(const std::vector<int>& coordinates)
 {
+    if (coordinates[0] < 0 || coordinates[0] > room_size[0] || coordinates[1] < 0 || coordinates[1] > room_size[1]) {
+        return false;
+    }
     for (size_t i = 0; i < taken_places.size(); i++) {
         if (taken_places[i] == coordinates) {
             return false;
@@ -55,9 +58,9 @@ void Room::addFurniture(const Furniture& furniture) {
     if (is_possible_to_add_object(furniture.get_coordinates()) || taken_places.size() == 0)
     {
         this->furniture.push_back(furniture);
-        for (int i = 0; i <= furniture.getLength(); i++)
+        for (int i = 0; i <= furniture.getLength() - 1; i++)
         {
-            for (int j = 0; j <= furniture.getWidth(); j++) {
+            for (int j = 0; j <= furniture.getWidth() - 1; j++) {
                 taken_places.push_back({ furniture.get_coordinates()[0] + i, furniture.get_coordinates()[1] + j });
             }
         }
@@ -72,9 +75,9 @@ void Room::addFurniture(const Furniture& furniture) {
 
 void Room::deleteFurniture(const Furniture& furn) {
 
-    for (int i = 0; i <= furn.getLength(); i++)
+    for (int i = 0; i <= furn.getLength() - 1; i++)
     {
-        for (int j = 0; j <= furn.getWidth(); j++)
+        for (int j = 0; j <= furn.getWidth() - 1; j++)
         {
             std::vector<int> coordinate = { furn.get_coordinates()[0] + i, furn.get_coordinates()[1] + j };
             for (int g = 0; g < taken_places.size(); g++)

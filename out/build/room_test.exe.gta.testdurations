@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GtaTestDurations xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Executable>C:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\room_test.exe</Executable>
+  <TestDurations>
+    <TestDuration Test="RoomTest.Dust" Duration="1" />
+    <TestDuration Test="RoomTest.GetLength" Duration="1" />
+    <TestDuration Test="RoomTest.GetWidth" Duration="1" />
+    <TestDuration Test="RoomTest.GetTakenPlaces" Duration="1" />
+    <TestDuration Test="RoomTest.GetDirtyPlaces" Duration="1" />
+    <TestDuration Test="RoomTest.SetLength" Duration="1" />
+    <TestDuration Test="RoomTest.SetWidth" Duration="1" />
+    <TestDuration Test="RoomTest.AddFurnitureTest" Duration="1" />
+  </TestDurations>
+</GtaTestDurations>

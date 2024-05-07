@@ -1,0 +1,352 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'testing::internal::Mutex::owner_thread_id_' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-port.h"
+                },
+                "region": {
+                  "startLine": 1388,
+                  "startColumn": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "testing::internal::Mutex::{ctor}",
+                  "decoratedName": "??0Mutex@internal@testing@@QEAA@W4StaticConstructorSelector@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "testing::internal::Mutex::owner_thread_id_"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'testing::internal::Mutex::type_' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-port.h"
+                },
+                "region": {
+                  "startLine": 1388,
+                  "startColumn": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "testing::internal::Mutex::{ctor}",
+                  "decoratedName": "??0Mutex@internal@testing@@QEAA@W4StaticConstructorSelector@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "testing::internal::Mutex::type_"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'testing::internal::Mutex::critical_section_init_phase_' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-port.h"
+                },
+                "region": {
+                  "startLine": 1388,
+                  "startColumn": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "testing::internal::Mutex::{ctor}",
+                  "decoratedName": "??0Mutex@internal@testing@@QEAA@W4StaticConstructorSelector@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "testing::internal::Mutex::critical_section_init_phase_"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'testing::internal::Mutex::critical_section_' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-port.h"
+                },
+                "region": {
+                  "startLine": 1388,
+                  "startColumn": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "testing::internal::Mutex::{ctor}",
+                  "decoratedName": "??0Mutex@internal@testing@@QEAA@W4StaticConstructorSelector@012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "testing::internal::Mutex::critical_section_"
+          }
+        },
+        {
+          "ruleId": "C26439",
+          "message": {
+            "text": "This kind of function should not throw. Declare it 'noexcept' (f.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/gtest-matchers.h"
+                },
+                "region": {
+                  "startLine": 299,
+                  "startColumn": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "testing::internal::MatcherBase<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const &>::{ctor}",
+                  "decoratedName": "??0?$MatcherBase@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@internal@testing@@IEAA@$$QEAV012@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.39.33521.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-port.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "c22ef5c860dabc3e74225f3a54c2d7224375ad2dd2af619d3f8cbe7e917fc754"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/gtest-matchers.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "d637dd188944433c62d96a062f9b1adab851574c537d7021270c7a52a2759a90"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/src/gtest_main.cc"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "3836c1ce7c4829c44a30f368d888ae3bed218437d61d102c50c0db4afca33b3f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/gtest.h"
+          },
+          "hashes": {
+            "sha-256": "93da03ddf6d5b9bdf40ae4ded9939067c9ed0b6de93f787f7e8d187609b6b02d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h"
+          },
+          "hashes": {
+            "sha-256": "d6562e22c316e831bfbc2cde3b158f06380a22e7e1c6c1e180689abee5c5b972"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/gtest-message.h"
+          },
+          "hashes": {
+            "sha-256": "f1c7bd4e0c02240e884deed25a2e0bfd04e5e0c3fd778a3b126cbb64531f65a7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h"
+          },
+          "hashes": {
+            "sha-256": "5e06747c9e8b86e9d841fabd61c2f045b2bb1133716f127be4a963ced1c44e01"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-port-arch.h"
+          },
+          "hashes": {
+            "sha-256": "37f6d5c70322ee5f4f84fafcb4e8e2f4bbf08a5afc64a6636cf6a9f45d442198"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/gtest-death-test.h"
+          },
+          "hashes": {
+            "sha-256": "8decbb86ebbfa142fd78a83cfbeb4c5e73e98179058ce70fcc279935c497429a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-death-test-internal.h"
+          },
+          "hashes": {
+            "sha-256": "a70d1174ef668639c7af21764442f8e487b0fc70c237a70f90e3161a8e8262d6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/gtest-printers.h"
+          },
+          "hashes": {
+            "sha-256": "f3396ea55d577ee04f15a2b14b14b76edb8a84d385c831defd88cff8535bc273"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-internal.h"
+          },
+          "hashes": {
+            "sha-256": "a33806c8e6ca5eb6f839b8e015bdf8eae848641035f9499834f9d402b823d5fe"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h"
+          },
+          "hashes": {
+            "sha-256": "544ce95d2e1e4b7ae17ee170f482aaa09e17d0056999c4ce7e7a6097c3a755cf"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-string.h"
+          },
+          "hashes": {
+            "sha-256": "0cc08c746bceb2b101c61ffbc905c598eb62fee3c262c4585c21b10d8a3e6508"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h"
+          },
+          "hashes": {
+            "sha-256": "c1cf53463579025a7b25466e9680a778d74beff52d8a64b6e83fcb6dd99e4bb7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-printers.h"
+          },
+          "hashes": {
+            "sha-256": "b95afda2426e8c4f09c11d3296d522fb336b248c0da7e078388db4bb072c2166"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/gtest-param-test.h"
+          },
+          "hashes": {
+            "sha-256": "1adb46e17e47fc2f40dc5b8e9acec4f01efa389a19bbea25d32aea28b94e32e6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-param-util.h"
+          },
+          "hashes": {
+            "sha-256": "effa1b3e6a3554aae8fc82fbe88c1c3215f723bb3e2e444bf424f688c476a030"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/gtest-test-part.h"
+          },
+          "hashes": {
+            "sha-256": "2279b9bfd08aff7c0f764a2716bde0d3a61dc12573687a2cff91256b17681bf0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/gtest-typed-test.h"
+          },
+          "hashes": {
+            "sha-256": "d56313830bf30d6271d7c1f8ca57dc52d95a10b97e4ace6efa0f085ae519303a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h"
+          },
+          "hashes": {
+            "sha-256": "85e850e735a42ebb5f9a01a018708c1c0b9b7d83c94b14b7d5d29512c00b6ffd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest/include/gtest/gtest_prod.h"
+          },
+          "hashes": {
+            "sha-256": "3c6301ef533db8686e474dd5a0de4d98a31cbb630e2273f712472d1be25aa261"
+          }
+        }
+      ]
+    }
+  ]
+}

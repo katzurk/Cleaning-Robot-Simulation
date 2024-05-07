@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GtaTestDurations xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Executable>C:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\furniture_test.exe</Executable>
+  <TestDurations>
+    <TestDuration Test="FurnitureTest.ConstructorTest" Duration="1" />
+    <TestDuration Test="FurnitureTest.SetNameTest" Duration="1" />
+    <TestDuration Test="FurnitureTest.SetLengthTest" Duration="1" />
+    <TestDuration Test="FurnitureTest.SetWidthTest" Duration="1" />
+    <TestDuration Test="FurnitureTest.SetCoordinatesTest" Duration="1" />
+    <TestDuration Test="FurnitureTest.InvalidArgumentsTest" Duration="1" />
+  </TestDurations>
+</GtaTestDurations>
