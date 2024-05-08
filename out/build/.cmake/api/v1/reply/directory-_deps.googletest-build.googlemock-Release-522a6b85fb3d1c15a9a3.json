@@ -106,7 +106,7 @@
 			"isOptional" : true,
 			"paths" : 
 			[
-				"out/build/bin/${CMAKE_INSTALL_CONFIG_NAME}/gmockpdb_debug_postfix-NOTFOUND.pdb"
+				"out/build/bin/${CMAKE_INSTALL_CONFIG_NAME}/gmock.pdb"
 			],
 			"type" : "file"
 		},
@@ -117,7 +117,7 @@
 			"isOptional" : true,
 			"paths" : 
 			[
-				"out/build/bin/${CMAKE_INSTALL_CONFIG_NAME}/gmock_mainpdb_debug_postfix-NOTFOUND.pdb"
+				"out/build/bin/${CMAKE_INSTALL_CONFIG_NAME}/gmock_main.pdb"
 			],
 			"type" : "file"
 		},

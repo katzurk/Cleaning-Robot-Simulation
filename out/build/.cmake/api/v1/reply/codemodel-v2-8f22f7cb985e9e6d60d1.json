@@ -11,7 +11,7 @@
 						1
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -41,7 +41,7 @@
 						2
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.googletest-build-Debug-3354dfd7af5a3acebe44.json",
+					"jsonFile" : "directory-_deps.googletest-build-Release-3354dfd7af5a3acebe44.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.13"
@@ -57,7 +57,7 @@
 						3
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.googletest-build.googlemock-Debug-e185c8378ab045094f3d.json",
+					"jsonFile" : "directory-_deps.googletest-build.googlemock-Release-522a6b85fb3d1c15a9a3.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.13"
@@ -78,7 +78,7 @@
 				{
 					"build" : "_deps/googletest-build/googletest",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.googletest-build.googletest-Debug-3128be2d3e17cbf729ec.json",
+					"jsonFile" : "directory-_deps.googletest-build.googletest-Release-04c68eba3a2d239e293c.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.13"
@@ -97,7 +97,7 @@
 					]
 				}
 			],
-			"name" : "Debug",
+			"name" : "Release",
 			"projects" : 
 			[
 				{
@@ -182,168 +182,168 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "furniture_test::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-furniture_test-Debug-64371a95db3c631f547c.json",
+					"jsonFile" : "target-furniture_test-Release-02ceeaf3519339edabca.json",
 					"name" : "furniture_test",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "furniture_test_autogen::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-furniture_test_autogen-Debug-a06e708ead6e87fc2ad2.json",
+					"jsonFile" : "target-furniture_test_autogen-Release-a06e708ead6e87fc2ad2.json",
 					"name" : "furniture_test_autogen",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "furniture_test_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-furniture_test_autogen_timestamp_deps-Debug-649e4c91b7dbc0066d8b.json",
+					"jsonFile" : "target-furniture_test_autogen_timestamp_deps-Release-649e4c91b7dbc0066d8b.json",
 					"name" : "furniture_test_autogen_timestamp_deps",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "gmock::@0f7bb11d64f3678238c7",
-					"jsonFile" : "target-gmock-Debug-37bd4d0e88751f5882ae.json",
+					"jsonFile" : "target-gmock-Release-3fb82fc3da06bcd20c98.json",
 					"name" : "gmock",
 					"projectIndex" : 2
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "gmock_autogen::@0f7bb11d64f3678238c7",
-					"jsonFile" : "target-gmock_autogen-Debug-9af9e4a746545f5ca585.json",
+					"jsonFile" : "target-gmock_autogen-Release-9af9e4a746545f5ca585.json",
 					"name" : "gmock_autogen",
 					"projectIndex" : 2
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "gmock_autogen_timestamp_deps::@0f7bb11d64f3678238c7",
-					"jsonFile" : "target-gmock_autogen_timestamp_deps-Debug-488da7175925138482ee.json",
+					"jsonFile" : "target-gmock_autogen_timestamp_deps-Release-488da7175925138482ee.json",
 					"name" : "gmock_autogen_timestamp_deps",
 					"projectIndex" : 2
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "gmock_main::@0f7bb11d64f3678238c7",
-					"jsonFile" : "target-gmock_main-Debug-f3a9f99f03865b8e282d.json",
+					"jsonFile" : "target-gmock_main-Release-9aad29602929fec3b315.json",
 					"name" : "gmock_main",
 					"projectIndex" : 2
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "gmock_main_autogen::@0f7bb11d64f3678238c7",
-					"jsonFile" : "target-gmock_main_autogen-Debug-08b90645012f0cc68921.json",
+					"jsonFile" : "target-gmock_main_autogen-Release-08b90645012f0cc68921.json",
 					"name" : "gmock_main_autogen",
 					"projectIndex" : 2
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "gmock_main_autogen_timestamp_deps::@0f7bb11d64f3678238c7",
-					"jsonFile" : "target-gmock_main_autogen_timestamp_deps-Debug-fb578f4cb45a03a733aa.json",
+					"jsonFile" : "target-gmock_main_autogen_timestamp_deps-Release-fb578f4cb45a03a733aa.json",
 					"name" : "gmock_main_autogen_timestamp_deps",
 					"projectIndex" : 2
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "gtest::@1ea2dfc0605fe3ab2a3f",
-					"jsonFile" : "target-gtest-Debug-9d5a3cbbb5afd281948e.json",
+					"jsonFile" : "target-gtest-Release-ef2f357d7433ee9be479.json",
 					"name" : "gtest",
 					"projectIndex" : 3
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "gtest_autogen::@1ea2dfc0605fe3ab2a3f",
-					"jsonFile" : "target-gtest_autogen-Debug-f6fd0d07f8f711544c47.json",
+					"jsonFile" : "target-gtest_autogen-Release-f6fd0d07f8f711544c47.json",
 					"name" : "gtest_autogen",
 					"projectIndex" : 3
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "gtest_autogen_timestamp_deps::@1ea2dfc0605fe3ab2a3f",
-					"jsonFile" : "target-gtest_autogen_timestamp_deps-Debug-08e82a4799953e465137.json",
+					"jsonFile" : "target-gtest_autogen_timestamp_deps-Release-08e82a4799953e465137.json",
 					"name" : "gtest_autogen_timestamp_deps",
 					"projectIndex" : 3
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "gtest_main::@1ea2dfc0605fe3ab2a3f",
-					"jsonFile" : "target-gtest_main-Debug-1e4b22609f395602c307.json",
+					"jsonFile" : "target-gtest_main-Release-4d6279c9b8400c8dbee4.json",
 					"name" : "gtest_main",
 					"projectIndex" : 3
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "gtest_main_autogen::@1ea2dfc0605fe3ab2a3f",
-					"jsonFile" : "target-gtest_main_autogen-Debug-e807e18b5cc67ca4fee1.json",
+					"jsonFile" : "target-gtest_main_autogen-Release-e807e18b5cc67ca4fee1.json",
 					"name" : "gtest_main_autogen",
 					"projectIndex" : 3
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "gtest_main_autogen_timestamp_deps::@1ea2dfc0605fe3ab2a3f",
-					"jsonFile" : "target-gtest_main_autogen_timestamp_deps-Debug-2ec040040056ee680ef8.json",
+					"jsonFile" : "target-gtest_main_autogen_timestamp_deps-Release-2ec040040056ee680ef8.json",
 					"name" : "gtest_main_autogen_timestamp_deps",
 					"projectIndex" : 3
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "main::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main-Debug-aabd7f0749ecbf90e9dd.json",
+					"jsonFile" : "target-main-Release-a9ce3dd49669025f936b.json",
 					"name" : "main",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "main_autogen::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main_autogen-Debug-c2c0e7861ebb40f3bb30.json",
+					"jsonFile" : "target-main_autogen-Release-c2c0e7861ebb40f3bb30.json",
 					"name" : "main_autogen",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "main_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main_autogen_timestamp_deps-Debug-e1fca79de0db4b349408.json",
+					"jsonFile" : "target-main_autogen_timestamp_deps-Release-e1fca79de0db4b349408.json",
 					"name" : "main_autogen_timestamp_deps",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "robot_test::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-robot_test-Debug-f1f6f7e5a2cea561fd5a.json",
+					"jsonFile" : "target-robot_test-Release-e73619f12b5896569259.json",
 					"name" : "robot_test",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "robot_test_autogen::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-robot_test_autogen-Debug-b97811b266134efb4413.json",
+					"jsonFile" : "target-robot_test_autogen-Release-b97811b266134efb4413.json",
 					"name" : "robot_test_autogen",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "robot_test_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-robot_test_autogen_timestamp_deps-Debug-b5d866a90d2641beaa83.json",
+					"jsonFile" : "target-robot_test_autogen_timestamp_deps-Release-b5d866a90d2641beaa83.json",
 					"name" : "robot_test_autogen_timestamp_deps",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "room_test::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-room_test-Debug-6278fadc8cf4786d9c98.json",
+					"jsonFile" : "target-room_test-Release-8e1deb6a80e4844427a7.json",
 					"name" : "room_test",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "room_test_autogen::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-room_test_autogen-Debug-65943c412ec2c7a3fd40.json",
+					"jsonFile" : "target-room_test_autogen-Release-65943c412ec2c7a3fd40.json",
 					"name" : "room_test_autogen",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "room_test_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-room_test_autogen_timestamp_deps-Debug-70a58a82746fd2fbe9dc.json",
+					"jsonFile" : "target-room_test_autogen_timestamp_deps-Release-70a58a82746fd2fbe9dc.json",
 					"name" : "room_test_autogen_timestamp_deps",
 					"projectIndex" : 0
 				}

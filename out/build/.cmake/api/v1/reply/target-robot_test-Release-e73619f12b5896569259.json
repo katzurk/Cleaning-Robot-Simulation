@@ -55,7 +55,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++14"
+					"fragment" : "-DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++14"
 				}
 			],
 			"includes" : 
@@ -96,15 +96,15 @@
 	[
 		{
 			"backtrace" : 2,
-			"id" : "gtest::@1ea2dfc0605fe3ab2a3f"
-		},
-		{
-			"backtrace" : 2,
 			"id" : "gtest_main::@1ea2dfc0605fe3ab2a3f"
 		},
 		{
 			"backtrace" : 0,
 			"id" : "robot_test_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "gtest::@1ea2dfc0605fe3ab2a3f"
 		},
 		{
 			"id" : "robot_test_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
@@ -116,11 +116,11 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1",
+				"fragment" : "-DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
+				"fragment" : "/machine:x64 /INCREMENTAL:NO /subsystem:console",
 				"role" : "flags"
 			},
 			{

@@ -159,7 +159,7 @@
 			"isOptional" : true,
 			"paths" : 
 			[
-				"out/build/bin/${CMAKE_INSTALL_CONFIG_NAME}/gtestpdb_debug_postfix-NOTFOUND.pdb"
+				"out/build/bin/${CMAKE_INSTALL_CONFIG_NAME}/gtest.pdb"
 			],
 			"type" : "file"
 		},
@@ -170,7 +170,7 @@
 			"isOptional" : true,
 			"paths" : 
 			[
-				"out/build/bin/${CMAKE_INSTALL_CONFIG_NAME}/gtest_mainpdb_debug_postfix-NOTFOUND.pdb"
+				"out/build/bin/${CMAKE_INSTALL_CONFIG_NAME}/gtest_main.pdb"
 			],
 			"type" : "file"
 		},

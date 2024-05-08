@@ -80,7 +80,7 @@ void Robot::set_coordinate_y(int new_y){
 }
 
 
-std::vector<std::vector<int>> Robot::make_path(const Room &room){
+std::vector<std::vector<int>> Robot::make_path(Room &room){
     std::vector<std::vector<int>> path;
 
     while (coordinates[1] < room.getWidth()){
@@ -104,5 +104,6 @@ std::vector<std::vector<int>> Robot::make_path(const Room &room){
         set_coordinate_y(coordinates[1] + size[1]);
 
     }
+    room.clean(*this);
     return path;
 }

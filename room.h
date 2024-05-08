@@ -8,7 +8,10 @@
 #include <random>
 #include <cstdlib>
 #include <ctime>
+#include <algorithm>
 #include "furniture.h"
+ 
+class Robot;
 
 class Room {
 private:
@@ -40,6 +43,7 @@ public:
 
     // method to create dust
     void dust();
+    void clean(const Robot &robot);
 };
 
 #endif

@@ -1,5 +1,5 @@
 set(__QT_DEPLOY_TARGET_main_FILE C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/main.exe)
-set(__QT_DEPLOY_TARGET_main_RUNTIME_DLLS C:/Qt/6.7.0/msvc2019_64/bin/Qt6Widgetsd.dll;C:/Qt/6.7.0/msvc2019_64/bin/Qt6Guid.dll;C:/Qt/6.7.0/msvc2019_64/bin/Qt6Cored.dll)
+set(__QT_DEPLOY_TARGET_main_RUNTIME_DLLS C:/Qt/6.7.0/msvc2019_64/bin/Qt6Widgets.dll;C:/Qt/6.7.0/msvc2019_64/bin/Qt6Gui.dll;C:/Qt/6.7.0/msvc2019_64/bin/Qt6Core.dll)
 set(__QT_DEPLOY_TARGET_robot_test_FILE C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/robot_test.exe)
 set(__QT_DEPLOY_TARGET_robot_test_RUNTIME_DLLS )
 set(__QT_DEPLOY_TARGET_furniture_test_FILE C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/furniture_test.exe)

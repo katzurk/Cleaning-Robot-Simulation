@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: 209.1-ROBOT-SPRZATAJACY
-# Configurations: Debug
+# Configurations: Release
 # =============================================================================
 
 #############################################
@@ -24,7 +24,7 @@ ninja_required_version = 1.5
 #############################################
 # Set configuration variable for custom commands.
 
-CONFIGURATION = Debug
+CONFIGURATION = Release
 # =============================================================================
 # Include auxiliary files.
 
@@ -49,63 +49,63 @@ cmake_ninja_workdir = C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\b
 
 build cmake_object_order_depends_target_main: phony || main_autogen main_autogen\mocs_compilation.cpp main_autogen\timestamp main_autogen_timestamp_deps
 
-build CMakeFiles\main.dir\main_autogen\mocs_compilation.cpp.obj: CXX_COMPILER__main_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\main_autogen\mocs_compilation.cpp || cmake_object_order_depends_target_main
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 -Zc:__cplusplus -permissive- -utf-8
+build CMakeFiles\main.dir\main_autogen\mocs_compilation.cpp.obj: CXX_COMPILER__main_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\main_autogen\mocs_compilation.cpp || cmake_object_order_depends_target_main
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++17 -Zc:__cplusplus -permissive- -utf-8
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\main_autogen\include -external:IC:\Qt\6.7.0\msvc2019_64\include\QtCore -external:IC:\Qt\6.7.0\msvc2019_64\include -external:IC:\Qt\6.7.0\msvc2019_64\mkspecs\win32-msvc -external:IC:\Qt\6.7.0\msvc2019_64\include\QtGui -external:IC:\Qt\6.7.0\msvc2019_64\include\QtWidgets -external:W0
   OBJECT_DIR = CMakeFiles\main.dir
   OBJECT_FILE_DIR = CMakeFiles\main.dir\main_autogen
   TARGET_COMPILE_PDB = CMakeFiles\main.dir\
   TARGET_PDB = main.pdb
 
-build CMakeFiles\main.dir\main.cpp.obj: CXX_COMPILER__main_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\main.cpp || cmake_object_order_depends_target_main
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 -Zc:__cplusplus -permissive- -utf-8
+build CMakeFiles\main.dir\main.cpp.obj: CXX_COMPILER__main_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\main.cpp || cmake_object_order_depends_target_main
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++17 -Zc:__cplusplus -permissive- -utf-8
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\main_autogen\include -external:IC:\Qt\6.7.0\msvc2019_64\include\QtCore -external:IC:\Qt\6.7.0\msvc2019_64\include -external:IC:\Qt\6.7.0\msvc2019_64\mkspecs\win32-msvc -external:IC:\Qt\6.7.0\msvc2019_64\include\QtGui -external:IC:\Qt\6.7.0\msvc2019_64\include\QtWidgets -external:W0
   OBJECT_DIR = CMakeFiles\main.dir
   OBJECT_FILE_DIR = CMakeFiles\main.dir
   TARGET_COMPILE_PDB = CMakeFiles\main.dir\
   TARGET_PDB = main.pdb
 
-build CMakeFiles\main.dir\robot.cpp.obj: CXX_COMPILER__main_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\robot.cpp || cmake_object_order_depends_target_main
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 -Zc:__cplusplus -permissive- -utf-8
+build CMakeFiles\main.dir\robot.cpp.obj: CXX_COMPILER__main_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\robot.cpp || cmake_object_order_depends_target_main
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++17 -Zc:__cplusplus -permissive- -utf-8
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\main_autogen\include -external:IC:\Qt\6.7.0\msvc2019_64\include\QtCore -external:IC:\Qt\6.7.0\msvc2019_64\include -external:IC:\Qt\6.7.0\msvc2019_64\mkspecs\win32-msvc -external:IC:\Qt\6.7.0\msvc2019_64\include\QtGui -external:IC:\Qt\6.7.0\msvc2019_64\include\QtWidgets -external:W0
   OBJECT_DIR = CMakeFiles\main.dir
   OBJECT_FILE_DIR = CMakeFiles\main.dir
   TARGET_COMPILE_PDB = CMakeFiles\main.dir\
   TARGET_PDB = main.pdb
 
-build CMakeFiles\main.dir\room.cpp.obj: CXX_COMPILER__main_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\room.cpp || cmake_object_order_depends_target_main
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 -Zc:__cplusplus -permissive- -utf-8
+build CMakeFiles\main.dir\room.cpp.obj: CXX_COMPILER__main_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\room.cpp || cmake_object_order_depends_target_main
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++17 -Zc:__cplusplus -permissive- -utf-8
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\main_autogen\include -external:IC:\Qt\6.7.0\msvc2019_64\include\QtCore -external:IC:\Qt\6.7.0\msvc2019_64\include -external:IC:\Qt\6.7.0\msvc2019_64\mkspecs\win32-msvc -external:IC:\Qt\6.7.0\msvc2019_64\include\QtGui -external:IC:\Qt\6.7.0\msvc2019_64\include\QtWidgets -external:W0
   OBJECT_DIR = CMakeFiles\main.dir
   OBJECT_FILE_DIR = CMakeFiles\main.dir
   TARGET_COMPILE_PDB = CMakeFiles\main.dir\
   TARGET_PDB = main.pdb
 
-build CMakeFiles\main.dir\furniture.cpp.obj: CXX_COMPILER__main_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\furniture.cpp || cmake_object_order_depends_target_main
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 -Zc:__cplusplus -permissive- -utf-8
+build CMakeFiles\main.dir\furniture.cpp.obj: CXX_COMPILER__main_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\furniture.cpp || cmake_object_order_depends_target_main
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++17 -Zc:__cplusplus -permissive- -utf-8
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\main_autogen\include -external:IC:\Qt\6.7.0\msvc2019_64\include\QtCore -external:IC:\Qt\6.7.0\msvc2019_64\include -external:IC:\Qt\6.7.0\msvc2019_64\mkspecs\win32-msvc -external:IC:\Qt\6.7.0\msvc2019_64\include\QtGui -external:IC:\Qt\6.7.0\msvc2019_64\include\QtWidgets -external:W0
   OBJECT_DIR = CMakeFiles\main.dir
   OBJECT_FILE_DIR = CMakeFiles\main.dir
   TARGET_COMPILE_PDB = CMakeFiles\main.dir\
   TARGET_PDB = main.pdb
 
-build CMakeFiles\main.dir\visualiser.cpp.obj: CXX_COMPILER__main_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\visualiser.cpp || cmake_object_order_depends_target_main
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 -Zc:__cplusplus -permissive- -utf-8
+build CMakeFiles\main.dir\visualiser.cpp.obj: CXX_COMPILER__main_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\visualiser.cpp || cmake_object_order_depends_target_main
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++17 -Zc:__cplusplus -permissive- -utf-8
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\main_autogen\include -external:IC:\Qt\6.7.0\msvc2019_64\include\QtCore -external:IC:\Qt\6.7.0\msvc2019_64\include -external:IC:\Qt\6.7.0\msvc2019_64\mkspecs\win32-msvc -external:IC:\Qt\6.7.0\msvc2019_64\include\QtGui -external:IC:\Qt\6.7.0\msvc2019_64\include\QtWidgets -external:W0
   OBJECT_DIR = CMakeFiles\main.dir
   OBJECT_FILE_DIR = CMakeFiles\main.dir
   TARGET_COMPILE_PDB = CMakeFiles\main.dir\
   TARGET_PDB = main.pdb
 
-build CMakeFiles\main.dir\simulation.cpp.obj: CXX_COMPILER__main_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\simulation.cpp || cmake_object_order_depends_target_main
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 -Zc:__cplusplus -permissive- -utf-8
+build CMakeFiles\main.dir\simulation.cpp.obj: CXX_COMPILER__main_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\simulation.cpp || cmake_object_order_depends_target_main
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++17 -Zc:__cplusplus -permissive- -utf-8
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\main_autogen\include -external:IC:\Qt\6.7.0\msvc2019_64\include\QtCore -external:IC:\Qt\6.7.0\msvc2019_64\include -external:IC:\Qt\6.7.0\msvc2019_64\mkspecs\win32-msvc -external:IC:\Qt\6.7.0\msvc2019_64\include\QtGui -external:IC:\Qt\6.7.0\msvc2019_64\include\QtWidgets -external:W0
   OBJECT_DIR = CMakeFiles\main.dir
   OBJECT_FILE_DIR = CMakeFiles\main.dir
@@ -120,10 +120,10 @@ build CMakeFiles\main.dir\simulation.cpp.obj: CXX_COMPILER__main_unscanned_Debug
 #############################################
 # Link the executable main.exe
 
-build main.exe: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles\main.dir\main_autogen\mocs_compilation.cpp.obj CMakeFiles\main.dir\main.cpp.obj CMakeFiles\main.dir\robot.cpp.obj CMakeFiles\main.dir\room.cpp.obj CMakeFiles\main.dir\furniture.cpp.obj CMakeFiles\main.dir\visualiser.cpp.obj CMakeFiles\main.dir\simulation.cpp.obj | C$:\Qt\6.7.0\msvc2019_64\lib\Qt6Widgetsd.lib C$:\Qt\6.7.0\msvc2019_64\lib\Qt6Guid.lib C$:\Qt\6.7.0\msvc2019_64\lib\Qt6Cored.lib || main_autogen main_autogen_timestamp_deps
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1
-  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = C:\Qt\6.7.0\msvc2019_64\lib\Qt6Widgetsd.lib  C:\Qt\6.7.0\msvc2019_64\lib\Qt6Guid.lib  C:\Qt\6.7.0\msvc2019_64\lib\Qt6Cored.lib  mpr.lib  userenv.lib  d3d11.lib  dxgi.lib  dxguid.lib  d3d12.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+build main.exe: CXX_EXECUTABLE_LINKER__main_Release CMakeFiles\main.dir\main_autogen\mocs_compilation.cpp.obj CMakeFiles\main.dir\main.cpp.obj CMakeFiles\main.dir\robot.cpp.obj CMakeFiles\main.dir\room.cpp.obj CMakeFiles\main.dir\furniture.cpp.obj CMakeFiles\main.dir\visualiser.cpp.obj CMakeFiles\main.dir\simulation.cpp.obj | C$:\Qt\6.7.0\msvc2019_64\lib\Qt6Widgets.lib C$:\Qt\6.7.0\msvc2019_64\lib\Qt6Gui.lib C$:\Qt\6.7.0\msvc2019_64\lib\Qt6Core.lib || main_autogen main_autogen_timestamp_deps
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG
+  LINK_FLAGS = /machine:x64 /INCREMENTAL:NO /subsystem:console
+  LINK_LIBRARIES = C:\Qt\6.7.0\msvc2019_64\lib\Qt6Widgets.lib  C:\Qt\6.7.0\msvc2019_64\lib\Qt6Gui.lib  C:\Qt\6.7.0\msvc2019_64\lib\Qt6Core.lib  mpr.lib  userenv.lib  d3d11.lib  dxgi.lib  dxguid.lib  d3d12.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = CMakeFiles\main.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -141,24 +141,24 @@ build main.exe: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles\main.dir\main_autog
 
 build cmake_object_order_depends_target_robot_test: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main robot_test_autogen robot_test_autogen\mocs_compilation.cpp robot_test_autogen\timestamp robot_test_autogen_timestamp_deps
 
-build CMakeFiles\robot_test.dir\robot_test_autogen\mocs_compilation.cpp.obj: CXX_COMPILER__robot_test_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\robot_test_autogen\mocs_compilation.cpp || cmake_object_order_depends_target_robot_test
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
+build CMakeFiles\robot_test.dir\robot_test_autogen\mocs_compilation.cpp.obj: CXX_COMPILER__robot_test_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\robot_test_autogen\mocs_compilation.cpp || cmake_object_order_depends_target_robot_test
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++14
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\robot_test_autogen\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest -external:W0
   OBJECT_DIR = CMakeFiles\robot_test.dir
   OBJECT_FILE_DIR = CMakeFiles\robot_test.dir\robot_test_autogen
   TARGET_COMPILE_PDB = CMakeFiles\robot_test.dir\
   TARGET_PDB = robot_test.pdb
 
-build CMakeFiles\robot_test.dir\robot.cpp.obj: CXX_COMPILER__robot_test_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\robot.cpp || cmake_object_order_depends_target_robot_test
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
+build CMakeFiles\robot_test.dir\robot.cpp.obj: CXX_COMPILER__robot_test_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\robot.cpp || cmake_object_order_depends_target_robot_test
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++14
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\robot_test_autogen\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest -external:W0
   OBJECT_DIR = CMakeFiles\robot_test.dir
   OBJECT_FILE_DIR = CMakeFiles\robot_test.dir
   TARGET_COMPILE_PDB = CMakeFiles\robot_test.dir\
   TARGET_PDB = robot_test.pdb
 
-build CMakeFiles\robot_test.dir\robot_test.cc.obj: CXX_COMPILER__robot_test_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\robot_test.cc || cmake_object_order_depends_target_robot_test
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
+build CMakeFiles\robot_test.dir\robot_test.cc.obj: CXX_COMPILER__robot_test_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\robot_test.cc || cmake_object_order_depends_target_robot_test
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++14
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\robot_test_autogen\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest -external:W0
   OBJECT_DIR = CMakeFiles\robot_test.dir
   OBJECT_FILE_DIR = CMakeFiles\robot_test.dir
@@ -173,9 +173,9 @@ build CMakeFiles\robot_test.dir\robot_test.cc.obj: CXX_COMPILER__robot_test_unsc
 #############################################
 # Link the executable robot_test.exe
 
-build robot_test.exe: CXX_EXECUTABLE_LINKER__robot_test_Debug CMakeFiles\robot_test.dir\robot_test_autogen\mocs_compilation.cpp.obj CMakeFiles\robot_test.dir\robot.cpp.obj CMakeFiles\robot_test.dir\robot_test.cc.obj | lib\gtest_main.lib lib\gtest.lib || lib\gtest.lib lib\gtest_main.lib robot_test_autogen robot_test_autogen_timestamp_deps
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1
-  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+build robot_test.exe: CXX_EXECUTABLE_LINKER__robot_test_Release CMakeFiles\robot_test.dir\robot_test_autogen\mocs_compilation.cpp.obj CMakeFiles\robot_test.dir\robot.cpp.obj CMakeFiles\robot_test.dir\robot_test.cc.obj | lib\gtest_main.lib lib\gtest.lib || lib\gtest.lib lib\gtest_main.lib robot_test_autogen robot_test_autogen_timestamp_deps
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG
+  LINK_FLAGS = /machine:x64 /INCREMENTAL:NO /subsystem:console
   LINK_LIBRARIES = lib\gtest_main.lib  lib\gtest.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = CMakeFiles\robot_test.dir
   POST_BUILD = cd .
@@ -194,24 +194,24 @@ build robot_test.exe: CXX_EXECUTABLE_LINKER__robot_test_Debug CMakeFiles\robot_t
 
 build cmake_object_order_depends_target_furniture_test: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main furniture_test_autogen furniture_test_autogen\mocs_compilation.cpp furniture_test_autogen\timestamp furniture_test_autogen_timestamp_deps
 
-build CMakeFiles\furniture_test.dir\furniture_test_autogen\mocs_compilation.cpp.obj: CXX_COMPILER__furniture_test_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\furniture_test_autogen\mocs_compilation.cpp || cmake_object_order_depends_target_furniture_test
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
+build CMakeFiles\furniture_test.dir\furniture_test_autogen\mocs_compilation.cpp.obj: CXX_COMPILER__furniture_test_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\furniture_test_autogen\mocs_compilation.cpp || cmake_object_order_depends_target_furniture_test
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++14
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\furniture_test_autogen\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest -external:W0
   OBJECT_DIR = CMakeFiles\furniture_test.dir
   OBJECT_FILE_DIR = CMakeFiles\furniture_test.dir\furniture_test_autogen
   TARGET_COMPILE_PDB = CMakeFiles\furniture_test.dir\
   TARGET_PDB = furniture_test.pdb
 
-build CMakeFiles\furniture_test.dir\furniture.cpp.obj: CXX_COMPILER__furniture_test_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\furniture.cpp || cmake_object_order_depends_target_furniture_test
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
+build CMakeFiles\furniture_test.dir\furniture.cpp.obj: CXX_COMPILER__furniture_test_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\furniture.cpp || cmake_object_order_depends_target_furniture_test
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++14
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\furniture_test_autogen\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest -external:W0
   OBJECT_DIR = CMakeFiles\furniture_test.dir
   OBJECT_FILE_DIR = CMakeFiles\furniture_test.dir
   TARGET_COMPILE_PDB = CMakeFiles\furniture_test.dir\
   TARGET_PDB = furniture_test.pdb
 
-build CMakeFiles\furniture_test.dir\furniture_test.cc.obj: CXX_COMPILER__furniture_test_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\furniture_test.cc || cmake_object_order_depends_target_furniture_test
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
+build CMakeFiles\furniture_test.dir\furniture_test.cc.obj: CXX_COMPILER__furniture_test_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\furniture_test.cc || cmake_object_order_depends_target_furniture_test
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++14
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\furniture_test_autogen\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest -external:W0
   OBJECT_DIR = CMakeFiles\furniture_test.dir
   OBJECT_FILE_DIR = CMakeFiles\furniture_test.dir
@@ -226,9 +226,9 @@ build CMakeFiles\furniture_test.dir\furniture_test.cc.obj: CXX_COMPILER__furnitu
 #############################################
 # Link the executable furniture_test.exe
 
-build furniture_test.exe: CXX_EXECUTABLE_LINKER__furniture_test_Debug CMakeFiles\furniture_test.dir\furniture_test_autogen\mocs_compilation.cpp.obj CMakeFiles\furniture_test.dir\furniture.cpp.obj CMakeFiles\furniture_test.dir\furniture_test.cc.obj | lib\gtest_main.lib lib\gtest.lib || furniture_test_autogen furniture_test_autogen_timestamp_deps lib\gtest.lib lib\gtest_main.lib
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1
-  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+build furniture_test.exe: CXX_EXECUTABLE_LINKER__furniture_test_Release CMakeFiles\furniture_test.dir\furniture_test_autogen\mocs_compilation.cpp.obj CMakeFiles\furniture_test.dir\furniture.cpp.obj CMakeFiles\furniture_test.dir\furniture_test.cc.obj | lib\gtest_main.lib lib\gtest.lib || furniture_test_autogen furniture_test_autogen_timestamp_deps lib\gtest.lib lib\gtest_main.lib
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG
+  LINK_FLAGS = /machine:x64 /INCREMENTAL:NO /subsystem:console
   LINK_LIBRARIES = lib\gtest_main.lib  lib\gtest.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = CMakeFiles\furniture_test.dir
   POST_BUILD = cd .
@@ -247,32 +247,32 @@ build furniture_test.exe: CXX_EXECUTABLE_LINKER__furniture_test_Debug CMakeFiles
 
 build cmake_object_order_depends_target_room_test: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main room_test_autogen room_test_autogen\mocs_compilation.cpp room_test_autogen\timestamp room_test_autogen_timestamp_deps
 
-build CMakeFiles\room_test.dir\room_test_autogen\mocs_compilation.cpp.obj: CXX_COMPILER__room_test_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\room_test_autogen\mocs_compilation.cpp || cmake_object_order_depends_target_room_test
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
+build CMakeFiles\room_test.dir\room_test_autogen\mocs_compilation.cpp.obj: CXX_COMPILER__room_test_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\room_test_autogen\mocs_compilation.cpp || cmake_object_order_depends_target_room_test
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++14
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\room_test_autogen\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest -external:W0
   OBJECT_DIR = CMakeFiles\room_test.dir
   OBJECT_FILE_DIR = CMakeFiles\room_test.dir\room_test_autogen
   TARGET_COMPILE_PDB = CMakeFiles\room_test.dir\
   TARGET_PDB = room_test.pdb
 
-build CMakeFiles\room_test.dir\room.cpp.obj: CXX_COMPILER__room_test_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\room.cpp || cmake_object_order_depends_target_room_test
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
+build CMakeFiles\room_test.dir\room.cpp.obj: CXX_COMPILER__room_test_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\room.cpp || cmake_object_order_depends_target_room_test
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++14
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\room_test_autogen\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest -external:W0
   OBJECT_DIR = CMakeFiles\room_test.dir
   OBJECT_FILE_DIR = CMakeFiles\room_test.dir
   TARGET_COMPILE_PDB = CMakeFiles\room_test.dir\
   TARGET_PDB = room_test.pdb
 
-build CMakeFiles\room_test.dir\furniture.cpp.obj: CXX_COMPILER__room_test_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\furniture.cpp || cmake_object_order_depends_target_room_test
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
+build CMakeFiles\room_test.dir\furniture.cpp.obj: CXX_COMPILER__room_test_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\furniture.cpp || cmake_object_order_depends_target_room_test
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++14
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\room_test_autogen\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest -external:W0
   OBJECT_DIR = CMakeFiles\room_test.dir
   OBJECT_FILE_DIR = CMakeFiles\room_test.dir
   TARGET_COMPILE_PDB = CMakeFiles\room_test.dir\
   TARGET_PDB = room_test.pdb
 
-build CMakeFiles\room_test.dir\room_test.cc.obj: CXX_COMPILER__room_test_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\room_test.cc || cmake_object_order_depends_target_room_test
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++14
+build CMakeFiles\room_test.dir\room_test.cc.obj: CXX_COMPILER__room_test_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\room_test.cc || cmake_object_order_depends_target_room_test
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++14
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\room_test_autogen\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest -external:W0
   OBJECT_DIR = CMakeFiles\room_test.dir
   OBJECT_FILE_DIR = CMakeFiles\room_test.dir
@@ -287,9 +287,9 @@ build CMakeFiles\room_test.dir\room_test.cc.obj: CXX_COMPILER__room_test_unscann
 #############################################
 # Link the executable room_test.exe
 
-build room_test.exe: CXX_EXECUTABLE_LINKER__room_test_Debug CMakeFiles\room_test.dir\room_test_autogen\mocs_compilation.cpp.obj CMakeFiles\room_test.dir\room.cpp.obj CMakeFiles\room_test.dir\furniture.cpp.obj CMakeFiles\room_test.dir\room_test.cc.obj | lib\gtest_main.lib lib\gtest.lib || lib\gtest.lib lib\gtest_main.lib room_test_autogen room_test_autogen_timestamp_deps
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1
-  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+build room_test.exe: CXX_EXECUTABLE_LINKER__room_test_Release CMakeFiles\room_test.dir\room_test_autogen\mocs_compilation.cpp.obj CMakeFiles\room_test.dir\room.cpp.obj CMakeFiles\room_test.dir\furniture.cpp.obj CMakeFiles\room_test.dir\room_test.cc.obj | lib\gtest_main.lib lib\gtest.lib || lib\gtest.lib lib\gtest_main.lib room_test_autogen room_test_autogen_timestamp_deps
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG
+  LINK_FLAGS = /machine:x64 /INCREMENTAL:NO /subsystem:console
   LINK_LIBRARIES = lib\gtest_main.lib  lib\gtest.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = CMakeFiles\room_test.dir
   POST_BUILD = cd .
@@ -417,7 +417,7 @@ build room_test_autogen: phony CMakeFiles\room_test_autogen room_test_autogen\ti
 # Custom command for main_autogen\timestamp
 
 build main_autogen\timestamp main_autogen\mocs_compilation.cpp | ${cmake_ninja_workdir}main_autogen\timestamp ${cmake_ninja_workdir}main_autogen\mocs_compilation.cpp: CUSTOM_COMMAND C$:\Qt\6.7.0\msvc2019_64\.\bin\moc.exe || main_autogen_timestamp_deps
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/main_autogen.dir/AutogenInfo.json Debug && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/main_autogen/timestamp && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_transform_depfile Ninja gccdepfile C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/main_autogen/deps C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/1f5828d7f043ba700988e53842d05dcba32d7127b38ca3e9d6cfcc965308304a.d"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/main_autogen.dir/AutogenInfo.json Release && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/main_autogen/timestamp && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_transform_depfile Ninja gccdepfile C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/main_autogen/deps C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/1f5828d7f043ba700988e53842d05dcba32d7127b38ca3e9d6cfcc965308304a.d"
   DESC = Automatic MOC for target main
   depfile = C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/1f5828d7f043ba700988e53842d05dcba32d7127b38ca3e9d6cfcc965308304a.d
   restat = 1
@@ -427,7 +427,7 @@ build main_autogen\timestamp main_autogen\mocs_compilation.cpp | ${cmake_ninja_w
 # Custom command for robot_test_autogen\timestamp
 
 build robot_test_autogen\timestamp robot_test_autogen\mocs_compilation.cpp | ${cmake_ninja_workdir}robot_test_autogen\timestamp ${cmake_ninja_workdir}robot_test_autogen\mocs_compilation.cpp: CUSTOM_COMMAND C$:\Qt\6.7.0\msvc2019_64\.\bin\moc.exe || _deps\googletest-build\googletest\gtest_autogen _deps\googletest-build\googletest\gtest_autogen_timestamp_deps _deps\googletest-build\googletest\gtest_main_autogen _deps\googletest-build\googletest\gtest_main_autogen_timestamp_deps lib\gtest.lib lib\gtest_main.lib robot_test_autogen_timestamp_deps
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/robot_test_autogen.dir/AutogenInfo.json Debug && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/robot_test_autogen/timestamp && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_transform_depfile Ninja gccdepfile C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/robot_test_autogen/deps C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/eb842170186670d29ad167f35b01ed22b34f1c017883025912bc985e287253e6.d"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/robot_test_autogen.dir/AutogenInfo.json Release && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/robot_test_autogen/timestamp && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_transform_depfile Ninja gccdepfile C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/robot_test_autogen/deps C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/eb842170186670d29ad167f35b01ed22b34f1c017883025912bc985e287253e6.d"
   DESC = Automatic MOC for target robot_test
   depfile = C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/eb842170186670d29ad167f35b01ed22b34f1c017883025912bc985e287253e6.d
   restat = 1
@@ -437,7 +437,7 @@ build robot_test_autogen\timestamp robot_test_autogen\mocs_compilation.cpp | ${c
 # Custom command for furniture_test_autogen\timestamp
 
 build furniture_test_autogen\timestamp furniture_test_autogen\mocs_compilation.cpp | ${cmake_ninja_workdir}furniture_test_autogen\timestamp ${cmake_ninja_workdir}furniture_test_autogen\mocs_compilation.cpp: CUSTOM_COMMAND C$:\Qt\6.7.0\msvc2019_64\.\bin\moc.exe || _deps\googletest-build\googletest\gtest_autogen _deps\googletest-build\googletest\gtest_autogen_timestamp_deps _deps\googletest-build\googletest\gtest_main_autogen _deps\googletest-build\googletest\gtest_main_autogen_timestamp_deps furniture_test_autogen_timestamp_deps lib\gtest.lib lib\gtest_main.lib
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/furniture_test_autogen.dir/AutogenInfo.json Debug && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/furniture_test_autogen/timestamp && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_transform_depfile Ninja gccdepfile C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/furniture_test_autogen/deps C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/793054a76de5bb9f6cb19152651556501cac604a517f82109ac4c97223dfd05f.d"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/furniture_test_autogen.dir/AutogenInfo.json Release && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/furniture_test_autogen/timestamp && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_transform_depfile Ninja gccdepfile C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/furniture_test_autogen/deps C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/793054a76de5bb9f6cb19152651556501cac604a517f82109ac4c97223dfd05f.d"
   DESC = Automatic MOC for target furniture_test
   depfile = C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/793054a76de5bb9f6cb19152651556501cac604a517f82109ac4c97223dfd05f.d
   restat = 1
@@ -447,7 +447,7 @@ build furniture_test_autogen\timestamp furniture_test_autogen\mocs_compilation.c
 # Custom command for room_test_autogen\timestamp
 
 build room_test_autogen\timestamp room_test_autogen\mocs_compilation.cpp | ${cmake_ninja_workdir}room_test_autogen\timestamp ${cmake_ninja_workdir}room_test_autogen\mocs_compilation.cpp: CUSTOM_COMMAND C$:\Qt\6.7.0\msvc2019_64\.\bin\moc.exe || _deps\googletest-build\googletest\gtest_autogen _deps\googletest-build\googletest\gtest_autogen_timestamp_deps _deps\googletest-build\googletest\gtest_main_autogen _deps\googletest-build\googletest\gtest_main_autogen_timestamp_deps lib\gtest.lib lib\gtest_main.lib room_test_autogen_timestamp_deps
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/room_test_autogen.dir/AutogenInfo.json Debug && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/room_test_autogen/timestamp && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_transform_depfile Ninja gccdepfile C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/room_test_autogen/deps C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/f0922d9b2f3566107a6c3b27cf6e3615a27c545fd6a9c5c9ea55804692b2bd9f.d"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/room_test_autogen.dir/AutogenInfo.json Release && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/room_test_autogen/timestamp && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_transform_depfile Ninja gccdepfile C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/room_test_autogen/deps C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/f0922d9b2f3566107a6c3b27cf6e3615a27c545fd6a9c5c9ea55804692b2bd9f.d"
   DESC = Automatic MOC for target room_test
   depfile = C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/f0922d9b2f3566107a6c3b27cf6e3615a27c545fd6a9c5c9ea55804692b2bd9f.d
   restat = 1
@@ -584,29 +584,29 @@ build _deps\googletest-build\install\local: phony _deps\googletest-build\CMakeFi
 
 build cmake_object_order_depends_target_gmock: phony || _deps\googletest-build\googlemock\gmock_autogen _deps\googletest-build\googlemock\gmock_autogen\mocs_compilation.cpp _deps\googletest-build\googlemock\gmock_autogen\timestamp _deps\googletest-build\googlemock\gmock_autogen_timestamp_deps
 
-build _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\gmock_autogen\mocs_compilation.cpp.obj: CXX_COMPILER__gmock_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googlemock\gmock_autogen\mocs_compilation.cpp || cmake_object_order_depends_target_gmock
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
+build _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\gmock_autogen\mocs_compilation.cpp.obj: CXX_COMPILER__gmock_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googlemock\gmock_autogen\mocs_compilation.cpp || cmake_object_order_depends_target_gmock
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++14 -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googlemock\gmock_autogen\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googlemock\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googlemock -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest
   OBJECT_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock.dir
   OBJECT_FILE_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\gmock_autogen
-  TARGET_COMPILE_PDB = lib\gmockpdb_debug_postfix-NOTFOUND.pdb
-  TARGET_PDB = bin\gmockpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_COMPILE_PDB = lib\gmock.pdb
+  TARGET_PDB = bin\gmock.pdb
 
-build _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\__\googletest\src\gtest-all.cc.obj: CXX_COMPILER__gmock_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\src\gtest-all.cc || cmake_object_order_depends_target_gmock
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
+build _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\__\googletest\src\gtest-all.cc.obj: CXX_COMPILER__gmock_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\src\gtest-all.cc || cmake_object_order_depends_target_gmock
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++14 -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googlemock\gmock_autogen\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googlemock\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googlemock -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest
   OBJECT_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock.dir
   OBJECT_FILE_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\__\googletest\src
-  TARGET_COMPILE_PDB = lib\gmockpdb_debug_postfix-NOTFOUND.pdb
-  TARGET_PDB = bin\gmockpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_COMPILE_PDB = lib\gmock.pdb
+  TARGET_PDB = bin\gmock.pdb
 
-build _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\src\gmock-all.cc.obj: CXX_COMPILER__gmock_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googlemock\src\gmock-all.cc || cmake_object_order_depends_target_gmock
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
+build _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\src\gmock-all.cc.obj: CXX_COMPILER__gmock_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googlemock\src\gmock-all.cc || cmake_object_order_depends_target_gmock
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++14 -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googlemock\gmock_autogen\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googlemock\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googlemock -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest
   OBJECT_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock.dir
   OBJECT_FILE_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\src
-  TARGET_COMPILE_PDB = lib\gmockpdb_debug_postfix-NOTFOUND.pdb
-  TARGET_PDB = bin\gmockpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_COMPILE_PDB = lib\gmock.pdb
+  TARGET_PDB = bin\gmock.pdb
 
 
 # =============================================================================
@@ -616,15 +616,15 @@ build _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\src\gmock-all.cc.ob
 #############################################
 # Link the static library lib\gmock.lib
 
-build lib\gmock.lib: CXX_STATIC_LIBRARY_LINKER__gmock_Debug _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\gmock_autogen\mocs_compilation.cpp.obj _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\__\googletest\src\gtest-all.cc.obj _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\src\gmock-all.cc.obj || _deps\googletest-build\googlemock\gmock_autogen _deps\googletest-build\googlemock\gmock_autogen_timestamp_deps
-  LANGUAGE_COMPILE_FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1
+build lib\gmock.lib: CXX_STATIC_LIBRARY_LINKER__gmock_Release _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\gmock_autogen\mocs_compilation.cpp.obj _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\__\googletest\src\gtest-all.cc.obj _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\src\gmock-all.cc.obj || _deps\googletest-build\googlemock\gmock_autogen _deps\googletest-build\googlemock\gmock_autogen_timestamp_deps
+  LANGUAGE_COMPILE_FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG
   LINK_FLAGS = /machine:x64
   OBJECT_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = lib\gmockpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_COMPILE_PDB = lib\gmock.pdb
   TARGET_FILE = lib\gmock.lib
-  TARGET_PDB = bin\gmockpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_PDB = bin\gmock.pdb
 
 # =============================================================================
 # Object build statements for STATIC_LIBRARY target gmock_main
@@ -635,37 +635,37 @@ build lib\gmock.lib: CXX_STATIC_LIBRARY_LINKER__gmock_Debug _deps\googletest-bui
 
 build cmake_object_order_depends_target_gmock_main: phony || _deps\googletest-build\googlemock\gmock_main_autogen _deps\googletest-build\googlemock\gmock_main_autogen\mocs_compilation.cpp _deps\googletest-build\googlemock\gmock_main_autogen\timestamp _deps\googletest-build\googlemock\gmock_main_autogen_timestamp_deps
 
-build _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\gmock_main_autogen\mocs_compilation.cpp.obj: CXX_COMPILER__gmock_main_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googlemock\gmock_main_autogen\mocs_compilation.cpp || cmake_object_order_depends_target_gmock_main
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
+build _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\gmock_main_autogen\mocs_compilation.cpp.obj: CXX_COMPILER__gmock_main_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googlemock\gmock_main_autogen\mocs_compilation.cpp || cmake_object_order_depends_target_gmock_main
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++14 -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googlemock\gmock_main_autogen\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googlemock\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googlemock -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest
   OBJECT_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir
   OBJECT_FILE_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\gmock_main_autogen
-  TARGET_COMPILE_PDB = lib\gmock_mainpdb_debug_postfix-NOTFOUND.pdb
-  TARGET_PDB = bin\gmock_mainpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_COMPILE_PDB = lib\gmock_main.pdb
+  TARGET_PDB = bin\gmock_main.pdb
 
-build _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\__\googletest\src\gtest-all.cc.obj: CXX_COMPILER__gmock_main_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\src\gtest-all.cc || cmake_object_order_depends_target_gmock_main
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
+build _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\__\googletest\src\gtest-all.cc.obj: CXX_COMPILER__gmock_main_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\src\gtest-all.cc || cmake_object_order_depends_target_gmock_main
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++14 -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googlemock\gmock_main_autogen\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googlemock\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googlemock -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest
   OBJECT_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir
   OBJECT_FILE_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\__\googletest\src
-  TARGET_COMPILE_PDB = lib\gmock_mainpdb_debug_postfix-NOTFOUND.pdb
-  TARGET_PDB = bin\gmock_mainpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_COMPILE_PDB = lib\gmock_main.pdb
+  TARGET_PDB = bin\gmock_main.pdb
 
-build _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\src\gmock-all.cc.obj: CXX_COMPILER__gmock_main_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googlemock\src\gmock-all.cc || cmake_object_order_depends_target_gmock_main
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
+build _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\src\gmock-all.cc.obj: CXX_COMPILER__gmock_main_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googlemock\src\gmock-all.cc || cmake_object_order_depends_target_gmock_main
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++14 -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googlemock\gmock_main_autogen\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googlemock\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googlemock -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest
   OBJECT_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir
   OBJECT_FILE_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\src
-  TARGET_COMPILE_PDB = lib\gmock_mainpdb_debug_postfix-NOTFOUND.pdb
-  TARGET_PDB = bin\gmock_mainpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_COMPILE_PDB = lib\gmock_main.pdb
+  TARGET_PDB = bin\gmock_main.pdb
 
-build _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\src\gmock_main.cc.obj: CXX_COMPILER__gmock_main_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googlemock\src\gmock_main.cc || cmake_object_order_depends_target_gmock_main
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
+build _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\src\gmock_main.cc.obj: CXX_COMPILER__gmock_main_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googlemock\src\gmock_main.cc || cmake_object_order_depends_target_gmock_main
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++14 -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googlemock\gmock_main_autogen\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googlemock\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googlemock -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest
   OBJECT_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir
   OBJECT_FILE_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\src
-  TARGET_COMPILE_PDB = lib\gmock_mainpdb_debug_postfix-NOTFOUND.pdb
-  TARGET_PDB = bin\gmock_mainpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_COMPILE_PDB = lib\gmock_main.pdb
+  TARGET_PDB = bin\gmock_main.pdb
 
 
 # =============================================================================
@@ -675,15 +675,15 @@ build _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\src\gmock_main
 #############################################
 # Link the static library lib\gmock_main.lib
 
-build lib\gmock_main.lib: CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\gmock_main_autogen\mocs_compilation.cpp.obj _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\__\googletest\src\gtest-all.cc.obj _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\src\gmock-all.cc.obj _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\src\gmock_main.cc.obj || _deps\googletest-build\googlemock\gmock_main_autogen _deps\googletest-build\googlemock\gmock_main_autogen_timestamp_deps
-  LANGUAGE_COMPILE_FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1
+build lib\gmock_main.lib: CXX_STATIC_LIBRARY_LINKER__gmock_main_Release _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\gmock_main_autogen\mocs_compilation.cpp.obj _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\__\googletest\src\gtest-all.cc.obj _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\src\gmock-all.cc.obj _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\src\gmock_main.cc.obj || _deps\googletest-build\googlemock\gmock_main_autogen _deps\googletest-build\googlemock\gmock_main_autogen_timestamp_deps
+  LANGUAGE_COMPILE_FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG
   LINK_FLAGS = /machine:x64
   OBJECT_DIR = _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = lib\gmock_mainpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_COMPILE_PDB = lib\gmock_main.pdb
   TARGET_FILE = lib\gmock_main.lib
-  TARGET_PDB = bin\gmock_mainpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_PDB = bin\gmock_main.pdb
 
 
 #############################################
@@ -779,7 +779,7 @@ build _deps\googletest-build\googlemock\gmock_main_autogen: phony _deps\googlete
 # Custom command for _deps\googletest-build\googlemock\gmock_autogen\timestamp
 
 build _deps\googletest-build\googlemock\gmock_autogen\timestamp _deps\googletest-build\googlemock\gmock_autogen\mocs_compilation.cpp | ${cmake_ninja_workdir}_deps\googletest-build\googlemock\gmock_autogen\timestamp ${cmake_ninja_workdir}_deps\googletest-build\googlemock\gmock_autogen\mocs_compilation.cpp: CUSTOM_COMMAND C$:\Qt\6.7.0\msvc2019_64\.\bin\moc.exe || _deps\googletest-build\googlemock\gmock_autogen_timestamp_deps
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googlemock && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googlemock/CMakeFiles/gmock_autogen.dir/AutogenInfo.json Debug && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googlemock/gmock_autogen/timestamp && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_transform_depfile Ninja gccdepfile C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googlemock C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googlemock C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googlemock/gmock_autogen/deps C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/e2b8e0b9e1c53c45d4ad3d5246c50f6353a2e79baf1c6c9eb4bcce39af17df11.d"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googlemock && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googlemock/CMakeFiles/gmock_autogen.dir/AutogenInfo.json Release && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googlemock/gmock_autogen/timestamp && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_transform_depfile Ninja gccdepfile C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googlemock C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googlemock C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googlemock/gmock_autogen/deps C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/e2b8e0b9e1c53c45d4ad3d5246c50f6353a2e79baf1c6c9eb4bcce39af17df11.d"
   DESC = Automatic MOC for target gmock
   depfile = C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/e2b8e0b9e1c53c45d4ad3d5246c50f6353a2e79baf1c6c9eb4bcce39af17df11.d
   restat = 1
@@ -789,7 +789,7 @@ build _deps\googletest-build\googlemock\gmock_autogen\timestamp _deps\googletest
 # Custom command for _deps\googletest-build\googlemock\gmock_main_autogen\timestamp
 
 build _deps\googletest-build\googlemock\gmock_main_autogen\timestamp _deps\googletest-build\googlemock\gmock_main_autogen\mocs_compilation.cpp | ${cmake_ninja_workdir}_deps\googletest-build\googlemock\gmock_main_autogen\timestamp ${cmake_ninja_workdir}_deps\googletest-build\googlemock\gmock_main_autogen\mocs_compilation.cpp: CUSTOM_COMMAND C$:\Qt\6.7.0\msvc2019_64\.\bin\moc.exe || _deps\googletest-build\googlemock\gmock_main_autogen_timestamp_deps
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googlemock && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen.dir/AutogenInfo.json Debug && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googlemock/gmock_main_autogen/timestamp && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_transform_depfile Ninja gccdepfile C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googlemock C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googlemock C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googlemock/gmock_main_autogen/deps C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/19501e08249eb6258b6b8558241e49c75ca75d83b8b5956a6c6145c0a7308985.d"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googlemock && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen.dir/AutogenInfo.json Release && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googlemock/gmock_main_autogen/timestamp && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_transform_depfile Ninja gccdepfile C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googlemock C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googlemock C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googlemock/gmock_main_autogen/deps C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/19501e08249eb6258b6b8558241e49c75ca75d83b8b5956a6c6145c0a7308985.d"
   DESC = Automatic MOC for target gmock_main
   depfile = C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/19501e08249eb6258b6b8558241e49c75ca75d83b8b5956a6c6145c0a7308985.d
   restat = 1
@@ -832,21 +832,21 @@ build _deps\googletest-build\googlemock\CMakeFiles\gmock_main_autogen | ${cmake_
 
 build cmake_object_order_depends_target_gtest: phony || _deps\googletest-build\googletest\gtest_autogen _deps\googletest-build\googletest\gtest_autogen\mocs_compilation.cpp _deps\googletest-build\googletest\gtest_autogen\timestamp _deps\googletest-build\googletest\gtest_autogen_timestamp_deps
 
-build _deps\googletest-build\googletest\CMakeFiles\gtest.dir\gtest_autogen\mocs_compilation.cpp.obj: CXX_COMPILER__gtest_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googletest\gtest_autogen\mocs_compilation.cpp || cmake_object_order_depends_target_gtest
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
+build _deps\googletest-build\googletest\CMakeFiles\gtest.dir\gtest_autogen\mocs_compilation.cpp.obj: CXX_COMPILER__gtest_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googletest\gtest_autogen\mocs_compilation.cpp || cmake_object_order_depends_target_gtest
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++14 -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googletest\gtest_autogen\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest
   OBJECT_DIR = _deps\googletest-build\googletest\CMakeFiles\gtest.dir
   OBJECT_FILE_DIR = _deps\googletest-build\googletest\CMakeFiles\gtest.dir\gtest_autogen
-  TARGET_COMPILE_PDB = lib\gtestpdb_debug_postfix-NOTFOUND.pdb
-  TARGET_PDB = bin\gtestpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_COMPILE_PDB = lib\gtest.pdb
+  TARGET_PDB = bin\gtest.pdb
 
-build _deps\googletest-build\googletest\CMakeFiles\gtest.dir\src\gtest-all.cc.obj: CXX_COMPILER__gtest_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\src\gtest-all.cc || cmake_object_order_depends_target_gtest
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
+build _deps\googletest-build\googletest\CMakeFiles\gtest.dir\src\gtest-all.cc.obj: CXX_COMPILER__gtest_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\src\gtest-all.cc || cmake_object_order_depends_target_gtest
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++14 -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googletest\gtest_autogen\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\include -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest
   OBJECT_DIR = _deps\googletest-build\googletest\CMakeFiles\gtest.dir
   OBJECT_FILE_DIR = _deps\googletest-build\googletest\CMakeFiles\gtest.dir\src
-  TARGET_COMPILE_PDB = lib\gtestpdb_debug_postfix-NOTFOUND.pdb
-  TARGET_PDB = bin\gtestpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_COMPILE_PDB = lib\gtest.pdb
+  TARGET_PDB = bin\gtest.pdb
 
 
 # =============================================================================
@@ -856,15 +856,15 @@ build _deps\googletest-build\googletest\CMakeFiles\gtest.dir\src\gtest-all.cc.ob
 #############################################
 # Link the static library lib\gtest.lib
 
-build lib\gtest.lib: CXX_STATIC_LIBRARY_LINKER__gtest_Debug _deps\googletest-build\googletest\CMakeFiles\gtest.dir\gtest_autogen\mocs_compilation.cpp.obj _deps\googletest-build\googletest\CMakeFiles\gtest.dir\src\gtest-all.cc.obj || _deps\googletest-build\googletest\gtest_autogen _deps\googletest-build\googletest\gtest_autogen_timestamp_deps
-  LANGUAGE_COMPILE_FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1
+build lib\gtest.lib: CXX_STATIC_LIBRARY_LINKER__gtest_Release _deps\googletest-build\googletest\CMakeFiles\gtest.dir\gtest_autogen\mocs_compilation.cpp.obj _deps\googletest-build\googletest\CMakeFiles\gtest.dir\src\gtest-all.cc.obj || _deps\googletest-build\googletest\gtest_autogen _deps\googletest-build\googletest\gtest_autogen_timestamp_deps
+  LANGUAGE_COMPILE_FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG
   LINK_FLAGS = /machine:x64
   OBJECT_DIR = _deps\googletest-build\googletest\CMakeFiles\gtest.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = lib\gtestpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_COMPILE_PDB = lib\gtest.pdb
   TARGET_FILE = lib\gtest.lib
-  TARGET_PDB = bin\gtestpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_PDB = bin\gtest.pdb
 
 # =============================================================================
 # Object build statements for STATIC_LIBRARY target gtest_main
@@ -875,21 +875,21 @@ build lib\gtest.lib: CXX_STATIC_LIBRARY_LINKER__gtest_Debug _deps\googletest-bui
 
 build cmake_object_order_depends_target_gtest_main: phony || _deps\googletest-build\googletest\gtest_main_autogen _deps\googletest-build\googletest\gtest_main_autogen\mocs_compilation.cpp _deps\googletest-build\googletest\gtest_main_autogen\timestamp _deps\googletest-build\googletest\gtest_main_autogen_timestamp_deps cmake_object_order_depends_target_gtest
 
-build _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\gtest_main_autogen\mocs_compilation.cpp.obj: CXX_COMPILER__gtest_main_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googletest\gtest_main_autogen\mocs_compilation.cpp || cmake_object_order_depends_target_gtest_main
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
+build _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\gtest_main_autogen\mocs_compilation.cpp.obj: CXX_COMPILER__gtest_main_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googletest\gtest_main_autogen\mocs_compilation.cpp || cmake_object_order_depends_target_gtest_main
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++14 -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googletest\gtest_main_autogen\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest -external:W0
   OBJECT_DIR = _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir
   OBJECT_FILE_DIR = _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\gtest_main_autogen
-  TARGET_COMPILE_PDB = lib\gtest_mainpdb_debug_postfix-NOTFOUND.pdb
-  TARGET_PDB = bin\gtest_mainpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_COMPILE_PDB = lib\gtest_main.pdb
+  TARGET_PDB = bin\gtest_main.pdb
 
-build _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj: CXX_COMPILER__gtest_main_unscanned_Debug C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\src\gtest_main.cc || cmake_object_order_depends_target_gtest_main
-  FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++14 -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
+build _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj: CXX_COMPILER__gtest_main_unscanned_Release C$:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\src\gtest_main.cc || cmake_object_order_depends_target_gtest_main
+  FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++14 -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
   INCLUDES = -IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googletest\gtest_main_autogen\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest\include -external:IC:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-src\googletest -external:W0
   OBJECT_DIR = _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir
   OBJECT_FILE_DIR = _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\src
-  TARGET_COMPILE_PDB = lib\gtest_mainpdb_debug_postfix-NOTFOUND.pdb
-  TARGET_PDB = bin\gtest_mainpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_COMPILE_PDB = lib\gtest_main.pdb
+  TARGET_PDB = bin\gtest_main.pdb
 
 
 # =============================================================================
@@ -899,15 +899,15 @@ build _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\src\gtest_main
 #############################################
 # Link the static library lib\gtest_main.lib
 
-build lib\gtest_main.lib: CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\gtest_main_autogen\mocs_compilation.cpp.obj _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj || _deps\googletest-build\googletest\gtest_main_autogen _deps\googletest-build\googletest\gtest_main_autogen_timestamp_deps lib\gtest.lib
-  LANGUAGE_COMPILE_FLAGS = -DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1
+build lib\gtest_main.lib: CXX_STATIC_LIBRARY_LINKER__gtest_main_Release _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\gtest_main_autogen\mocs_compilation.cpp.obj _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj || _deps\googletest-build\googletest\gtest_main_autogen _deps\googletest-build\googletest\gtest_main_autogen_timestamp_deps lib\gtest.lib
+  LANGUAGE_COMPILE_FLAGS = -DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG
   LINK_FLAGS = /machine:x64
   OBJECT_DIR = _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = lib\gtest_mainpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_COMPILE_PDB = lib\gtest_main.pdb
   TARGET_FILE = lib\gtest_main.lib
-  TARGET_PDB = bin\gtest_mainpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_PDB = bin\gtest_main.pdb
 
 
 #############################################
@@ -1003,7 +1003,7 @@ build _deps\googletest-build\googletest\gtest_main_autogen: phony _deps\googlete
 # Custom command for _deps\googletest-build\googletest\gtest_autogen\timestamp
 
 build _deps\googletest-build\googletest\gtest_autogen\timestamp _deps\googletest-build\googletest\gtest_autogen\mocs_compilation.cpp | ${cmake_ninja_workdir}_deps\googletest-build\googletest\gtest_autogen\timestamp ${cmake_ninja_workdir}_deps\googletest-build\googletest\gtest_autogen\mocs_compilation.cpp: CUSTOM_COMMAND C$:\Qt\6.7.0\msvc2019_64\.\bin\moc.exe || _deps\googletest-build\googletest\gtest_autogen_timestamp_deps
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googletest && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googletest/CMakeFiles/gtest_autogen.dir/AutogenInfo.json Debug && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googletest/gtest_autogen/timestamp && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_transform_depfile Ninja gccdepfile C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googletest C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googletest/gtest_autogen/deps C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/e5efd1998c3dbd67af8ee581f7d149fbbe4e83dd61fd398845ce6725ae40439c.d"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googletest && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googletest/CMakeFiles/gtest_autogen.dir/AutogenInfo.json Release && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googletest/gtest_autogen/timestamp && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_transform_depfile Ninja gccdepfile C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googletest C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googletest/gtest_autogen/deps C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/e5efd1998c3dbd67af8ee581f7d149fbbe4e83dd61fd398845ce6725ae40439c.d"
   DESC = Automatic MOC for target gtest
   depfile = C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/e5efd1998c3dbd67af8ee581f7d149fbbe4e83dd61fd398845ce6725ae40439c.d
   restat = 1
@@ -1013,7 +1013,7 @@ build _deps\googletest-build\googletest\gtest_autogen\timestamp _deps\googletest
 # Custom command for _deps\googletest-build\googletest\gtest_main_autogen\timestamp
 
 build _deps\googletest-build\googletest\gtest_main_autogen\timestamp _deps\googletest-build\googletest\gtest_main_autogen\mocs_compilation.cpp | ${cmake_ninja_workdir}_deps\googletest-build\googletest\gtest_main_autogen\timestamp ${cmake_ninja_workdir}_deps\googletest-build\googletest\gtest_main_autogen\mocs_compilation.cpp: CUSTOM_COMMAND C$:\Qt\6.7.0\msvc2019_64\.\bin\moc.exe || _deps\googletest-build\googletest\gtest_autogen _deps\googletest-build\googletest\gtest_autogen_timestamp_deps _deps\googletest-build\googletest\gtest_main_autogen_timestamp_deps lib\gtest.lib
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googletest && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googletest/CMakeFiles/gtest_main_autogen.dir/AutogenInfo.json Debug && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googletest/gtest_main_autogen/timestamp && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_transform_depfile Ninja gccdepfile C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googletest C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googletest/gtest_main_autogen/deps C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/8854ab62137570be33af3de697f4ac7dc02978508fe78832ea50525a5c402de5.d"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\alesy\source\repos\209.1-robot-sprzatajacy\out\build\_deps\googletest-build\googletest && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googletest/CMakeFiles/gtest_main_autogen.dir/AutogenInfo.json Release && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googletest/gtest_main_autogen/timestamp && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E cmake_transform_depfile Ninja gccdepfile C:/Users/alesy/source/repos/209.1-robot-sprzatajacy C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-src/googletest C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googletest C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/_deps/googletest-build/googletest/gtest_main_autogen/deps C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/8854ab62137570be33af3de697f4ac7dc02978508fe78832ea50525a5c402de5.d"
   DESC = Automatic MOC for target gtest_main
   depfile = C:/Users/alesy/source/repos/209.1-robot-sprzatajacy/out/build/CMakeFiles/d/8854ab62137570be33af3de697f4ac7dc02978508fe78832ea50525a5c402de5.d
   restat = 1
@@ -1137,7 +1137,7 @@ build C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\Co
 # Clean additional files.
 
 build CMakeFiles\clean.additional: CLEAN_ADDITIONAL
-  CONFIG = Debug
+  CONFIG = Release
 
 
 #############################################

@@ -11,7 +11,7 @@ int main(int argc, char* argv[]) {
         std::vector <int> size = { 20, 20 };
         Robot rob{ pos, size };
         std::cout << rob.get_length() << " " << rob.get_width() << ", " << rob.get_coordinates()[0] << " " << rob.get_coordinates()[1] << std::endl;
-        std::vector <int> room_size = { 120, 40 };
+        std::vector <int> room_size = { 1200, 400 };
         Room room(room_size);
         room.setLength(800);
         room.setWidth(600);

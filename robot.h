@@ -27,7 +27,7 @@ class Robot{
         void set_coordinate_x(int new_x);
         void set_coordinate_y(int new_y);
 
-        std::vector<std::vector<int>> make_path(const Room &room);
+        std::vector<std::vector<int>> make_path(Room &room);
 
 };
 

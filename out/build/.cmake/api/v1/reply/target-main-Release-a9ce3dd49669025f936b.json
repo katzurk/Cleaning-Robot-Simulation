@@ -177,7 +177,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1 -std:c++17"
+					"fragment" : "-DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG -std:c++17"
 				},
 				{
 					"backtrace" : 25,
@@ -201,6 +201,10 @@
 				{
 					"backtrace" : 25,
 					"define" : "QT_GUI_LIB"
+				},
+				{
+					"backtrace" : 25,
+					"define" : "QT_NO_DEBUG"
 				},
 				{
 					"backtrace" : 25,
@@ -300,26 +304,26 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-DQT_QML_DEBUG /MDd /Zi /Ob0 /Od /RTC1",
+				"fragment" : "-DQT_QML_DEBUG /MD /O2 /Ob2 /DNDEBUG",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
+				"fragment" : "/machine:x64 /INCREMENTAL:NO /subsystem:console",
 				"role" : "flags"
 			},
 			{
 				"backtrace" : 8,
-				"fragment" : "C:\\Qt\\6.7.0\\msvc2019_64\\lib\\Qt6Widgetsd.lib",
+				"fragment" : "C:\\Qt\\6.7.0\\msvc2019_64\\lib\\Qt6Widgets.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 13,
-				"fragment" : "C:\\Qt\\6.7.0\\msvc2019_64\\lib\\Qt6Guid.lib",
+				"fragment" : "C:\\Qt\\6.7.0\\msvc2019_64\\lib\\Qt6Gui.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 18,
-				"fragment" : "C:\\Qt\\6.7.0\\msvc2019_64\\lib\\Qt6Cored.lib",
+				"fragment" : "C:\\Qt\\6.7.0\\msvc2019_64\\lib\\Qt6Core.lib",
 				"role" : "libraries"
 			},
 			{
