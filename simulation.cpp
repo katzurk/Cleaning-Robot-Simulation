@@ -25,7 +25,7 @@ void Simulation::setRobot(const Robot& robot) {
         robot.get_length(), robot.get_width(), QPen(Qt::black), QBrush(Qt::red));
 }
 
-void Simulation::generatePath() {
+void Simulation::generatePath(const Room& room) {
     path = robot.make_path(room);
 }
 
@@ -40,17 +40,7 @@ void Simulation::moveRobot() {
     int x = currentPosition[0];
     int y = currentPosition[1];
 
-    /*robotObject->setPos(x, y);*/
-    // ^ miscalculates the positions for some reason
-
-    // Delete the previous robotObject
-    if (robotObject != nullptr) {
-        removeItem(robotObject);
-        delete robotObject;
-        robotObject = nullptr;
-    }
-    // Create a new robotObject with new coordinates
-    robotObject = addRect(x, y, robot.get_length(), robot.get_width(), QPen(Qt::black), QBrush(Qt::red));
+    robotObject->setPos(x, y);
 
     currentPositionId++;
 }

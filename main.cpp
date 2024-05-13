@@ -7,7 +7,7 @@
 
 int main(int argc, char* argv[]) {
     try {
-        std::vector <int> pos = { 50,10 };
+        std::vector <int> pos = { 0,0 };  // nessesary strating pos {0, 0}
         std::vector <int> size = { 20, 20 };
         Robot rob{ pos, size };
         std::cout << rob.get_length() << " " << rob.get_width() << ", " << rob.get_coordinates()[0] << " " << rob.get_coordinates()[1] << std::endl;
@@ -29,19 +29,19 @@ int main(int argc, char* argv[]) {
         }
 
         // path
-       /* std::cout << "----------------path-----------------" << std::endl;
-        std::vector<std::vector<int>> path = rob.make_path(room);
-        for (int i = 0; i < path.size(); i++) {
-            std::cout << "{" << path[i][0]  << ", " << path[i][1] << "}, ";
-        }
-        std::cout << std::endl;*/
+        // std::cout << "----------------path-----------------" << std::endl;
+        // std::vector<std::vector<int>> path = rob.make_path(room);
+        // for (int i = 0; i < path.size(); i++) {
+        //     std::cout << "{" << path[i][0]  << ", " << path[i][1] << "}, ";
+        // }
+        // std::cout << std::endl;
 
         QApplication app(argc, argv);
         Visualizer visualizer;
         visualizer.setGeometry(100, 100, 800, 600);
         visualizer.setRoom(room);
         visualizer.setRobot(rob);
-        visualizer.generatePath();
+        visualizer.generatePath(room);
 
         visualizer.show();
 

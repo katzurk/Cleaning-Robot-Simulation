@@ -1,5 +1,5 @@
 #include "room.h"
-#include "robot.h"
+// #include "robot.h"
 
 Room::Room(std::vector <int> room_size) : room_size(room_size) {
     is_valid();
@@ -117,24 +117,24 @@ void Room::dust() {
     }
 }
 
-void Room::clean(const Robot &robot) {
-    int rx = robot.get_coordinates()[0];
-    int ry = robot.get_coordinates()[1];
-    int width = robot.get_length() - 1;
-    int height = robot.get_width() - 1;
+// void Room::clean(const Robot &robot) {
+//     int rx = robot.get_coordinates()[0];
+//     int ry = robot.get_coordinates()[1];
+//     int width = robot.get_length() - 1;
+//     int height = robot.get_width() - 1;
 
 
-    for (auto it = dirty_places.begin(); it != dirty_places.end();) {
-        const std::vector<int>& dust_coordinate = *it;
-        int x = dust_coordinate[0];
-        int y = dust_coordinate[1];
+//     for (auto it = dirty_places.begin(); it != dirty_places.end();) {
+//         const std::vector<int>& dust_coordinate = *it;
+//         int x = dust_coordinate[0];
+//         int y = dust_coordinate[1];
 
-        // Check if dust coordinate is on furniture
-        if ((x <= rx || x > (rx + width)) && (y <= ry || y > (ry + height))) {
-            dirty_places.erase(it);
-        }
-        else {
-            ++it;
-        }
-    }
-}
+//         // Check if dust coordinate is on furniture
+//         if ((x <= rx || x > (rx + width)) && (y <= ry || y > (ry + height))) {
+//             dirty_places.erase(it);
+//         }
+//         else {
+//             ++it;
+//         }
+//     }
+// }

@@ -20,7 +20,7 @@ public:
     explicit Simulation(QObject* parent = nullptr);
     void setRoom(const Room& room);
     void setRobot(const Robot& robot);
-    void generatePath();
+    void generatePath(const Room& room);
     void moveRobot();
 
 private:
