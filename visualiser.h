@@ -1,5 +1,5 @@
 /*
-   autor: katarzyna Kanicka
+   autor: Katarzyna Kanicka
 */
 #ifndef VISUALIZER_H
 #define VISUALIZER_H

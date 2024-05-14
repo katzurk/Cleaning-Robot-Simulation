@@ -1,5 +1,5 @@
 /*
-   autor: katarzyna Kanicka
+   autor: Katarzyna Kanicka
 */
 #ifndef SIMULATION_H
 #define SIMULATION_H
