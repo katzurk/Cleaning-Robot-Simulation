@@ -3,6 +3,7 @@
 
 Room::Room(std::vector <int> room_size) : room_size(room_size) {
     is_valid();
+    dust();
 }
 
 void Room::is_valid() {
