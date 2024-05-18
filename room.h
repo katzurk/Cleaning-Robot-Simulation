@@ -43,7 +43,7 @@ public:
 
     // method to create dust
     void dust();
-    //void clean(const Robot &robot);
+    void clean(const Robot &robot);
 };
 
 #endif
