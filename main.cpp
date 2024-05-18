@@ -42,8 +42,9 @@ int main(int argc, char* argv[]) {
         visualizer.setRoom(room);
         visualizer.setRobot(rob);
         visualizer.generatePath(room);
+
         visualizer.show();
-        
+
         return app.exec();
 
         /*for (const auto& bp : room.get_busy_places())

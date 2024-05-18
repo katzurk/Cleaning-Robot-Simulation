@@ -11,19 +11,11 @@ void Simulation::setRoom(const Room& room) {
     clear(); // Clear the scene
     // Draw the room
     addRect(0, 0, room.getLength(), room.getWidth(), QPen(Qt::black), QBrush(Qt::white));
-    // Draw the dust
-    for (const auto& dust : room.get_dirty_places())
-    {
-        QGraphicsEllipseItem* point = new QGraphicsEllipseItem(dust[0], dust[1], 1, 1);
-        point->setBrush(QBrush(Qt::black));
-        addItem(point);
-    };
     // Draw the furniture
     for (const auto& furniture : room.getFurniture()) {
         addRect(furniture.get_coordinates()[0], furniture.get_coordinates()[1],
             furniture.getLength(), furniture.getWidth(), QPen(Qt::black), QBrush(Qt::blue));
     }
-    
 }
 
 void Simulation::setRobot(const Robot& robot) {
@@ -33,6 +25,9 @@ void Simulation::setRobot(const Robot& robot) {
         robot.get_length(), robot.get_width(), QPen(Qt::black), QBrush(Qt::red));
 }
 
+void Simulation::generatePath(const Room& room) {
+    path = robot.make_path(room);
+}
 
 void Simulation::moveRobot() {
     if (robotObject == nullptr || path.empty())
@@ -44,29 +39,8 @@ void Simulation::moveRobot() {
     const std::vector<int>& currentPosition = path[currentPositionId];
     int x = currentPosition[0];
     int y = currentPosition[1];
-    int prevPosX;
-    int prevPosY;
-    if (currentPositionId == 0) {
-        prevPosX = 0;
-        prevPosY = 0;
-    }
-    else
-    {
-        std::vector<int>& prevPosition = path[currentPositionId - 1];
-        prevPosX = prevPosition[0];
-        prevPosY = prevPosition[1];
-    }
-    //generatePath
-    QGraphicsLineItem* line = new QGraphicsLineItem(prevPosX+ robot.get_width() / 2, prevPosY+ robot.get_length() / 2, x + robot.get_width() / 2, y + robot.get_length() / 2);
-    line->setPen(QPen(Qt::green, robot.get_width()));
-    line->setZValue(0); // Set path lines to be behind the robot
-    addItem(line);
 
     robotObject->setPos(x, y);
-    robotObject->setZValue(1);
-    currentPositionId++;
-}
 
-void Simulation::generatePath(const Room& room) {
-    path = robot.make_path(room);
+    currentPositionId++;
 }
