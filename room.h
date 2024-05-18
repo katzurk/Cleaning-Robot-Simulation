@@ -10,7 +10,7 @@
 #include <ctime>
 #include <algorithm>
 #include "furniture.h"
- 
+
 class Robot;
 
 class Room {
@@ -43,7 +43,7 @@ public:
 
     // method to create dust
     void dust();
-    void clean(const Robot &robot);
+    // void clean(const Robot &robot);
 };
 
 #endif
