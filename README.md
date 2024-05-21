@@ -19,10 +19,10 @@ symulator for choosing path to clean whole room and visualasing.
     - visualiser can show path and cleaned area
     - visualiser can show robot moving in room (simulation)
 3. adding Dirt and Robot avoidance of obstacles
-    - showing dirt and random placement and size of Furniture
-    - visualiser can show dirt and cleaned area
+    - showing dirt and cleaning algorithm
+    - random placement of furniture and adding cats (randomly moving furniture in room)
     - robot avoiding obstacles
-4. simulate with ranomly placed obstacles
+4. simulate with randomly placed obstacles
 
 
 ## Authors
@@ -38,7 +38,7 @@ points: 1.1(Robot), 2.1(algorithm), 3.3(avoiding obstacles)
 points: 1.2(Room, Furniture), 2.2 (Showing path), 3.2(dirt and cleaning algorithm)
 
 3. Katarzyna Kanicka
-points: 1.3(Visualiser), 2.3 (Simulation), 3.1(showing dirt and cleaning)
+points: 1.3(Visualiser), 2.3 (Simulation), 3.1(cats - moving_figures)
 
 ## Architecture
 
