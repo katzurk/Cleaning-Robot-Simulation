@@ -81,29 +81,40 @@ void Robot::set_coordinate_y(int new_y){
 
 
 std::vector<std::vector<int>> Robot::make_path(const Room &room){
+    int x_direction = 1;
+    bool is_last_row = false;
     std::vector<std::vector<int>> path;
+    path.push_back(coordinates);
 
-    while (coordinates[1] < room.getWidth()){
-        while(coordinates[0] < room.getLength() - size[0]){
+    while (coordinates[1] + size[1] <= room.getWidth()) {
+        while((coordinates[0] < room.getLength() - size[0] and x_direction > 0) or (coordinates[0] > 0 and x_direction < 0)){
+            if(room.getLength() - (coordinates[0] + size[0]) < size[0] and x_direction > 0){
+                set_coordinate_x(room.getLength() - size[0] * x_direction);
+            }
+            else if(coordinates[0] < size[0] and x_direction < 0){
+                set_coordinate_x(0);
+            }
+            else {
+                set_coordinate_x(coordinates[0] + size[0]* x_direction);
+            }
             path.push_back(coordinates);
-            set_coordinate_x(coordinates[0] + size[0]);
 
         }
-        path.push_back(coordinates);
-        set_coordinate_y(coordinates[1] + size[1]);
-
-        if(coordinates[1] > room.getWidth()){
+        x_direction *= -1;
+        if(is_last_row){
             break;
         }
 
-        while(coordinates[0] > 0){
-            path.push_back(coordinates);
-            set_coordinate_x(coordinates[0] - size[0]);
+        if(room.getWidth() - (coordinates[1] + size[1]) < size[1]){
+            set_coordinate_y(room.getWidth() - size[1]);
+            is_last_row = true;
         }
-        path.push_back(coordinates);
-        set_coordinate_y(coordinates[1] + size[1]);
+        else {
+            set_coordinate_y(coordinates[1] + size[1]);
+        }
 
+
+        path.push_back(coordinates);
     }
-    // room.clean(*this);
     return path;
 }
