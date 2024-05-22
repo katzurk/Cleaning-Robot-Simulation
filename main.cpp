@@ -13,12 +13,12 @@ int main(int argc, char* argv[]) {
         std::cout << rob.get_length() << " " << rob.get_width() << ", " << rob.get_coordinates()[0] << " " << rob.get_coordinates()[1] << std::endl;
         std::vector <int> room_size = { 1200, 400 };
         Room room(room_size);
-        room.setLength(800);
-        room.setWidth(600);
-        Furniture furniture1("Chair", { 50, 50 }, { 100, 100 });
+        room.setLength(190);
+        room.setWidth(210);
+        Furniture furniture1("Chair", { 50, 50 }, { 50, 50 });
         room.addFurniture(furniture1);
-        Furniture furniture2("Table", { 70, 100 }, { 100, 200 });
-        room.addFurniture(furniture2);
+        // Furniture furniture2("Table", { 70, 100 }, { 100, 200 });
+        // room.addFurniture(furniture2);
         room.dust();
 
         std::cout << "room's length: " << room.getLength() << std::endl;

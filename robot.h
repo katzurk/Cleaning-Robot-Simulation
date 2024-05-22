@@ -27,6 +27,7 @@ class Robot{
         void set_coordinate_x(int new_x);
         void set_coordinate_y(int new_y);
 
+        void object_detour(const Room &room, std::vector<int> &coordinates, std::vector<std::vector<int>> &path, int &x_direction);
         std::vector<std::vector<int>> make_path(const Room &room);
 
 };

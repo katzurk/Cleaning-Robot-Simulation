@@ -34,7 +34,7 @@ enable_testing() #to  discover tests in test explorer
 
 add_executable(main main.cpp robot.cpp room.cpp furniture.cpp visualiser.cpp simulation.cpp) # add this executable
 
-add_executable(robot_test robot.cpp robot_test.cc) # add this executable
+add_executable(robot_test robot.cpp room.cpp robot_test.cc) # add this executable
 add_test(robot_test robot_test)
 target_link_libraries(robot_test GTest::gtest_main) # link google test to this executable
 

@@ -24,7 +24,7 @@ void Room::is_valid() {
     }
 }
 
-bool Room::is_possible_to_add_object(const std::vector<int>& coordinates)
+bool Room::is_place_free_for_object(const std::vector<int>& coordinates) const
 {
     if (coordinates[0] < 0 || coordinates[0] > room_size[0] || coordinates[1] < 0 || coordinates[1] > room_size[1]) {
         return false;
@@ -57,7 +57,7 @@ void Room::setWidth(int width) {
 
 
 void Room::addFurniture(const Furniture& furniture) {
-    if (is_possible_to_add_object(furniture.get_coordinates()) || taken_places.size() == 0)
+    if (is_place_free_for_object(furniture.get_coordinates()) || taken_places.size() == 0)
     {
         this->furniture.push_back(furniture);
         for (int i = 0; i <= furniture.getLength() - 1; i++)

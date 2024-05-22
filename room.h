@@ -20,10 +20,10 @@ private:
     std::vector<std::vector<int>> taken_places;
     std::vector<std::vector<int>> dirty_places;
     void is_valid();
-    bool is_possible_to_add_object(const std::vector<int>& coordinates);
 
 
 public:
+    bool is_place_free_for_object(const std::vector<int>& coordinates) const;
     Room(std::vector <int> room_size = { 1, 1 });
 
     // Getters
