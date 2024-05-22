@@ -13,7 +13,7 @@ void Simulation::setRoom(const Room& room) {
     // Draw the room
     addRect(0, 0, room.getLength(), room.getWidth(), QPen(Qt::black), QBrush(Qt::white));
     // Draw the dust
-    for (const auto& dust : room.get_dirty_places())
+    for (const auto& dust : room.getDirtyPlaces())
     {
         QGraphicsEllipseItem* point = new QGraphicsEllipseItem(dust[0], dust[1], 1, 1);
         point->setBrush(QBrush(Qt::black));

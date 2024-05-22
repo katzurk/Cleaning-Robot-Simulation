@@ -30,8 +30,8 @@ public:
     int getLength() const { return room_size[0]; }
     int getWidth() const { return room_size[1]; }
     const std::vector<Furniture>& getFurniture() const { return furniture; }
-    std::vector<std::vector<int>> get_taken_places() const { return taken_places; }
-    std::vector<std::vector<int>> get_dirty_places() const { return dirty_places; }
+    std::vector<std::vector<int>> getTakenPlaces() const { return taken_places; }
+    std::vector<std::vector<int>> getDirtyPlaces() const { return dirty_places; }
 
     // Setters
     void setLength(int length);
