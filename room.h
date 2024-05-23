@@ -23,16 +23,17 @@ private:
 
 
 public:
+    bool is_place_free_for_object(const std::vector<int>& coordinates, const std::vector<int>& size) const;
     bool is_place_in_room(const std::vector<int>& coordinates) const ;
-    bool is_place_free_for_object(const std::vector<int>& coordinates) const;
+    // bool is_place_free_for_object(const std::vector<int>& coordinates) const;
     Room(std::vector <int> room_size = { 1, 1 });
 
     // Getters
     int getLength() const { return room_size[0]; }
     int getWidth() const { return room_size[1]; }
     const std::vector<Furniture>& getFurniture() const { return furniture; }
-    std::vector<std::vector<int>> get_taken_places() const { return taken_places; }
-    std::vector<std::vector<int>> get_dirty_places() const { return dirty_places; }
+    std::vector<std::vector<int>> getTakenPlaces() const { return taken_places; }
+    std::vector<std::vector<int>> getDirtyPlaces() const { return dirty_places; }
 
     // Setters
     void setLength(int length);
@@ -44,7 +45,21 @@ public:
 
     // method to create dust
     void dust();
-    // void clean(const Robot &robot);
+    void cleanDirty(const std::vector<int> dust) {
+        for (auto dirty = getDirtyPlaces().begin(); dirty != getDirtyPlaces().end();)
+        {
+            const std::vector<int>& dust_coordinate = *dirty;
+            int x = dust_coordinate[0];
+            int y = dust_coordinate[1];
+            if (dust[0] == x && dust[1] == y) {
+                dirty_places.erase(dirty);
+            }
+            else {
+                ++dirty;
+            }
+        }
+
+    };
 };
 
 #endif

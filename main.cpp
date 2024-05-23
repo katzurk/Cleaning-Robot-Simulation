@@ -16,8 +16,9 @@ int main(int argc, char* argv[]) {
         room.setLength(190);
         room.setWidth(210);
         Furniture furniture1("Chair mid", { 50, 50 }, { 90, 30 });
-        // room.addFurniture(furniture1);
-        Furniture furnitureE("Chair to E wall", { 100, 100 }, { 140, 50 });
+        room.addFurniture(furniture1);
+        // Furniture furnitureE("Chair to E wall", { 100, 100 }, { 140, 50 });
+        Furniture furnitureE("Chair to E wall", { 50, 80 }, { 140, 50 });
         room.addFurniture(furnitureE);
         Furniture furnitureN("Chair to N wall", { 37, 37 }, { 150, 0 });
         room.addFurniture(furnitureN);

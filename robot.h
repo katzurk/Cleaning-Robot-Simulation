@@ -8,8 +8,9 @@
 #include <vector>
 #include <string>
 #include "room.h"
+#include "room_info.h"
 
-class Robot{
+class Robot : virtual public Room_info{
     private:
         std::vector<int> size;
         std::vector <int> coordinates;

@@ -99,7 +99,7 @@ std::vector<std::vector<int>> Robot::make_path(const Room &room){
             }
 
             std::cout << coordinates[0] << ", " << coordinates[1] << std::endl;
-            if(not room.is_place_free_for_object(coordinates)){
+            if(not room.is_place_free_for_object(coordinates, size)){
                 object_detour(room, coordinates, path, x_direction);
             }
             else{
@@ -120,7 +120,7 @@ std::vector<std::vector<int>> Robot::make_path(const Room &room){
         else {
             set_coordinate_y(coordinates[1] + size[1]);
         }
-        if(not room.is_place_free_for_object(coordinates)){
+        if(not room.is_place_free_for_object(coordinates, size)){
             object_detour(room, coordinates, path, x_direction);
         }
         else{
@@ -136,7 +136,7 @@ std::vector<std::vector<int>> Robot::make_path(const Room &room){
 void Robot::detour_object_below_next_to_wall(const Room &room, std::vector<int> &coordinates, std::vector<std::vector<int>> &path, int &x_direction, int &begining_y){
     for (int i = 1; i < size[0]; i++){
         std::cout << "------------up correction (never down detour): " << coordinates[0] << ", " << coordinates[1] << std::endl;
-        if(room.is_place_free_for_object(coordinates)){
+        if(room.is_place_free_for_object(coordinates, size)){
             break;
         }
         set_coordinate_y(coordinates[1] - 1);
@@ -145,7 +145,7 @@ void Robot::detour_object_below_next_to_wall(const Room &room, std::vector<int> 
     std::cout << "----corrected to left/right CORDS (never down detour): " << coordinates[0] << ", " << coordinates[1] << std::endl;
 
     std::vector<int> possible_cords_down = {coordinates[0], coordinates[1] + 1};
-    while(not room.is_place_free_for_object(possible_cords_down)){
+    while(not room.is_place_free_for_object(possible_cords_down, size)){
         if(room.getLength() - (coordinates[0] + size[0]) < size[0] and x_direction > 0){
             set_coordinate_x(room.getLength() - size[0] * x_direction);
             x_direction *= -1;
@@ -156,7 +156,7 @@ void Robot::detour_object_below_next_to_wall(const Room &room, std::vector<int> 
         }
         else {
             set_coordinate_x(coordinates[0] + x_direction);
-            if(not room.is_place_free_for_object(coordinates)){
+            if(not room.is_place_free_for_object(coordinates, size)){
                 set_coordinate_x(coordinates[0] - x_direction);
                 south_object_detour_up(room, coordinates, path, x_direction);
                 possible_cords_down[1] = coordinates[1] + 1;
@@ -168,16 +168,16 @@ void Robot::detour_object_below_next_to_wall(const Room &room, std::vector<int> 
     }
     path.pop_back();
 
-    for (int i = 1; i < size[0]; i++){
-        // std::cout << "------------left/right correction possibility: " << possible_cords_down[0] << ", " << possible_cords_down[1] << std::endl;
-        possible_cords_down[0] -= x_direction;
-        if(not room.is_place_free_for_object(possible_cords_down)){
-            break;
-        }
-    }
-    possible_cords_down[0] += x_direction;
-    set_coordinate_x(possible_cords_down[0]);
-    path.push_back(coordinates);
+    // for (int i = 1; i < size[0]; i++){
+    //     // std::cout << "------------left/right correction possibility: " << possible_cords_down[0] << ", " << possible_cords_down[1] << std::endl;
+    //     possible_cords_down[0] -= x_direction;
+    //     if(not room.is_place_free_for_object(possible_cords_down, size)){
+    //         break;
+    //     }
+    // }
+    // possible_cords_down[0] += x_direction;
+    // set_coordinate_x(possible_cords_down[0]);
+    // path.push_back(coordinates);
     std::cout << "----corrected to go down CORDS (never down detour): " << coordinates[0] << ", " << coordinates[1] << std::endl;
 
     // go down
@@ -198,13 +198,13 @@ void Robot::detour_object_below_next_to_wall(const Room &room, std::vector<int> 
 void Robot::south_object_detour_up(const Room &room, std::vector<int> &coordinates, std::vector<std::vector<int>> &path, int &x_direction){
     std::vector<int> possible_cords = {coordinates[0] + x_direction, coordinates[1]};
 
-    while(not room.is_place_free_for_object(possible_cords)){
+    while(not room.is_place_free_for_object(possible_cords, size)){
         set_coordinate_y(coordinates[1] + 1);
         possible_cords[1] += 1;
 
         std::cout << "--------going up SOuTH DETOUR possible: " << possible_cords[0] << ", " << possible_cords[1] << std::endl;
         std::cout << "--------going up SOuTH DETOUR: " << coordinates[0] << ", " << coordinates[1] << std::endl;
-        std::cout << "--------going up is not free: " << not room.is_place_free_for_object(possible_cords)<< std::endl;
+        std::cout << "--------going up is not free: " << not room.is_place_free_for_object(possible_cords, size)<< std::endl;
         path.push_back(coordinates);
         if(coordinates[1] >= room.getLength()){
             std::cout << "out of room" << std::endl;
@@ -216,7 +216,7 @@ void Robot::south_object_detour_up(const Room &room, std::vector<int> &coordinat
     for (int i = 1; i < size[1]; i++){
         std::cout << "------------up correction possibility SOuTH DETOUR: " << possible_cords[0] << ", " << possible_cords[1] << std::endl;
         possible_cords[1] += 1;
-        if(not room.is_place_free_for_object(possible_cords)){
+        if(not room.is_place_free_for_object(possible_cords, size)){
             break;
         }
         if(not room.is_place_in_room(possible_cords)){
@@ -249,7 +249,7 @@ void Robot::object_detour(const Room &room, std::vector<int> &coordinates, std::
             set_coordinate_x(coordinates[0] - x_direction);
         }
 
-        if(room.is_place_free_for_object(coordinates)){
+        if(room.is_place_free_for_object(coordinates, size)){
             break;
         }
 
@@ -271,7 +271,7 @@ void Robot::object_detour(const Room &room, std::vector<int> &coordinates, std::
     // go up
     while (coordinates[1] > begining_y) {
         set_coordinate_y(coordinates[1] - 1);
-        if(not room.is_place_free_for_object(coordinates)){
+        if(not room.is_place_free_for_object(coordinates, size)){
             set_coordinate_y(coordinates[1] + 1);
             object_detour_horizontal(room, coordinates, path, x_direction, begining_y);
         }
@@ -291,7 +291,7 @@ void Robot::object_detour_down(const Room &room, std::vector<int> &coordinates, 
         set_coordinate_y(coordinates[1] + 1);
         possible_cords[1] += 1;
         std::cout << "--------going down: " << coordinates[0] << ", " << coordinates[1] << std::endl;
-        if(not room.is_place_free_for_object(coordinates)){
+        if(not room.is_place_free_for_object(coordinates, size)){
             set_coordinate_y(coordinates[1] - 1);
             std::cout << "NEW DETOUR: " << coordinates[0] << ", " << coordinates[1] << std::endl;
             path.pop_back();
@@ -299,29 +299,29 @@ void Robot::object_detour_down(const Room &room, std::vector<int> &coordinates, 
             return;
         }
         path.push_back(coordinates);
-    } while(not room.is_place_free_for_object(possible_cords));
+    } while(not room.is_place_free_for_object(possible_cords, size));
     path.pop_back();
 
-    for (int i = 1; i < size[1]; i++){
-        std::cout << "------------down correction possibility: " << possible_cords[0] << ", " << possible_cords[1] << std::endl;
-        possible_cords[1] -= 1;
-        if(not room.is_place_free_for_object(possible_cords)){
-            break;
-        }
-        if(not room.is_place_in_room(possible_cords)){
-            break;
-        }
-    }
-    possible_cords[1] += 1;
-    set_coordinate_y(possible_cords[1]);
-    path.push_back(coordinates);
+    // for (int i = 1; i < size[1]; i++){
+    //     std::cout << "------------down correction possibility: " << possible_cords[0] << ", " << possible_cords[1] << std::endl;
+    //     possible_cords[1] -= 1;
+    //     if(not room.is_place_free_for_object(possible_cords), size){
+    //         break;
+    //     }
+    //     if(not room.is_place_in_room(possible_cords)){
+    //         break;
+    //     }
+    // }
+    // possible_cords[1] += 1;
+    // set_coordinate_y(possible_cords[1]);
+    // path.push_back(coordinates);
     std::cout << "----corrected to go left/right NEW CORDS: " << coordinates[0] << ", " << coordinates[1] << std::endl;
     return;
 }
 
 void Robot::object_detour_horizontal(const Room &room, std::vector<int> &coordinates, std::vector<std::vector<int>> &path, int &x_direction, int &begining_y){
     std::vector<int> possible_cords_up = {coordinates[0], coordinates[1] - 1};
-    while(not room.is_place_free_for_object(possible_cords_up)){
+    while(not room.is_place_free_for_object(possible_cords_up, size)){
         if(room.getLength() - coordinates[0] <= size[0] and x_direction > 0){
             std::cout << "--------------------------------HERE" << std::endl;
             set_coordinate_x(room.getLength() - size[0] * x_direction);
@@ -339,7 +339,7 @@ void Robot::object_detour_horizontal(const Room &room, std::vector<int> &coordin
         }
         else {
             set_coordinate_x(coordinates[0] + x_direction);
-            if(not room.is_place_free_for_object(coordinates)){
+            if(not room.is_place_free_for_object(coordinates, size)){
                 set_coordinate_x(coordinates[0] - x_direction);
                 object_detour_down(room, coordinates, path, x_direction, begining_y);
                 possible_cords_up[1] = coordinates[1] - 1;
@@ -354,15 +354,15 @@ void Robot::object_detour_horizontal(const Room &room, std::vector<int> &coordin
     }
     // path.pop_back();
 
-    for (int i = 1; i < size[0]; i++){
-        // std::cout << "------------left/right correction possibility: " << possible_cords_up[0] << ", " << possible_cords_up[1] << std::endl;
-        possible_cords_up[0] -= x_direction;
-        if(not room.is_place_free_for_object(possible_cords_up)){
-            break;
-        }
-    }
-    possible_cords_up[0] += x_direction;
-    set_coordinate_x(possible_cords_up[0]);
-    path.push_back(coordinates);
+    // for (int i = 1; i < size[0]; i++){
+    //     // std::cout << "------------left/right correction possibility: " << possible_cords_up[0] << ", " << possible_cords_up[1] << std::endl;
+    //     possible_cords_up[0] -= x_direction;
+    //     if(not room.is_place_free_for_object(possible_cords_up, size)){
+    //         break;
+    //     }
+    // }
+    // possible_cords_up[0] += x_direction;
+    // set_coordinate_x(possible_cords_up[0]);
+    // path.push_back(coordinates);
     std::cout << "----corrected to go up NEW CORDS: " << coordinates[0] << ", " << coordinates[1] << std::endl;
 }
