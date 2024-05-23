@@ -20,7 +20,7 @@ private:
     std::vector<std::vector<int>> taken_places;
     std::vector<std::vector<int>> dirty_places;
     void is_valid();
-    bool is_possible_to_add_object(const std::vector<int>& coordinates);
+    bool is_possible_to_add_object(const std::vector<int>& coordinates, const std::vector<int>& size);
 
 
 public:
@@ -43,7 +43,21 @@ public:
 
     // method to create dust
     void dust();
-    // void clean(const Robot &robot);
+    void cleanDirty(const std::vector<int> dust) {
+        for (auto dirty = getDirtyPlaces().begin(); dirty != getDirtyPlaces().end();)
+        {
+            const std::vector<int>& dust_coordinate = *dirty;
+            int x = dust_coordinate[0];
+            int y = dust_coordinate[1];
+            if (dust[0] == x && dust[1] == y) {
+                dirty_places.erase(dirty);
+            }
+            else {
+                ++dirty;
+            }
+        }
+
+    };
 };
 
 #endif

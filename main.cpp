@@ -19,6 +19,8 @@ int main(int argc, char* argv[]) {
         room.addFurniture(furniture1);
         Furniture furniture2("Table", { 70, 100 }, { 100, 200 });
         room.addFurniture(furniture2);
+        //Furniture furniture3("Table2", { 70, 100 }, { 150, 150 });
+        //room.addFurniture(furniture3);
         room.dust();
 
         std::cout << "room's length: " << room.getLength() << std::endl;

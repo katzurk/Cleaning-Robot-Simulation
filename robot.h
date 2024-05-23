@@ -28,7 +28,6 @@ class Robot{
         void set_coordinate_y(int new_y);
 
         std::vector<std::vector<int>> make_path(const Room &room);
-
 };
 
 #endif

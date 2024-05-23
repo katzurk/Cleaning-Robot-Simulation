@@ -23,16 +23,22 @@ void Room::is_valid() {
     }
 }
 
-bool Room::is_possible_to_add_object(const std::vector<int>& coordinates)
+bool Room::is_possible_to_add_object(const std::vector<int>& coordinates, const std::vector<int>& size)
 {
-    if (coordinates[0] < 0 || coordinates[0] > room_size[0] || coordinates[1] < 0 || coordinates[1] > room_size[1]) {
-        return false;
-    }
-    for (size_t i = 0; i < taken_places.size(); i++) {
-        if (taken_places[i] == coordinates) {
-            return false;
-        }
-    }
+    for (int i = 0; i < size[0]; i++)
+    {
+        for (int j = 0; j < size[1]; j++) {
+            if (coordinates[0] + i < 0 || coordinates[0] + i > room_size[0] || coordinates[1] + j < 0 || coordinates[1] + j > room_size[1]) {
+                return false;
+            }
+            const std::vector<int> current_coordinate = { coordinates[0] + i, coordinates[1] + j };
+            for (size_t k = 0; k < taken_places.size(); k++) {
+                if (taken_places[k] == current_coordinate) {
+                    return false;
+                }
+            }
+        };
+    };
     return true;
 }
 
@@ -56,7 +62,7 @@ void Room::setWidth(int width) {
 
 
 void Room::addFurniture(const Furniture& furniture) {
-    if (is_possible_to_add_object(furniture.get_coordinates()) || taken_places.size() == 0)
+    if (is_possible_to_add_object(furniture.get_coordinates(), { furniture.getLength(), furniture.getWidth()}) || taken_places.size() == 0)
     {
         this->furniture.push_back(furniture);
         for (int i = 0; i <= furniture.getLength() - 1; i++)
@@ -69,7 +75,7 @@ void Room::addFurniture(const Furniture& furniture) {
     else
     {
         std::stringstream exeption_str;
-        exeption_str << "Impossible to place this object ";
+        exeption_str << "Impossible to place this object " << furniture.getName();
         throw std::invalid_argument(exeption_str.str());
     }
 }
@@ -117,24 +123,3 @@ void Room::dust() {
     }
 }
 
-// void Room::clean(const Robot &robot) {
-//     int rx = robot.get_coordinates()[0];
-//     int ry = robot.get_coordinates()[1];
-//     int width = robot.get_length() - 1;
-//     int height = robot.get_width() - 1;
-
-
-//     for (auto it = dirty_places.begin(); it != dirty_places.end();) {
-//         const std::vector<int>& dust_coordinate = *it;
-//         int x = dust_coordinate[0];
-//         int y = dust_coordinate[1];
-
-//         // Check if dust coordinate is on furniture
-//         if ((x <= rx || x > (rx + width)) && (y <= ry || y > (ry + height))) {
-//             dirty_places.erase(it);
-//         }
-//         else {
-//             ++it;
-//         }
-//     }
-// }
