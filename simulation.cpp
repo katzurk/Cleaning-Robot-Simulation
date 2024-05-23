@@ -3,6 +3,7 @@
 Simulation::Simulation(QObject* parent) : QGraphicsScene(parent), robotObject(nullptr), currentPositionId(0) {
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &Simulation::moveRobot);
+    connect(timer, &QTimer::timeout, this, &Simulation::cleanRoom);
     timer->start(100);
 }
 
@@ -16,6 +17,7 @@ void Simulation::setRoom(const Room& room) {
     {
         QGraphicsEllipseItem* point = new QGraphicsEllipseItem(dust[0], dust[1], 1, 1);
         point->setBrush(QBrush(Qt::black));
+        point->setZValue(1);
         addItem(point);
     };
     // Draw the furniture
@@ -69,4 +71,17 @@ void Simulation::moveRobot() {
 
 void Simulation::generatePath(const Room& room) {
     path = robot.make_path(room);
+}
+
+void Simulation::cleanRoom() {
+    if (!robotObject)
+        return;
+
+    QList<QGraphicsItem*> collidingItems = robotObject->collidingItems();
+    for (QGraphicsItem* item : collidingItems) {
+        if (QGraphicsEllipseItem* ellipse = dynamic_cast<QGraphicsEllipseItem*>(item)) {
+            removeItem(ellipse);
+            delete ellipse;
+        }
+    }
 }
