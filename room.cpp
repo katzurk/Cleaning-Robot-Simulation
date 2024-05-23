@@ -3,7 +3,6 @@
 
 Room::Room(std::vector <int> room_size) : room_size(room_size) {
     is_valid();
-    dust();
 }
 
 void Room::is_valid() {
@@ -24,11 +23,18 @@ void Room::is_valid() {
     }
 }
 
-bool Room::is_place_free_for_object(const std::vector<int>& coordinates) const
-{
+bool Room::is_place_in_room(const std::vector<int>& coordinates) const {
     if (coordinates[0] < 0 || coordinates[0] > room_size[0] || coordinates[1] < 0 || coordinates[1] > room_size[1]) {
         return false;
     }
+    return true;
+}
+
+bool Room::is_place_free_for_object(const std::vector<int>& coordinates) const {
+    if(!is_place_in_room(coordinates)) {
+        return false;
+    }
+
     for (size_t i = 0; i < taken_places.size(); i++) {
         if (taken_places[i] == coordinates) {
             return false;
