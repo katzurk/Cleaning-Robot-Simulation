@@ -366,3 +366,4 @@ void Robot::object_detour_horizontal(const Room &room, std::vector<int> &coordin
     // path.push_back(coordinates);
     std::cout << "----corrected to go up NEW CORDS: " << coordinates[0] << ", " << coordinates[1] << std::endl;
 }
+

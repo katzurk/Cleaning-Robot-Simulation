@@ -23,27 +23,16 @@ void Room::is_valid() {
     }
 }
 
-bool Room::is_place_in_room(const std::vector<int>& coordinates) const {
+bool Room::is_possible_to_add_object(const std::vector<int>& coordinates)
+{
     if (coordinates[0] < 0 || coordinates[0] > room_size[0] || coordinates[1] < 0 || coordinates[1] > room_size[1]) {
         return false;
     }
-    return true;
-}
-
-bool Room::is_place_free_for_object(const std::vector<int>& coordinates, const std::vector<int>& size) const {
-
-    for (int i = 0; i < size[0]; i++)
-    {
-        for (int j = 0; j < size[1]; j++) {
-            is_place_in_room(coordinates);
-            const std::vector<int> current_coordinate = { coordinates[0] + i, coordinates[1] + j };
-            for (size_t k = 0; k < taken_places.size(); k++) {
-                if (taken_places[k] == current_coordinate) {
-                    return false;
-                }
-            }
-        };
-    };
+    for (size_t i = 0; i < taken_places.size(); i++) {
+        if (taken_places[i] == coordinates) {
+            return false;
+        }
+    }
     return true;
 }
 
@@ -67,7 +56,7 @@ void Room::setWidth(int width) {
 
 
 void Room::addFurniture(const Furniture& furniture) {
-    if (is_place_free_for_object(furniture.get_coordinates(), { furniture.getLength(), furniture.getWidth()}) || taken_places.size() == 0)
+    if (is_place_free_for_object(furniture.get_coordinates(), { furniture.getLength(), furniture.getWidth()}, { furniture.getLength(), furniture.getWidth()}) || taken_places.size() == 0)
     {
         this->furniture.push_back(furniture);
         for (int i = 0; i <= furniture.getLength() - 1; i++)
@@ -80,7 +69,7 @@ void Room::addFurniture(const Furniture& furniture) {
     else
     {
         std::stringstream exeption_str;
-        exeption_str << "Impossible to place this object " << furniture.getName();
+        exeption_str << "Impossible to place this object " << furniture.getName() << furniture.getName();
         throw std::invalid_argument(exeption_str.str());
     }
 }
