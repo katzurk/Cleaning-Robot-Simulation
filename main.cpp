@@ -15,16 +15,18 @@ int main(int argc, char* argv[]) {
         Room room(room_size);
         room.setLength(190);
         room.setWidth(210);
-        Furniture furniture1("Chair mid", { 50, 50 }, { 40, 40 });   //TODO: y %robot.size[1] != 0 how to handle tops?
+        // Furniture furniture1("Chair mid", { 50, 50 }, { 30, 30 });   //TODO: y %robot.size[1] != 0 how to handle tops?
+        Furniture furniture1("Chair mid", { 50, 50 }, { 40, 40 });
         room.addFurniture(furniture1);
-        Furniture furnitureE("Chair to E wall", { 50, 80 }, { 140, 80 });
-        // room.addFurniture(furnitureE);
+        Furniture furnitureE("Chair to E wall", { 50, 80 }, { 140, 70 });
+        room.addFurniture(furnitureE);
         Furniture furnitureN("Chair to N wall", { 30, 30 }, { 145, 0 });
-        // room.addFurniture(furnitureN);
+        room.addFurniture(furnitureN);
         Furniture furnitureW("Chair to W wall", { 37, 37 }, { 0, 50 });
-        // room.addFurniture(furnitureW);
-        Furniture furnitureS("Chair to S wall", { 50, 50 }, { 50, 180 });
-        // room.addFurniture(furnitureS);  //to investigate
+        room.addFurniture(furnitureW);
+        // Furniture furnitureS("Chair to S wall", { 50, 50 }, { 50, 180 });
+        Furniture furnitureS("Chair to S wall", { 50, 50 }, { 50, 155 });
+        room.addFurniture(furnitureS);  //to investigate
 
         // Furniture furniture2("Table", { 70, 100 }, { 100, 200 });
         // room.addFurniture(furniture2);
