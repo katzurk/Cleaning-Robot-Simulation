@@ -22,11 +22,8 @@ void Room::is_valid() {
         throw std::invalid_argument(exeption_str.str());
     }
 }
-
-bool Room::is_possible_to_add_object(const std::vector<int>& coordinates, const std::vector<int>& size)
-{
-    for (int i = 0; i < size[0]; i++)
-    {
+bool Room::is_place_free_for_object(const std::vector<int>& coordinates, const std::vector<int>& size) const{
+    for (int i = 0; i < size[0]; i++) {
         for (int j = 0; j < size[1]; j++) {
             if (coordinates[0] + i < 0 || coordinates[0] + i > room_size[0] || coordinates[1] + j < 0 || coordinates[1] + j > room_size[1]) {
                 return false;
@@ -41,6 +38,7 @@ bool Room::is_possible_to_add_object(const std::vector<int>& coordinates, const 
     };
     return true;
 }
+
 
 void Room::setLength(int length) {
     if (length > 0) {
@@ -62,7 +60,7 @@ void Room::setWidth(int width) {
 
 
 void Room::addFurniture(const Furniture& furniture) {
-    if (is_possible_to_add_object(furniture.get_coordinates(), { furniture.getLength(), furniture.getWidth()}) || taken_places.size() == 0)
+    if (is_place_free_for_object(furniture.get_coordinates(), { furniture.getLength(), furniture.getWidth()}) || taken_places.size() == 0)
     {
         this->furniture.push_back(furniture);
         for (int i = 0; i <= furniture.getLength() - 1; i++)
@@ -75,7 +73,7 @@ void Room::addFurniture(const Furniture& furniture) {
     else
     {
         std::stringstream exeption_str;
-        exeption_str << "Impossible to place this object " << furniture.getName();
+        exeption_str << "Impossible to place this object " << furniture.getName() << furniture.getName();
         throw std::invalid_argument(exeption_str.str());
     }
 }

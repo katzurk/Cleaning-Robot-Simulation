@@ -9,21 +9,24 @@
 #include <cstdlib>
 #include <ctime>
 #include <algorithm>
+#include "room_info.h"
 #include "furniture.h"
 
-class Robot;
+// class Robot;
 
-class Room {
+class Room : virtual public Room_info {
 private:
     std::vector<int> room_size;
     std::vector<Furniture> furniture;
     std::vector<std::vector<int>> taken_places;
     std::vector<std::vector<int>> dirty_places;
     void is_valid();
-    bool is_possible_to_add_object(const std::vector<int>& coordinates, const std::vector<int>& size);
 
 
 public:
+    bool is_place_free_for_object(const std::vector<int>& coordinates, const std::vector<int>& size) const;
+    // bool is_place_in_room(const std::vector<int>& coordinates) const ;
+    // bool is_place_free_for_object(const std::vector<int>& coordinates) const;
     Room(std::vector <int> room_size = { 1, 1 });
 
     // Getters

@@ -13,14 +13,21 @@ int main(int argc, char* argv[]) {
         std::cout << rob.get_length() << " " << rob.get_width() << ", " << rob.get_coordinates()[0] << " " << rob.get_coordinates()[1] << std::endl;
         std::vector <int> room_size = { 1200, 400 };
         Room room(room_size);
-        room.setLength(800);
-        room.setWidth(600);
-        Furniture furniture1("Chair", { 50, 50 }, { 100, 100 });
+        room.setLength(190);
+        room.setWidth(210);
+        Furniture furniture1("Chair mid", { 50, 50 }, { 40, 40 });   //TODO: y %robot.size[1] != 0 how to handle tops?
         room.addFurniture(furniture1);
-        Furniture furniture2("Table", { 70, 100 }, { 100, 200 });
-        room.addFurniture(furniture2);
-        //Furniture furniture3("Table2", { 70, 100 }, { 150, 150 });
-        //room.addFurniture(furniture3);
+        Furniture furnitureE("Chair to E wall", { 50, 80 }, { 140, 80 });
+        // room.addFurniture(furnitureE);
+        Furniture furnitureN("Chair to N wall", { 30, 30 }, { 145, 0 });
+        // room.addFurniture(furnitureN);
+        Furniture furnitureW("Chair to W wall", { 37, 37 }, { 0, 50 });
+        // room.addFurniture(furnitureW);
+        Furniture furnitureS("Chair to S wall", { 50, 50 }, { 50, 180 });
+        // room.addFurniture(furnitureS);  //to investigate
+
+        // Furniture furniture2("Table", { 70, 100 }, { 100, 200 });
+        // room.addFurniture(furniture2);
         room.dust();
 
         std::cout << "room's length: " << room.getLength() << std::endl;

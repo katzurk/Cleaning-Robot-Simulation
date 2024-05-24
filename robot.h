@@ -8,6 +8,7 @@
 #include <vector>
 #include <string>
 #include "room.h"
+// #include "room_info.h"
 
 class Robot{
     private:
@@ -27,7 +28,14 @@ class Robot{
         void set_coordinate_x(int new_x);
         void set_coordinate_y(int new_y);
 
-        std::vector<std::vector<int>> make_path(const Room &room);
+        std::vector<std::vector<int>> make_path(const Room_info &room_info);
+        void detour_object_below_next_to_wall(const Room_info &room_info, std::vector<int> &coordinates, std::vector<std::vector<int>> &path, int &x_direction, int &begining_y);
+        void object_detour(const Room_info &room_info, std::vector<int> &coordinates, std::vector<std::vector<int>> &path, int &x_direction);
+        void object_detour_down(const Room_info &room_info, std::vector<int> &coordinates, std::vector<std::vector<int>> &path, int &x_direction, int &begining_y);
+        void object_detour_horizontal(const Room_info &room_info, std::vector<int> &coordinates, std::vector<std::vector<int>> &path, int &x_direction, int &begining_y);
+        void south_object_detour_up(const Room_info &room_info, std::vector<int> &coordinates, std::vector<std::vector<int>> &path, int &x_direction);
+
+
 };
 
 #endif
