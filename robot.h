@@ -33,7 +33,7 @@ class Robot{
         void object_detour(const Room_info &room_info, std::vector<int> &coordinates, std::vector<std::vector<int>> &path, int &x_direction);
         void object_detour_down(const Room_info &room_info, std::vector<int> &coordinates, std::vector<std::vector<int>> &path, int &x_direction, int &begining_y);
         void object_detour_horizontal(const Room_info &room_info, std::vector<int> &coordinates, std::vector<std::vector<int>> &path, int &x_direction, int &begining_y);
-        void south_object_detour_up(const Room_info &room_info, std::vector<int> &coordinates, std::vector<std::vector<int>> &path, int &x_direction);
+        void south_object_detour_up(const Room_info &room_info, std::vector<int> &coordinates, std::vector<std::vector<int>> &path, int &x_direction, int &begining_y);
 
 
 };
