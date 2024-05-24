@@ -22,8 +22,9 @@ void Simulation::setRoom(const Room& room) {
     };
     // Draw the furniture
     for (const auto& furniture : room.getFurniture()) {
-        addRect(furniture.get_coordinates()[0], furniture.get_coordinates()[1],
+        QGraphicsRectItem* furn = addRect(furniture.get_coordinates()[0], furniture.get_coordinates()[1],
             furniture.getLength(), furniture.getWidth(), QPen(Qt::black), QBrush(Qt::blue));
+        furn->setZValue(2);
     }
 }
 
