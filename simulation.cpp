@@ -81,7 +81,9 @@ void Simulation::cleanRoom() {
     QList<QGraphicsItem*> collidingItems = robotObject->collidingItems();
     for (QGraphicsItem* item : collidingItems) {
         if (QGraphicsEllipseItem* ellipse = dynamic_cast<QGraphicsEllipseItem*>(item)) {
-            //room.cleanDirty();
+            int x = ellipse->x();
+            int y = ellipse->y();
+            room.cleanDirty({x, y});
             removeItem(ellipse);
             delete ellipse;
         }

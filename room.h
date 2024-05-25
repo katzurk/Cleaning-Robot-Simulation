@@ -44,23 +44,9 @@ public:
     void addFurniture(const Furniture& furniture);
     void deleteFurniture(const Furniture& furn);
 
-    // method to create dust
+    // method to create and delete dust
     void dust();
-    void cleanDirty(const std::vector<int> dust) {
-        for (auto dirty = getDirtyPlaces().begin(); dirty != getDirtyPlaces().end();)
-        {
-            const std::vector<int>& dust_coordinate = *dirty;
-            int x = dust_coordinate[0];
-            int y = dust_coordinate[1];
-            if (dust[0] == x && dust[1] == y) {
-                dirty_places.erase(dirty);
-            }
-            else {
-                ++dirty;
-            }
-        }
-
-    };
+    void cleanDirty(std::vector<int> dust);
 };
 
 #endif

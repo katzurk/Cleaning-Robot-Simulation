@@ -121,3 +121,19 @@ void Room::dust() {
     }
 }
 
+void Room::cleanDirty(std::vector<int> dust) {
+    std::vector<std::vector<int>> d = getDirtyPlaces();
+    for (auto dirty = d.begin(); dirty != d.end();)
+    {
+        const std::vector<int>& dust_coordinate = *dirty;
+        int x = dust_coordinate[0];
+        int y = dust_coordinate[1];
+        if (dust[0] == x && dust[1] == y) {
+            dirty_places.erase(dirty);
+        }
+        else {
+            ++dirty;
+        }
+    }
+};
+
