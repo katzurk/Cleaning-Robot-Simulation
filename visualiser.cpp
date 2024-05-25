@@ -5,7 +5,7 @@ Visualizer::Visualizer(QWidget* parent) : QGraphicsView(parent) {
     setScene(scene);
 }
 
-void Visualizer::setRoom(const Room& room) {
+void Visualizer::setRoom(Room* room) {
     scene->setRoom(room);
 }
 

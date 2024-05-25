@@ -18,14 +18,14 @@ class Simulation : public QGraphicsScene {
 
 public:
     explicit Simulation(QObject* parent = nullptr);
-    void setRoom(const Room& room);
+    void setRoom(Room* room);
     void setRobot(const Robot& robot);
     void generatePath(const Room& room);
     void moveRobot();
     void cleanRoom();
 
 private:
-    Room room;
+    Room* room;
     Robot robot;
     QGraphicsRectItem* robotObject;
     QTimer* timer;

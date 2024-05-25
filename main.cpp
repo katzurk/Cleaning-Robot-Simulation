@@ -16,17 +16,17 @@ int main(int argc, char* argv[]) {
         room.setLength(190);
         room.setWidth(210);
         // Furniture furniture1("Chair mid", { 50, 50 }, { 30, 30 });   //TODO: y %robot.size[1] != 0 how to handle tops?
-        Furniture furniture1("Chair mid", { 50, 50 }, { 40, 40 });
-        room.addFurniture(furniture1);
-        Furniture furnitureE("Chair to E wall", { 50, 80 }, { 140, 70 });
-        room.addFurniture(furnitureE);
-        Furniture furnitureN("Chair to N wall", { 30, 30 }, { 120, 0 });
-        room.addFurniture(furnitureN);
-        Furniture furnitureW("Chair to W wall", { 37, 37 }, { 0, 50 });
-        room.addFurniture(furnitureW);
-        // Furniture furnitureS("Chair to S wall", { 50, 50 }, { 140, 155 }); //TODO: to investigate
-        Furniture furnitureS("Chair to S wall", { 30, 30 }, { 60, 180 });
-        room.addFurniture(furnitureS);
+        auto furniture1 = std::make_unique<Furniture>("Chair mid", std::vector<int>{ 50, 50 }, std::vector<int>{ 40, 40 });
+        room.addFurniture(std::move(furniture1));
+        auto furnitureE = std::make_unique<Furniture>("Chair to E wall", std::vector<int>{ 50, 80 }, std::vector<int>{ 140, 70 });
+        room.addFurniture(std::move(furnitureE));
+        auto furnitureN = std::make_unique<Furniture>("Chair to N wall", std::vector<int>{ 30, 30 }, std::vector<int>{ 145, 0 });
+        room.addFurniture(std::move(furnitureN));
+        auto furnitureW = std::make_unique<Furniture>("Chair to W wall", std::vector<int>{ 37, 37 }, std::vector<int>{ 0, 50 });
+        room.addFurniture(std::move(furnitureW));
+        // Furniture furnitureS("Chair to S wall", { 50, 50 }, { 50, 180 });
+        auto furnitureS = std::make_unique<Furniture>("Chair to S wall", std::vector<int>{ 50, 50 }, std::vector<int>{ 50, 155 });
+        room.addFurniture(std::move(furnitureS));
 
         // Furniture furniture2("Table", { 70, 100 }, { 100, 200 });
         // room.addFurniture(furniture2);
@@ -36,7 +36,7 @@ int main(int argc, char* argv[]) {
         std::cout << "room's width: " << room.getWidth() << std::endl;
         std::cout << "furniture in room: " << std::endl;
         for (const auto& item : room.getFurniture()) {
-            std::cout << item.getName() << " " << item.getLength() << " " << item.getWidth() << " " << item.get_coordinates()[0] << " " << item.get_coordinates()[1] << std::endl;
+            std::cout << item->getName() << " " << item->getLength() << " " << item->getWidth() << " " << item->get_coordinates()[0] << " " << item->get_coordinates()[1] << std::endl;
         }
 
         // path
@@ -50,7 +50,7 @@ int main(int argc, char* argv[]) {
         QApplication app(argc, argv);
         Visualizer visualizer;
         visualizer.setGeometry(100, 100, 800, 600);
-        visualizer.setRoom(room);
+        visualizer.setRoom(&room);
         visualizer.setRobot(rob);
         visualizer.generatePath(room);
 

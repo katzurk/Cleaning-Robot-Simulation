@@ -58,50 +58,58 @@ void Room::setWidth(int width) {
 }
 
 
-void Room::addFurniture(const Furniture& furniture) {
-    if (is_place_free_for_object(furniture.get_coordinates(), { furniture.getLength(), furniture.getWidth()}) || taken_places.size() == 0)
-    {
-        this->furniture.push_back(furniture);
-        for (int i = 0; i <= furniture.getLength() - 1; i++)
-        {
-            for (int j = 0; j <= furniture.getWidth() - 1; j++) {
-                taken_places.push_back({ furniture.get_coordinates()[0] + i, furniture.get_coordinates()[1] + j });
+void Room::addFurniture(std::unique_ptr<Furniture> new_furniture) {
+    const auto& coordinates = new_furniture->get_coordinates();
+
+    int x = coordinates[0];
+    int y = coordinates[1];
+    int length = new_furniture->getLength();
+    int width = new_furniture->getWidth();
+
+    if (is_place_free_for_object(coordinates, { length, width }) || taken_places.empty()) {
+        furniture.push_back(std::move(new_furniture));
+
+        for (int i = 0; i < length; ++i) {
+            for (int j = 0; j < width; ++j) {
+                // Debugging output
+                std::cout << "Adding taken place: (" << x + i << ", " << y + j << ")" << std::endl;
+
+                taken_places.push_back({ x + i, y + j });
             }
         }
     }
-    else
-    {
-        std::stringstream exeption_str;
-        exeption_str << "Impossible to place this object " << furniture.getName() << furniture.getName();
-        throw std::invalid_argument(exeption_str.str());
+    else {
+        std::stringstream exception_str;
+        exception_str << "Impossible to place this object: " << new_furniture->getName();
+        throw std::invalid_argument(exception_str.str());
     }
 }
 
-void Room::deleteFurniture(const Furniture& furn) {
-
-    for (int i = 0; i <= furn.getLength() - 1; i++)
-    {
-        for (int j = 0; j <= furn.getWidth() - 1; j++)
-        {
-            std::vector<int> coordinate = { furn.get_coordinates()[0] + i, furn.get_coordinates()[1] + j };
-            for (int g = 0; g < taken_places.size(); g++)
-            {
-                if (taken_places[g] == coordinate) {
-                    taken_places.erase(taken_places.begin() + g);
-                }
-            }
-        }
-    }
-    int k = 0;
-    for (const auto& f : furniture)
-    {
-        if (f.get_coordinates() == furn.get_coordinates())
-        {
-            furniture.erase(furniture.begin() + k);
-        }
-        k += 1;
-    }
-}
+//void Room::deleteFurniture(const Furniture& furn) {
+//
+//    for (int i = 0; i <= furn.getLength() - 1; i++)
+//    {
+//        for (int j = 0; j <= furn.getWidth() - 1; j++)
+//        {
+//            std::vector<int> coordinate = { furn.get_coordinates()[0] + i, furn.get_coordinates()[1] + j };
+//            for (int g = 0; g < taken_places.size(); g++)
+//            {
+//                if (taken_places[g] == coordinate) {
+//                    taken_places.erase(taken_places.begin() + g);
+//                }
+//            }
+//        }
+//    }
+//    int k = 0;
+//    for (const auto& f : furniture)
+//    {
+//        if (f.get_coordinates() == furn.get_coordinates())
+//        {
+//            furniture.erase(furniture.begin() + k);
+//        }
+//        k += 1;
+//    }
+//}
 
 void Room::dust() {
     srand(time(NULL));

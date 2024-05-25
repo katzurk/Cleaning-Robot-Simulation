@@ -7,13 +7,13 @@ Simulation::Simulation(QObject* parent) : QGraphicsScene(parent), robotObject(nu
     timer->start(100);
 }
 
-void Simulation::setRoom(const Room& room) {
-    this->room = room;
+void Simulation::setRoom(Room* room) {
+    this->room = std::move(room);
     clear(); // Clear the scene
     // Draw the room
-    addRect(0, 0, room.getLength(), room.getWidth(), QPen(Qt::black), QBrush(Qt::white));
+    addRect(0, 0, room->getLength(), room->getWidth(), QPen(Qt::black), QBrush(Qt::white));
     // Draw the dust
-    for (const auto& dust : room.getDirtyPlaces())
+    for (const auto& dust : room->getDirtyPlaces())
     {
         QGraphicsEllipseItem* point = new QGraphicsEllipseItem(dust[0], dust[1], 1, 1);
         point->setBrush(QBrush(Qt::black));
@@ -21,9 +21,9 @@ void Simulation::setRoom(const Room& room) {
         addItem(point);
     };
     // Draw the furniture
-    for (const auto& furniture : room.getFurniture()) {
-        QGraphicsRectItem* furn = addRect(furniture.get_coordinates()[0], furniture.get_coordinates()[1],
-            furniture.getLength(), furniture.getWidth(), QPen(Qt::black), QBrush(Qt::blue));
+    for (const auto& furniture : room->getFurniture()) {
+        QGraphicsRectItem* furn = addRect(furniture->get_coordinates()[0], furniture->get_coordinates()[1],
+            furniture->getLength(), furniture->getWidth(), QPen(Qt::black), QBrush(Qt::blue));
         furn->setZValue(2);
     }
 }
@@ -83,7 +83,7 @@ void Simulation::cleanRoom() {
         if (QGraphicsEllipseItem* ellipse = dynamic_cast<QGraphicsEllipseItem*>(item)) {
             int x = ellipse->x();
             int y = ellipse->y();
-            room.cleanDirty({x, y});
+            room->cleanDirty({x, y});
             removeItem(ellipse);
             delete ellipse;
         }

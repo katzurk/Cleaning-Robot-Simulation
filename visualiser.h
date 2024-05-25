@@ -19,7 +19,7 @@ class Visualizer : public QGraphicsView {
 
 public:
     explicit Visualizer(QWidget* parent = nullptr);
-    void setRoom(const Room& room);
+    void setRoom(Room* room);
     void setRobot(const Robot& robot);
     void generatePath(const Room& room);
 

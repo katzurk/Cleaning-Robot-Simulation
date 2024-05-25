@@ -16,7 +16,7 @@
 class Room : virtual public Room_info {
 private:
     std::vector<int> room_size;
-    std::vector<Furniture> furniture;
+    std::vector<std::unique_ptr<Furniture>> furniture;
     std::vector<std::vector<int>> taken_places;
     std::vector<std::vector<int>> dirty_places;
     void is_valid();
@@ -29,7 +29,7 @@ public:
     // Getters
     int getLength() const { return room_size[0]; }
     int getWidth() const { return room_size[1]; }
-    const std::vector<Furniture>& getFurniture() const { return furniture; }
+    const std::vector<std::unique_ptr<Furniture>>& getFurniture() const { return furniture; }
     std::vector<std::vector<int>> getTakenPlaces() const { return taken_places; }
     std::vector<std::vector<int>> getDirtyPlaces() const { return dirty_places; }
 
@@ -38,8 +38,8 @@ public:
     void setWidth(int width);
 
     // method to work with furniture
-    void addFurniture(const Furniture& furniture);
-    void deleteFurniture(const Furniture& furn);
+    void addFurniture(std::unique_ptr<Furniture> new_furniture);
+    /*void deleteFurniture(const Furniture& furn);*/
 
     // method to create and delete dust
     void dust();
