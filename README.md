@@ -55,6 +55,9 @@ points: 1.3(Visualiser), 2.3 (Simulation), 3.2(cats - moving_figures)
 
 ### Methods
 - **make_path** - takes room, returns list of coordinates. It moves from left to right and top to bottom.
+- **object_detour** - takes room, path and x_direction. Moves around object down, left or right (based on x_direction) and up back to begining y pos.
+- **detour_object_below_next_to_wall** - takes room, path and x_direction. If robot can't move to front nor down go back and then down to begining y pos + size down.
+- **go_to_touch_object** - takes room, path, x_direction and y_direction. Robot wants to move per size on to object. Move there pointer and go back until found free position. Now actually move robot on free pos.
 
 
 side notes:

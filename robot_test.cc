@@ -136,7 +136,6 @@ TEST (Robot_Test, SetInvalidCoordinateX_ReturnsError){
             EXPECT_STREQ("Invalid robot coordinate X to set -2", e.what());
             throw;
         }
-
     }, std::invalid_argument);
 }
 
