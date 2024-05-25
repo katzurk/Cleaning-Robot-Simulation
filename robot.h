@@ -8,13 +8,31 @@
 #include <vector>
 #include <string>
 #include "room.h"
-// #include "room_info.h"
 
 class Robot{
     private:
         std::vector<int> size;
         std::vector <int> coordinates;
         void is_valid();
+        void adjust_x_pos(int delta_x);
+        void adjust_y_pos(int delta_y);
+
+
+
+        void traverse_horizontal(const Room_info &room_info, std::vector<std::vector<int>> &path, int &x_direction);
+
+        void find_room_size(const Room_info &room_info, std::vector<std::vector<int>> &path);
+        void go_round_to_get_room_size(const Room_info &room_info, std::vector<std::vector<int>> &path, int x_direction, int y_direction);
+
+        void go_to_touch_object(const Room_info &room_info, std::vector<std::vector<int>> &path, int x_direction, int y_direction);
+
+        void object_detour(const Room_info &room_info, std::vector<std::vector<int>> &path, int &x_direction);
+        void object_detour_down(const Room_info &room_info, std::vector<std::vector<int>> &path, int &x_direction, int &begining_y);
+        void object_detour_horizontal(const Room_info &room_info, std::vector<std::vector<int>> &path, int &x_direction, int &begining_y);
+        void object_detour_up(const Room_info &room_info, std::vector<std::vector<int>> &path,int &x_direction, int &begining_y);
+
+        void detour_object_below_next_to_wall(const Room_info &room_info, std::vector<std::vector<int>> &path, int &x_direction);
+        void south_object_detour_up(const Room_info &room_info, std::vector<std::vector<int>> &path, int &x_direction);
 
     public:
         Robot(std::vector <int> coordinates,std::vector<int> size);
@@ -29,13 +47,6 @@ class Robot{
         void set_coordinate_y(int new_y);
 
         std::vector<std::vector<int>> make_path(const Room_info &room_info);
-        void detour_object_below_next_to_wall(const Room_info &room_info, std::vector<int> &coordinates, std::vector<std::vector<int>> &path, int &x_direction, int &begining_y);
-        void object_detour(const Room_info &room_info, std::vector<int> &coordinates, std::vector<std::vector<int>> &path, int &x_direction);
-        void object_detour_down(const Room_info &room_info, std::vector<int> &coordinates, std::vector<std::vector<int>> &path, int &x_direction, int &begining_y);
-        void object_detour_horizontal(const Room_info &room_info, std::vector<int> &coordinates, std::vector<std::vector<int>> &path, int &x_direction, int &begining_y);
-        void south_object_detour_up(const Room_info &room_info, std::vector<int> &coordinates, std::vector<std::vector<int>> &path, int &x_direction, int &begining_y);
-
-
 };
 
 #endif

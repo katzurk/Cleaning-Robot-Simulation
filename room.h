@@ -12,7 +12,6 @@
 #include "room_info.h"
 #include "furniture.h"
 
-// class Robot;
 
 class Room : virtual public Room_info {
 private:
@@ -25,8 +24,6 @@ private:
 
 public:
     bool is_place_free_for_object(const std::vector<int>& coordinates, const std::vector<int>& size) const;
-    // bool is_place_in_room(const std::vector<int>& coordinates) const ;
-    // bool is_place_free_for_object(const std::vector<int>& coordinates) const;
     Room(std::vector <int> room_size = { 1, 1 });
 
     // Getters

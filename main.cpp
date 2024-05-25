@@ -20,13 +20,13 @@ int main(int argc, char* argv[]) {
         room.addFurniture(furniture1);
         Furniture furnitureE("Chair to E wall", { 50, 80 }, { 140, 70 });
         room.addFurniture(furnitureE);
-        Furniture furnitureN("Chair to N wall", { 30, 30 }, { 145, 0 });
+        Furniture furnitureN("Chair to N wall", { 30, 30 }, { 120, 0 });
         room.addFurniture(furnitureN);
         Furniture furnitureW("Chair to W wall", { 37, 37 }, { 0, 50 });
         room.addFurniture(furnitureW);
-        // Furniture furnitureS("Chair to S wall", { 50, 50 }, { 50, 180 });
-        Furniture furnitureS("Chair to S wall", { 50, 50 }, { 50, 155 });
-        room.addFurniture(furnitureS);  //to investigate
+        // Furniture furnitureS("Chair to S wall", { 50, 50 }, { 140, 155 }); //TODO: to investigate
+        Furniture furnitureS("Chair to S wall", { 30, 30 }, { 60, 180 });
+        room.addFurniture(furnitureS);
 
         // Furniture furniture2("Table", { 70, 100 }, { 100, 200 });
         // room.addFurniture(furniture2);
