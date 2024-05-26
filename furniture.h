@@ -10,7 +10,7 @@
 #include <sstream>
 
 class Furniture {
-private:
+protected:
     std::string name;
     std::vector<int> size;
     std::vector<int> coordinates;
@@ -18,6 +18,7 @@ private:
 
 public:
     Furniture(std::string name, std::vector<int> size, std::vector<int> coordinates);
+    virtual ~Furniture() = default;
 
     // Getters
     std::string getName() const { return name; }

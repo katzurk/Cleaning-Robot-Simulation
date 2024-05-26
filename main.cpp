@@ -20,12 +20,12 @@ int main(int argc, char* argv[]) {
         room.addFurniture(std::move(furniture1));
         auto furnitureE = std::make_unique<Furniture>("Chair to E wall", std::vector<int>{ 50, 80 }, std::vector<int>{ 140, 70 });
         room.addFurniture(std::move(furnitureE));
-        auto furnitureN = std::make_unique<Furniture>("Chair to N wall", std::vector<int>{ 30, 30 }, std::vector<int>{ 145, 0 });
+        auto furnitureN = std::make_unique<Furniture>("Chair to N wall", std::vector<int>{ 30, 30 }, std::vector<int>{ 120, 0 });
         room.addFurniture(std::move(furnitureN));
         auto furnitureW = std::make_unique<Furniture>("Chair to W wall", std::vector<int>{ 37, 37 }, std::vector<int>{ 0, 50 });
         room.addFurniture(std::move(furnitureW));
         // Furniture furnitureS("Chair to S wall", { 50, 50 }, { 50, 180 });
-        auto furnitureS = std::make_unique<Furniture>("Chair to S wall", std::vector<int>{ 50, 50 }, std::vector<int>{ 50, 155 });
+        auto furnitureS = std::make_unique<Furniture>("Chair to S wall", std::vector<int>{ 30, 30 }, std::vector<int>{ 60, 180 });
         room.addFurniture(std::move(furnitureS));
 
         // Furniture furniture2("Table", { 70, 100 }, { 100, 200 });
