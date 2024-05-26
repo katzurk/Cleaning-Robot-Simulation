@@ -152,3 +152,42 @@ void Room::cleanDirty(std::vector<int> dust) {
     }
 };
 
+void Room::update() {
+    srand(time(NULL));
+    for (const auto& f : furniture) {
+        Cat* cat = dynamic_cast<Cat*>(f.get());
+
+        if (cat) {
+            deleteCoordinates(*cat);
+            int deltaX = 0, deltaY = 0;
+            int direction = rand() % 4;
+            switch (direction) {
+            case 0: // Up
+                deltaY = -1;
+                break;
+            case 1: // Down
+                deltaY = 1;
+                break;
+            case 2: // Left
+                deltaX = -1;
+                break;
+            case 3: // Right
+                deltaX = 1;
+                break;
+            }
+            std::vector<int> new_coordinates = cat->get_coordinates();
+            new_coordinates[0] += deltaX;
+            new_coordinates[1] += deltaY;
+
+            int length = cat->getLength();
+            int width = cat->getWidth();
+
+            if (is_place_free_for_object(new_coordinates, { length, width })) {
+                cat->move(deltaX, deltaY);
+            }
+            addCoordinates(*cat);
+
+        }
+
+    }
+}

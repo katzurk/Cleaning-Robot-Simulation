@@ -13,6 +13,6 @@ void Visualizer::setRobot(const Robot& robot) {
     scene->setRobot(robot);
 }
 
-void Visualizer::generatePath(const Room& room) {
+void Visualizer::generatePath(Room& room) {
     scene->generatePath(room);
 }

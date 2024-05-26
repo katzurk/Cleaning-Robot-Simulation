@@ -70,7 +70,7 @@ void Simulation::moveRobot() {
     currentPositionId++;
 }
 
-void Simulation::generatePath(const Room& room) {
+void Simulation::generatePath(Room& room) {
     path = robot.make_path(room);
 }
 

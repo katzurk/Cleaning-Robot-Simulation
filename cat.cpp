@@ -4,7 +4,7 @@ Cat::Cat(std::string name, std::vector<int> size, std::vector<int> coordinates) 
 	path.push_back(coordinates);
 }
 
-void Cat::moveCat(int deltaX, int deltaY) {
+void Cat::move(int deltaX, int deltaY) {
 	int x = coordinates[0];
 	int y = coordinates[1];
 	x += deltaX;

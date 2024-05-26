@@ -42,7 +42,7 @@ add_executable(furniture_test furniture.cpp furniture_test.cc)
 add_test(furniture_test furniture_test)
 target_link_libraries(furniture_test GTest::gtest_main)
 
-add_executable(room_test room.cpp furniture.cpp room_test.cc)
+add_executable(room_test room.cpp furniture.cpp cat.cpp room_test.cc)
 add_test(room_test room_test)
 target_link_libraries(room_test GTest::gtest_main)
 

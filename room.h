@@ -11,6 +11,7 @@
 #include <algorithm>
 #include "room_info.h"
 #include "furniture.h"
+#include "cat.h"
 
 
 class Room : virtual public Room_info {
@@ -46,6 +47,8 @@ public:
     // method to create and delete dust
     void dust();
     void cleanDirty(std::vector<int> dust);
+
+    void update();
 };
 
 #endif

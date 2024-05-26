@@ -23,7 +23,7 @@ TEST(CatTest, MoveCatTest) {
     EXPECT_EQ(cat.get_coordinates()[0], 3);
     EXPECT_EQ(cat.get_coordinates()[1], 4);
 
-    cat.moveCat(1, -1);
+    cat.move(1, -1);
     EXPECT_EQ(cat.get_coordinates()[0], 4);
     EXPECT_EQ(cat.get_coordinates()[1], 3);
     EXPECT_EQ(cat.getPath().size(), 2);

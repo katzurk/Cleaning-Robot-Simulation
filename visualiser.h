@@ -12,6 +12,7 @@
 #include "room.h"
 #include "robot.h"
 #include "furniture.h"
+#include "cat.h"
 #include "simulation.h"
 
 class Visualizer : public QGraphicsView {
@@ -21,7 +22,7 @@ public:
     explicit Visualizer(QWidget* parent = nullptr);
     void setRoom(Room* room);
     void setRobot(const Robot& robot);
-    void generatePath(const Room& room);
+    void generatePath(Room& room);
 
 private:
     Simulation* scene;

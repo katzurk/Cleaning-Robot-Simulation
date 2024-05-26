@@ -12,6 +12,7 @@
 #include "room.h"
 #include "robot.h"
 #include "furniture.h"
+#include "cat.h"
 
 class Simulation : public QGraphicsScene {
     Q_OBJECT
@@ -20,7 +21,7 @@ public:
     explicit Simulation(QObject* parent = nullptr);
     void setRoom(Room* room);
     void setRobot(const Robot& robot);
-    void generatePath(const Room& room);
+    void generatePath(Room& room);
     void moveRobot();
     void cleanRoom();
 
