@@ -77,15 +77,15 @@ TEST(RoomTest, AddFurnitureTest) {
 }
 
 // Test deleteFurniture method
-//TEST(RoomTest, DeleteFurnitureTest) {
-//    Room room({ 10, 10 });
-//    Furniture furniture("Table", { 3, 2 }, { 1, 1 });
-//    room.addFurniture(furniture);
-//
-//    room.deleteFurniture(furniture);
-//    EXPECT_EQ(room.getFurniture().size(), 0);
-//    EXPECT_EQ(room.getTakenPlaces().size(), 0);
-//}
+TEST(RoomTest, DeleteFurnitureTest) {
+    Room room({ 10, 10 });
+    auto furniture = std::make_unique<Furniture>("Table", std::vector<int>{3, 2}, std::vector<int>{1, 1});
+    room.addFurniture(std::move(furniture));
+
+    room.deleteFurniture("Table");
+    EXPECT_EQ(room.getFurniture().size(), 0);
+    EXPECT_EQ(room.getTakenPlaces().size(), 0);
+}
 
 TEST(RoomTest, DustTest) {
     Room room({ 10, 10 });

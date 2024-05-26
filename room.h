@@ -21,6 +21,8 @@ private:
     std::vector<std::vector<int>> dirty_places;
     void is_valid();
 
+    void deleteCoordinates(const Furniture& f);
+    void addCoordinates(const Furniture& f);
 
 public:
     bool is_place_free_for_object(const std::vector<int>& coordinates, const std::vector<int>& size) const;
@@ -39,7 +41,7 @@ public:
 
     // method to work with furniture
     void addFurniture(std::unique_ptr<Furniture> new_furniture);
-    /*void deleteFurniture(const Furniture& furn);*/
+    void deleteFurniture(const std::string& furnitureName);
 
     // method to create and delete dust
     void dust();
