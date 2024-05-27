@@ -15,8 +15,8 @@ class FurnitureGenerator {
 private:
 	int minSize, maxSize, minCoord, maxCoord;
 	int generateRandomNumber(int min, int max);
+	int generateRandomNumber10(int min, int max); // get int divisible by 10
 	std::vector<int> generateRandomNumbers(int min, int max);
-
 	std::string generateRandomName();
 public:
 	FurnitureGenerator();
