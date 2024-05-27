@@ -1,6 +1,6 @@
 #include "furniture_generator.h"
 
-FurnitureGenerator::FurnitureGenerator() : minSize(1), maxSize(100), minCoord(0), maxCoord(500) {
+FurnitureGenerator::FurnitureGenerator() : minSize(10), maxSize(100), minCoord(0), maxCoord(500) {
 	srand(static_cast<unsigned>(time(0)));
 }
 
@@ -49,7 +49,7 @@ int FurnitureGenerator::generateRandomNumber(int min, int max) {
 }
 
 int FurnitureGenerator::generateRandomNumber10(int min, int max) {
-	return generateRandomNumber(min / 10, max / 10) * 10;
+	return generateRandomNumber(std::ceil(min / 10), max / 10) * 10;
 }
 
 std::vector<int> FurnitureGenerator::generateRandomNumbers(int min, int max) {

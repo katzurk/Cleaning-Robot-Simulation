@@ -32,7 +32,7 @@ int main(int argc, char* argv[]) {
                     room.addFurniture(furniture);
             }
         }
-        // random furniture can make the program slower (?)
+        // random furniture placement can make the program sometimes loop longer, sometimes shorter
 
 
         //// Furniture furniture1("Chair mid", { 50, 50 }, { 30, 30 });   //TODO: y %robot.size[1] != 0 how to handle tops?
