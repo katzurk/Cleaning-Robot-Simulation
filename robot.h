@@ -19,10 +19,7 @@ class Robot{
 
 
 
-        void traverse_horizontal(const Room_info &room_info, std::vector<std::vector<int>> &path, int &x_direction);
-
-        void find_room_size(const Room_info &room_info, std::vector<std::vector<int>> &path);
-        void go_round_to_get_room_size(const Room_info &room_info, std::vector<std::vector<int>> &path, int x_direction, int y_direction);
+        void traverse_horizontal(const Room_info &room_info, std::vector<std::vector<int>> &path, int &x_direction, bool &is_next_last_row);
 
         void go_to_touch_object(const Room_info &room_info, std::vector<std::vector<int>> &path, int x_direction, int y_direction);
 
@@ -31,8 +28,10 @@ class Robot{
         void object_detour_horizontal(const Room_info &room_info, std::vector<std::vector<int>> &path, int &x_direction, int &begining_y);
         void object_detour_up(const Room_info &room_info, std::vector<std::vector<int>> &path,int &x_direction, int &begining_y);
 
-        void detour_object_below_next_to_wall(const Room_info &room_info, std::vector<std::vector<int>> &path, int &x_direction);
+        void detour_object_below_next_to_wall(const Room_info &room_info, std::vector<std::vector<int>> &path, int &x_direction, int &begining_y);
         void south_object_detour_up(const Room_info &room_info, std::vector<std::vector<int>> &path, int &x_direction);
+        void detour_object_below_down_finish(const Room_info &room_info, std::vector<std::vector<int>> &path, int begining_y);
+
 
     public:
         Robot(std::vector <int> coordinates,std::vector<int> size);
