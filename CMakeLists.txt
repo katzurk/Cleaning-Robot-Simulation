@@ -32,7 +32,7 @@ enable_testing() #to  discover tests in test explorer
 
 # include_directories(googletest/include) # this is so we can #include <gtest/gtest.h>
 
-add_executable(main main.cpp robot.cpp room.cpp furniture.cpp visualiser.cpp simulation.cpp) # add this executable
+add_executable(main main.cpp robot.cpp room.cpp furniture.cpp visualiser.cpp simulation.cpp furniture_generator.cpp) # add this executable
 
 add_executable(robot_test robot.cpp room.cpp robot_test.cc) # add this executable
 add_test(robot_test robot_test)
@@ -46,6 +46,9 @@ add_executable(room_test room.cpp furniture.cpp room_test.cc)
 add_test(room_test room_test)
 target_link_libraries(room_test GTest::gtest_main)
 
+add_executable(furniture_generator_test furniture_generator.cpp furniture.cpp furniture_generator_test.cc)
+add_test(furniture_generator_test furniture_generator_test)
+target_link_libraries(furniture_generator_test GTest::gtest_main)
 
 target_link_libraries(main
         Qt::Core
@@ -69,4 +72,9 @@ gtest_add_tests(
 gtest_add_tests(
     TARGET      room_test
     TEST_LIST   room_test.cc
+)
+
+gtest_add_tests(
+    TARGET      furniture_generator_test
+    TEST_LIST   furniture_generator_test.cc
 )
