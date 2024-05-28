@@ -193,7 +193,6 @@ void Robot::detour_object_below_next_to_wall(const Room_info &room_info, std::ve
     while(! room_info.is_place_free_for_object(possible_cords_down, size)){
 
         if(! room_info.is_place_free_for_object(possible_cords_horizontal, size)) {
-            // std::cout << "cords horizontal: " << coordinates[0] << ", " << coordinates[1] << std::endl;
             if(room_info.is_now_east_wall(coordinates, size) && x_direction > 0) {
                 adjust_x_pos(size[0]);
                 go_to_touch_object(room_info, path, 1, 0);
