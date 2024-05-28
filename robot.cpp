@@ -127,7 +127,6 @@ void Robot::traverse_horizontal(const Room_info &room_info, std::vector<std::vec
             break;
         }
         else if(coordinates[0] < size[0] && x_direction < 0){
-        else if(coordinates[0] < size[0] && x_direction < 0){
             set_coordinate_x(0);
             path.push_back(coordinates);
             break;
@@ -136,7 +135,6 @@ void Robot::traverse_horizontal(const Room_info &room_info, std::vector<std::vec
             adjust_x_pos(size[0]* x_direction);
         }
 
-        if(! room_info.is_place_free_for_object(coordinates, size)){
         if(! room_info.is_place_free_for_object(coordinates, size)){
             object_detour(room_info, path, x_direction);
         }
@@ -210,11 +208,9 @@ void Robot::south_object_detour_up(const Room_info &room_info, std::vector<std::
     std::vector<int> possible_cords = {coordinates[0] + x_direction, coordinates[1]};
 
     while(! room_info.is_place_free_for_object(possible_cords, size)){
-    while(! room_info.is_place_free_for_object(possible_cords, size)){
         adjust_y_pos(-1);
         possible_cords[1] -= 1;
         path.push_back(coordinates);
-        if(! room_info.is_place_free_for_object(coordinates, size)) {
         if(! room_info.is_place_free_for_object(coordinates, size)) {
             adjust_y_pos(1);
             break; // no way around the object, what should little robot do?
@@ -265,7 +261,6 @@ void Robot::object_detour_down(const Room_info &room_info, std::vector<std::vect
         }
         path.push_back(coordinates);
     } while(! room_info.is_place_free_for_object(possible_cords, size));
-    } while(! room_info.is_place_free_for_object(possible_cords, size));
 }
 
 void Robot::object_detour_horizontal(const Room_info &room_info, std::vector<std::vector<int>> &path, int &x_direction, int &begining_y){
@@ -278,14 +273,12 @@ void Robot::object_detour_horizontal(const Room_info &room_info, std::vector<std
             x_direction *= -1;
             begining_y += size[1];
         } else if(coordinates[0] < size[0] && x_direction < 0) {
-        } else if(coordinates[0] < size[0] && x_direction < 0) {
             set_coordinate_x(0);
             path.push_back(coordinates);
             x_direction *= -1;
             begining_y += size[1];
         } else {
             adjust_x_pos(x_direction);
-            if(! room_info.is_place_free_for_object(coordinates, size)) {
             if(! room_info.is_place_free_for_object(coordinates, size)) {
                 adjust_x_pos(-x_direction);
                 object_detour_down(room_info, path, x_direction, begining_y);

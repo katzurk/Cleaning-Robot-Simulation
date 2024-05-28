@@ -9,6 +9,7 @@
 #include <string>
 #include <vector>
 #include <cstdlib>
+#include <cmath>
 #include <ctime>
 
 class FurnitureGenerator {
