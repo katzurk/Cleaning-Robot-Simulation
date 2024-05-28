@@ -2,6 +2,7 @@
 #include "visualiser.h"
 #include "robot.h"
 #include "room.h"
+#include "furniture_generator.h"
 #include <iostream>
 
 
@@ -15,18 +16,38 @@ int main(int argc, char* argv[]) {
         Room room(room_size);
         room.setLength(190);
         room.setWidth(210);
-        // Furniture furniture1("Chair mid", { 50, 50 }, { 30, 30 });   //TODO: y %robot.size[1] != 0 how to handle tops?
-        auto furniture1 = std::make_unique<Furniture>("Chair mid", std::vector<int>{ 50, 50 }, std::vector<int>{ 40, 40 });
-        room.addFurniture(std::move(furniture1));
-        auto furnitureE = std::make_unique<Furniture>("Chair to E wall", std::vector<int>{ 50, 80 }, std::vector<int>{ 140, 70 });
-        room.addFurniture(std::move(furnitureE));
-        auto furnitureN = std::make_unique<Furniture>("Chair to N wall", std::vector<int>{ 30, 30 }, std::vector<int>{ 120, 0 });
-        room.addFurniture(std::move(furnitureN));
-        auto furnitureW = std::make_unique<Furniture>("Chair to W wall", std::vector<int>{ 37, 37 }, std::vector<int>{ 0, 50 });
-        room.addFurniture(std::move(furnitureW));
-        // Furniture furnitureS("Chair to S wall", { 50, 50 }, { 50, 180 });
-        auto furnitureS = std::make_unique<Furniture>("Chair to S wall", std::vector<int>{ 30, 30 }, std::vector<int>{ 60, 180 });
-        room.addFurniture(std::move(furnitureS));
+
+        // generate random furniture
+        FurnitureGenerator generator;
+        int n = 3; // number of furniture to generate
+        generator.setSizeRange(15, 70);
+        generator.setCoordRange(50, 200);
+
+        while (room.getFurniture().size() != n) {
+            Furniture furnitureInstance = generator.createRandomFurniture();
+            auto furniture = std::make_unique<Furniture>(furnitureInstance);
+            int length = furniture->getLength();
+            int width = furniture->getWidth();
+            if (room.is_place_free_for_object(furniture->get_coordinates(), { length, width })) {
+                room.addFurniture(std::move(furniture));
+            }
+        }
+        // random furniture placement can make the program sometimes loop longer, sometimes shorter
+
+
+        //// Furniture furniture1("Chair mid", { 50, 50 }, { 30, 30 });   //TODO: y %robot.size[1] != 0 how to handle tops?
+        //Furniture furniture1("Chair mid", { 50, 50 }, { 40, 40 });
+        //room.addFurniture(furniture1);
+        //Furniture furnitureE("Chair to E wall", { 50, 80 }, { 140, 70 });
+        //room.addFurniture(furnitureE);
+        //Furniture furnitureN("Chair to N wall", { 30, 30 }, { 120, 0 });
+        //room.addFurniture(furnitureN);
+        //Furniture furnitureW("Chair to W wall", { 37, 37 }, { 0, 50 });
+        //room.addFurniture(furnitureW);
+        //// Furniture furnitureS("Chair to S wall", { 50, 50 }, { 140, 155 }); //TODO: to investigate
+        //Furniture furnitureS("Chair to S wall", { 30, 30 }, { 60, 180 });
+        //room.addFurniture(furnitureS);
+
 
         // Furniture furniture2("Table", { 70, 100 }, { 100, 200 });
         // room.addFurniture(furniture2);

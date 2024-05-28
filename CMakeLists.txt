@@ -49,6 +49,9 @@ target_link_libraries(room_test GTest::gtest_main)
 add_executable(cat_test cat.cpp furniture.cpp cat_test.cc)
 add_test(cat_test cat_test)
 target_link_libraries(cat_test GTest::gtest_main)
+add_executable(furniture_generator_test furniture_generator.cpp furniture.cpp furniture_generator_test.cc)
+add_test(furniture_generator_test furniture_generator_test)
+target_link_libraries(furniture_generator_test GTest::gtest_main)
 
 target_link_libraries(main
         Qt::Core
@@ -77,4 +80,9 @@ gtest_add_tests(
 gtest_add_tests(
     TARGET      cat_test
     TEST_LIST   cat_test.cc
+)
+
+gtest_add_tests(
+    TARGET      furniture_generator_test
+    TEST_LIST   furniture_generator_test.cc
 )
