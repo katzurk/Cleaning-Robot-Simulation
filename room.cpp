@@ -65,9 +65,6 @@ void Room::addCoordinates(const Furniture& f) {
     int width = f.getWidth();
     for (int i = 0; i < length; ++i) {
         for (int j = 0; j < width; ++j) {
-            // Debugging output
-            std::cout << "Adding taken place: (" << x + i << ", " << y + j << ")" << std::endl;
-
             taken_places.push_back({ x + i, y + j });
         }
     }
