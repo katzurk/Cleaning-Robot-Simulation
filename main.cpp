@@ -21,7 +21,7 @@ int main(int argc, char* argv[]) {
         // generate random furniture
         FurnitureGenerator generator;
         int n = 3; // number of furniture to generate
-        generator.setSizeRange(15, 70);
+        generator.setSizeRange(20, 70);
         generator.setCoordRange(50, 200);
 
         while (room.getFurniture().size() != n) {
@@ -35,18 +35,21 @@ int main(int argc, char* argv[]) {
         // random furniture placement can make the program sometimes loop longer, sometimes shorter
 
 
-        //// Furniture furniture1("Chair mid", { 50, 50 }, { 30, 30 });   //TODO: y %robot.size[1] != 0 how to handle tops?
-        //Furniture furniture1("Chair mid", { 50, 50 }, { 40, 40 });
-        //room.addFurniture(furniture1);
-        //Furniture furnitureE("Chair to E wall", { 50, 80 }, { 140, 70 });
-        //room.addFurniture(furnitureE);
-        //Furniture furnitureN("Chair to N wall", { 30, 30 }, { 120, 0 });
-        //room.addFurniture(furnitureN);
-        //Furniture furnitureW("Chair to W wall", { 37, 37 }, { 0, 50 });
-        //room.addFurniture(furnitureW);
-        //// Furniture furnitureS("Chair to S wall", { 50, 50 }, { 140, 155 }); //TODO: to investigate
-        //Furniture furnitureS("Chair to S wall", { 30, 30 }, { 60, 180 });
-        //room.addFurniture(furnitureS);
+        // Furniture furniture1("Chair mid", { 50, 50 }, { 30, 30 });   //TODO: y %robot.size[1] != 0 how to handle tops?
+        // Furniture furniture1("Chair mid", { 50, 50 }, { 40, 40 });
+        // // room.addFurniture(furniture1);
+        // Furniture furnitureE("Chair to E wall", { 50, 80 }, { 140, 70 });
+        // // room.addFurniture(furnitureE);
+        // Furniture furnitureN("Chair to N wall", { 30, 30 }, { 120, 0 });
+        // room.addFurniture(furnitureN);
+        // Furniture furnitureW("Chair to W wall", { 37, 37 }, { 0, 50 });
+        // room.addFurniture(furnitureW);
+        // Furniture furnitureS_right("Chair to S wall R", { 50, 50 }, { 140, 155 }); //TODO: to investigate
+        // // room.addFurniture(furnitureS_right);
+        // Furniture furnitureS_left("Chair to S wall L", { 50, 50 }, { 0, 155 }); //TODO: to investigate
+        // // room.addFurniture(furnitureS_left);
+        // Furniture furnitureS("Chair to S wall", { 30, 30 }, { 60, 180 });
+        // room.addFurniture(furnitureS);
 
         // Furniture furniture2("Table", { 70, 100 }, { 100, 200 });
         // room.addFurniture(furniture2);

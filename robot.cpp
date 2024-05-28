@@ -90,19 +90,21 @@ void Robot::adjust_y_pos(int delta_y){
 
 std::vector<std::vector<int>> Robot::make_path(const Room_info &room_info){
     int x_direction = 1;
-    bool is_next_last_row = false;
+    bool is_last_row = false;
     std::vector<std::vector<int>> path;
     path.push_back(coordinates);
 
     while (true) {
-        traverse_horizontal(room_info, path, x_direction, is_next_last_row);
-
+        traverse_horizontal(room_info, path, x_direction, is_last_row);
         x_direction *= -1;
+        if(is_last_row){
+            break;
+        }
 
-        if(room_info.is_next_move_south_wall(coordinates, size) || is_next_last_row){
+        if(room_info.is_next_move_south_wall(coordinates, size)){
             adjust_y_pos(size[1]);
             go_to_touch_object(room_info, path, 0, 1);
-            traverse_horizontal(room_info, path, x_direction, is_next_last_row);
+            traverse_horizontal(room_info, path, x_direction, is_last_row);
             break;
         }
         else {
@@ -111,7 +113,13 @@ std::vector<std::vector<int>> Robot::make_path(const Room_info &room_info){
 
         if(! room_info.is_place_free_for_object(coordinates, size)){
             int begining_y = coordinates[1];
-            detour_object_below_next_to_wall(room_info, path, x_direction, begining_y);
+            go_to_touch_object(room_info, path, 0, 1);
+            move_back_to_check_for_moving_object(path, 0, 1);
+            adjust_y_pos(1);
+
+            if(! room_info.is_place_free_for_object(coordinates, size)){
+                detour_object_below_next_to_wall(room_info, path, x_direction, begining_y);
+            }
         }
 
         path.push_back(coordinates);
@@ -119,8 +127,12 @@ std::vector<std::vector<int>> Robot::make_path(const Room_info &room_info){
     return path;
 }
 
-void Robot::traverse_horizontal(const Room_info &room_info, std::vector<std::vector<int>> &path, int &x_direction, bool &is_next_last_row){
+void Robot::traverse_horizontal(const Room_info &room_info, std::vector<std::vector<int>> &path, int &x_direction, bool &is_last_row){
     while(true) {
+        if(room_info.is_now_south_wall(coordinates, size)){
+            is_last_row = true;
+        }
+
         if(room_info.is_next_move_east_wall(coordinates, size) && x_direction > 0){
             adjust_x_pos(size[0]);
             go_to_touch_object(room_info, path, 1, 0);
@@ -136,13 +148,29 @@ void Robot::traverse_horizontal(const Room_info &room_info, std::vector<std::vec
         }
 
         if(! room_info.is_place_free_for_object(coordinates, size)){
-            object_detour(room_info, path, x_direction);
+            go_to_touch_object(room_info, path, x_direction, 0);
+            if (is_last_row){
+                break;
+            }
+            move_back_to_check_for_moving_object(path, x_direction, 0);
+            adjust_x_pos(x_direction);
+
+            if(! room_info.is_place_free_for_object(coordinates, size)){
+                object_detour(room_info, path, x_direction);
+            }
         }
         path.push_back(coordinates);
-        if(room_info.is_next_move_south_wall(coordinates, size)){
-            is_next_last_row = true;
-        }
     }
+}
+
+void Robot::move_back_to_check_for_moving_object(std::vector<std::vector<int>> &path, int x_direction, int y_direction){
+    adjust_x_pos(-x_direction);
+    adjust_y_pos(-y_direction);
+    path.push_back(coordinates);
+
+    adjust_x_pos(x_direction);
+    adjust_y_pos(y_direction);
+    path.push_back(coordinates);
 }
 
 void Robot::go_to_touch_object(const Room_info &room_info, std::vector<std::vector<int>> &path, int x_direction, int y_direction){
@@ -158,7 +186,6 @@ void Robot::go_to_touch_object(const Room_info &room_info, std::vector<std::vect
 }
 
 void Robot::detour_object_below_next_to_wall(const Room_info &room_info, std::vector<std::vector<int>> &path, int &x_direction, int &begining_y){
-    int current_begining_y = coordinates[1];
     go_to_touch_object(room_info, path, 0, 1);
 
     std::vector<int> possible_cords_down = {coordinates[0], coordinates[1]+1};
@@ -171,14 +198,13 @@ void Robot::detour_object_below_next_to_wall(const Room_info &room_info, std::ve
                 adjust_x_pos(size[0]);
                 go_to_touch_object(room_info, path, 1, 0);
                 x_direction *= -1;
-                // begining_y += size[1];
+                begining_y += size[1];
             } else if(coordinates[0] < size[0] && x_direction < 0) {
                 set_coordinate_x(0);
                 path.push_back(coordinates);
                 x_direction *= -1;
-                // begining_y += size[1];
+                begining_y += size[1];
             } else{
-                // adjust_x_pos(-x_direction);
                 south_object_detour_up(room_info, path, x_direction);
                 possible_cords_down = {coordinates[0], coordinates[1] + 1};
             }
@@ -190,17 +216,23 @@ void Robot::detour_object_below_next_to_wall(const Room_info &room_info, std::ve
     }
 
     // go down
-    detour_object_below_down_finish(room_info, path, current_begining_y);
+    detour_object_below_down_finish(room_info, path, begining_y);
 }
 
 void Robot::detour_object_below_down_finish(const Room_info &room_info, std::vector<std::vector<int>> &path, int begining_y){
-    std::vector<int> possible_cords_with_begining_y = {coordinates[0], begining_y};
-    if(room_info.is_now_east_wall(possible_cords_with_begining_y, size)){
-        begining_y -= size[1];
-    }
-    while (coordinates[1] < begining_y) {
-        adjust_y_pos(1);
-        path.push_back(coordinates);
+    std::vector<int> possible_cords_with_begining_y = {coordinates[0], begining_y-size[1]};
+    if(room_info.is_next_move_south_wall(possible_cords_with_begining_y, size)){
+        while (coordinates[1] < begining_y - size[1]) {
+            adjust_y_pos(1);
+            path.push_back(coordinates);
+        }
+        set_coordinate_y(begining_y);
+        go_to_touch_object(room_info, path, 0, 1);
+    } else{
+        while (coordinates[1] < begining_y) {
+            adjust_y_pos(1);
+            path.push_back(coordinates);
+        }
     }
 }
 
@@ -221,8 +253,8 @@ void Robot::south_object_detour_up(const Room_info &room_info, std::vector<std::
 
 void Robot::object_detour(const Room_info &room_info, std::vector<std::vector<int>> &path, int &x_direction){
     int begining_y = coordinates[1];
-
     go_to_touch_object(room_info, path, x_direction, 0);
+
     object_detour_down(room_info, path, x_direction, begining_y);
 
     // go left || right to be under object
@@ -256,7 +288,6 @@ void Robot::object_detour_down(const Room_info &room_info, std::vector<std::vect
             path.push_back(coordinates);
 
             detour_object_below_next_to_wall(room_info, path, x_direction, begining_y);
-            detour_object_below_down_finish(room_info, path, begining_y);
             return;
         }
         path.push_back(coordinates);
