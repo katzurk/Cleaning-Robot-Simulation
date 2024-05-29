@@ -6,6 +6,7 @@
 #define GENERATOR_H
 
 #include "furniture.h"
+#include "cat.h"
 #include <string>
 #include <vector>
 #include <cstdlib>
@@ -24,6 +25,7 @@ public:
 	void setSizeRange(int min, int max);
 	void setCoordRange(int min, int max);
 	Furniture createRandomFurniture();
+	Cat createRandomCat();
 };
 
 #endif // GENERATOR_H

@@ -75,3 +75,11 @@ Furniture FurnitureGenerator::createRandomFurniture() {
 
 	return Furniture(name, size, coordinates);
 }
+
+Cat FurnitureGenerator::createRandomCat() {
+	std::string name = "Cat";
+	std::vector<int> size = generateRandomNumbers(minSize, maxSize);
+	std::vector<int> coordinates = generateRandomNumbers(minCoord, maxCoord);
+
+	return Cat(name, size, coordinates);
+}

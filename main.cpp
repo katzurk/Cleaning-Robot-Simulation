@@ -17,23 +17,34 @@ int main(int argc, char* argv[]) {
         room.setLength(190);
         room.setWidth(210);
 
-        // generate random furniture
-        FurnitureGenerator generator;
-        int n = 3; // number of furniture to generate
-        generator.setSizeRange(20, 70);
-        generator.setCoordRange(50, 200);
+        //// generate random furniture
+        //FurnitureGenerator generator;
+        //int n = 2; // number of furniture to generate
+        //generator.setSizeRange(20, 30);
+        //generator.setCoordRange(50, 120);
 
-        while (room.getFurniture().size() != n) {
-            Furniture furnitureInstance = generator.createRandomFurniture();
-            auto furniture = std::make_unique<Furniture>(furnitureInstance);
-            int length = furniture->getLength();
-            int width = furniture->getWidth();
-            if (room.is_place_free_for_object(furniture->get_coordinates(), { length, width })) {
-                room.addFurniture(std::move(furniture));
-            }
+        //while (room.getFurniture().size() != n) {
+        //    Furniture furnitureInstance = generator.createRandomFurniture();
+        //    auto furniture = std::make_unique<Furniture>(furnitureInstance);
+        //    int length = furniture->getLength();
+        //    int width = furniture->getWidth();
+        //    if (room.is_place_free_for_object(furniture->get_coordinates(), { length, width })) {
+        //        room.addFurniture(std::move(furniture));
+        //    }
+        //}
+        Cat catI = Cat("cat", { 20, 20 }, { 140, 140 });
+        auto cat = std::make_unique<Cat>(catI);
+        room.addFurniture(std::move(cat));
+        /*Cat catInstance = generator.createRandomCat();
+        int length = catInstance.getLength();
+        int width = catInstance.getWidth();
+        while (! room.is_place_free_for_object(catInstance.get_coordinates(), { length, width })) {
+            Cat catInstance = generator.createRandomCat();
         }
-        // random furniture placement can make the program sometimes loop longer, sometimes shorter
+        auto cat = std::make_unique<Cat>(catInstance);
+        room.addFurniture(std::move(cat));*/
 
+        // random furniture placement can make the program sometimes loop longer, sometimes shorter
         room.dust();
 
         std::cout << "room's length: " << room.getLength() << std::endl;

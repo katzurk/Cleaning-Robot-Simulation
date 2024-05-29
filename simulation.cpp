@@ -4,6 +4,7 @@ Simulation::Simulation(QObject* parent) : QGraphicsScene(parent), room(nullptr),
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &Simulation::moveRobot);
     connect(timer, &QTimer::timeout, this, &Simulation::cleanRoom);
+    connect(timer, &QTimer::timeout, this, &Simulation::updateCats);
     timer->start(100);
 }
 
@@ -97,15 +98,28 @@ void Simulation::cleanRoom() {
 }
 
 void Simulation::updateCats() {
+    std::cout << currentPositionId << std::endl;
     for (auto& catItemPair : catItems) {
         Cat* cat = catItemPair.first;
         QGraphicsRectItem* catItem = catItemPair.second.get();
         std::vector<std::vector<int>> catPath = cat->getPath();
-        if (currentPositionId < catPath.size()) {
-            std::vector<int> currentPosition = catPath[currentPositionId];
-            int x = currentPosition[0];
-            int y = currentPosition[1];
-            catItem->setPos(x, y);
+        if (currentPositionId < 0 || currentPositionId >= catPath.size()) {
+            continue;
         }
+        std::vector<int> currentPosition = catPath[currentPositionId];
+        std::cout << currentPosition[0] << " " << currentPosition[1] << std::endl;
+        int x = currentPosition[0];
+        int y = currentPosition[1];
+        /*catItem->setPos(x, y);*/ //makes the cat appear outside of room (?)
+
+        if (catItem) {
+            removeItem(catItem);
+        }
+
+        QGraphicsRectItem* newCatItem = addRect(x, y,
+            cat->getLength(), cat->getWidth(), QPen(Qt::black), QBrush(Qt::blue));
+        newCatItem->setZValue(2);
+        // Update the pointer in the catItems map
+        catItemPair.second.reset(newCatItem);
     }
 }
