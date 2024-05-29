@@ -19,19 +19,19 @@ class Robot{
 
 
 
-        void traverse_horizontal(const Room_info& room_info, std::vector<std::vector<int>>& path, int& x_direction, bool& is_next_last_row);
+        void traverse_horizontal(Room_info& room_info, std::vector<std::vector<int>>& path, int& x_direction, bool& is_next_last_row);
 
-        void move_back_to_check_for_moving_object(std::vector<std::vector<int>> &path, int x_direction, int y_direction);
-        void go_to_touch_object(const Room_info &room_info, std::vector<std::vector<int>> &path, int x_direction, int y_direction);
+        void move_back_to_check_for_moving_object(Room_info& room_info, std::vector<std::vector<int>> &path, int x_direction, int y_direction);
+        void go_to_touch_object(Room_info &room_info, std::vector<std::vector<int>> &path, int x_direction, int y_direction);
 
-        void object_detour(const Room_info& room_info, std::vector<std::vector<int>>& path, int& x_direction);
-        void object_detour_down(const Room_info& room_info, std::vector<std::vector<int>>& path, int& x_direction, int& begining_y);
-        void object_detour_horizontal(const Room_info& room_info, std::vector<std::vector<int>>& path, int& x_direction, int& begining_y);
-        void object_detour_up(const Room_info& room_info, std::vector<std::vector<int>>& path, int& x_direction, int& begining_y);
+        void object_detour(Room_info& room_info, std::vector<std::vector<int>>& path, int& x_direction);
+        void object_detour_down(Room_info& room_info, std::vector<std::vector<int>>& path, int& x_direction, int& begining_y);
+        void object_detour_horizontal(Room_info& room_info, std::vector<std::vector<int>>& path, int& x_direction, int& begining_y);
+        void object_detour_up(Room_info& room_info, std::vector<std::vector<int>>& path, int& x_direction, int& begining_y);
 
-        void detour_object_below_next_to_wall(const Room_info& room_info, std::vector<std::vector<int>>& path, int& x_direction, int& begining_y);
-        void south_object_detour_up(const Room_info& room_info, std::vector<std::vector<int>>& path, int& x_direction);
-        void detour_object_below_down_finish(const Room_info& room_info, std::vector<std::vector<int>>& path, int begining_y);
+        void detour_object_below_next_to_wall(Room_info& room_info, std::vector<std::vector<int>>& path, int& x_direction, int& begining_y);
+        void south_object_detour_up(Room_info& room_info, std::vector<std::vector<int>>& path, int& x_direction);
+        void detour_object_below_down_finish(Room_info& room_info, std::vector<std::vector<int>>& path, int begining_y);
 
 
     public:

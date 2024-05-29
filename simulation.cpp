@@ -98,7 +98,6 @@ void Simulation::cleanRoom() {
 }
 
 void Simulation::updateCats() {
-    std::cout << currentPositionId << std::endl;
     for (auto& catItemPair : catItems) {
         Cat* cat = catItemPair.first;
         QGraphicsRectItem* catItem = catItemPair.second.get();
