@@ -106,7 +106,6 @@ void Simulation::updateCats() {
             continue;
         }
         std::vector<int> currentPosition = catPath[currentPositionId];
-        std::cout << currentPosition[0] << " " << currentPosition[1] << std::endl;
         int x = currentPosition[0];
         int y = currentPosition[1];
         /*catItem->setPos(x, y);*/ //makes the cat appear outside of room (?)

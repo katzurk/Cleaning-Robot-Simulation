@@ -113,7 +113,6 @@ std::vector<std::vector<int>> Robot::make_path(Room_info& room_info) {
         }
 
         if (!room_info.is_place_free_for_object(coordinates, size)) {
-            std::cout << "Collision" << std::endl;
             int begining_y = coordinates[1];
             go_to_touch_object(room_info, path, 0, 1);
             move_back_to_check_for_moving_object(room_info, path, 0, 1);
