@@ -16,6 +16,7 @@ class Room_info {
         virtual bool is_next_move_south_wall (const std::vector<int>& coordinates, const std::vector<int>& size) const = 0;
         virtual bool is_next_move_east_wall (const std::vector<int>& coordinates, const std::vector<int>& size) const = 0;
         virtual bool is_now_east_wall (const std::vector<int>& coordinates, const std::vector<int>& size) const = 0;
+        virtual bool is_now_south_wall (const std::vector<int>& coordinates, const std::vector<int>& size) const = 0;
 };
 
 #endif

@@ -30,6 +30,7 @@ public:
     bool is_next_move_south_wall (const std::vector<int>& coordinates, const std::vector<int>& size) const {if(getWidth() - (coordinates[1] + size[1]) < size[1]){return true;} return false;};
     bool is_next_move_east_wall (const std::vector<int>& coordinates, const std::vector<int>& size) const {if(getLength() - (coordinates[0] + size[0]) < size[0]){return true;} return false;};
     bool is_now_east_wall (const std::vector<int>& coordinates, const std::vector<int>& size) const {if(getLength() - coordinates[0] <= size[0]){return true;} return false;};
+    bool is_now_south_wall (const std::vector<int>& coordinates, const std::vector<int>& size) const {if(getWidth() - coordinates[1] <= size[1]){return true;} return false;};
 
 
     Room(std::vector <int> room_size = { 1, 1 });

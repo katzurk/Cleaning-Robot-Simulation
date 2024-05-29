@@ -21,7 +21,8 @@ class Robot{
 
         void traverse_horizontal(const Room_info& room_info, std::vector<std::vector<int>>& path, int& x_direction, bool& is_next_last_row);
 
-        void go_to_touch_object(const Room_info& room_info, std::vector<std::vector<int>>& path, int x_direction, int y_direction);
+        void move_back_to_check_for_moving_object(std::vector<std::vector<int>> &path, int x_direction, int y_direction);
+        void go_to_touch_object(const Room_info &room_info, std::vector<std::vector<int>> &path, int x_direction, int y_direction);
 
         void object_detour(const Room_info& room_info, std::vector<std::vector<int>>& path, int& x_direction);
         void object_detour_down(const Room_info& room_info, std::vector<std::vector<int>>& path, int& x_direction, int& begining_y);

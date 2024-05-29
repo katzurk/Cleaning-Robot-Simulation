@@ -48,14 +48,14 @@ int FurnitureGenerator::generateRandomNumber(int min, int max) {
 	return rand() % (max - min + 1) + min;
 }
 
-int FurnitureGenerator::generateRandomNumber10(int min, int max) {
-	return generateRandomNumber(std::ceil(min / 10), max / 10) * 10;
+int FurnitureGenerator::generateRandomNumber20(int min, int max) {
+	return generateRandomNumber(std::ceil(min / 20), max / 20) * 20;
 }
 
 std::vector<int> FurnitureGenerator::generateRandomNumbers(int min, int max) {
 	std::vector<int> v(2);
 	for (int& dim : v) {
-		dim = generateRandomNumber10(min, max);
+		dim = generateRandomNumber20(min, max);
 	}
 	return v;
 }
