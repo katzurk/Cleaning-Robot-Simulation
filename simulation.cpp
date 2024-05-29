@@ -1,6 +1,6 @@
 #include "simulation.h"
 
-Simulation::Simulation(QObject* parent) : QGraphicsScene(parent), robotObject(nullptr), currentPositionId(0) {
+Simulation::Simulation(QObject* parent) : QGraphicsScene(parent), room(nullptr), robotObject(nullptr), currentPositionId(0) {
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &Simulation::moveRobot);
     connect(timer, &QTimer::timeout, this, &Simulation::cleanRoom);
@@ -25,6 +25,12 @@ void Simulation::setRoom(Room* room) {
         QGraphicsRectItem* furn = addRect(furniture->get_coordinates()[0], furniture->get_coordinates()[1],
             furniture->getLength(), furniture->getWidth(), QPen(Qt::black), QBrush(Qt::blue));
         furn->setZValue(2);
+
+        if (Cat* cat = dynamic_cast<Cat*>(furniture.get()))
+        {
+            catItems.emplace_back(cat, std::move(furn));
+        }
+
     }
 }
 
@@ -86,6 +92,20 @@ void Simulation::cleanRoom() {
             room->cleanDirty({x, y});
             removeItem(ellipse);
             delete ellipse;
+        }
+    }
+}
+
+void Simulation::updateCats() {
+    for (auto& catItemPair : catItems) {
+        Cat* cat = catItemPair.first;
+        QGraphicsRectItem* catItem = catItemPair.second.get();
+        std::vector<std::vector<int>> catPath = cat->getPath();
+        if (currentPositionId < catPath.size()) {
+            std::vector<int> currentPosition = catPath[currentPositionId];
+            int x = currentPosition[0];
+            int y = currentPosition[1];
+            catItem->setPos(x, y);
         }
     }
 }

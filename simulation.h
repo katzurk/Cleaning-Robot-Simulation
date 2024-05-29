@@ -24,6 +24,7 @@ public:
     void generatePath(Room& room);
     void moveRobot();
     void cleanRoom();
+    void updateCats();
 
 private:
     Room* room;
@@ -32,6 +33,7 @@ private:
     QTimer* timer;
     int currentPositionId;
     std::vector<std::vector<int>> path;
+    std::vector<std::pair<Cat*, std::unique_ptr<QGraphicsRectItem>>> catItems;
 };
 
 #endif // SIMULATION_H
