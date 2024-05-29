@@ -182,6 +182,9 @@ void Room::update() {
             if (is_place_free_for_object(new_coordinates, { length, width })) {
                 cat->move(deltaX, deltaY);
             }
+            else {
+                cat->updatePath(cat->get_coordinates());
+            }
             addCoordinates(*cat);
 
         }

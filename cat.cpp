@@ -12,3 +12,7 @@ void Cat::move(int deltaX, int deltaY) {
 	set_coordinates({ x, y });
 	path.push_back(coordinates);
 }
+
+void Cat::updatePath(std::vector<int> new_coordinates) {
+	path.push_back(new_coordinates);
+}

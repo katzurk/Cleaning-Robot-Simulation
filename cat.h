@@ -12,7 +12,8 @@ private:
 public:
 	Cat(std::string name, std::vector<int> size, std::vector<int> coordinates);
 	std::vector<std::vector<int>> getPath() const { return path; }
-	void move(int deltaX, int deltaY);
+	virtual void move(int deltaX, int deltaY);
+	virtual void updatePath(std::vector<int> coordinates);
 };
 
 #endif

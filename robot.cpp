@@ -93,7 +93,6 @@ std::vector<std::vector<int>> Robot::make_path(Room_info& room_info) {
     bool is_last_row = false;
     std::vector<std::vector<int>> path;
     path.push_back(coordinates);
-    room_info.update();
 
     while (true) {
         traverse_horizontal(room_info, path, x_direction, is_last_row);

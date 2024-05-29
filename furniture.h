@@ -31,8 +31,6 @@ public:
     void setLength(int length) { this->size[0] = length; }
     void setWidth(int width) { this->size[1] = width; }
     void set_coordinates(const std::vector <int> new_coordinates);
-
-    virtual void move(int deltaX, int deltaY) {};
 };
 
 #endif
