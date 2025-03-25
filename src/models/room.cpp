@@ -160,16 +160,16 @@ void Room::update() {
             int direction = rand() % 4;
             switch (direction) {
             case 0: // Up
-                deltaY = -20;
+                deltaY = -5;
                 break;
             case 1: // Down
-                deltaY = 20;
+                deltaY = 5;
                 break;
             case 2: // Left
-                deltaX = -20;
+                deltaX = -5;
                 break;
             case 3: // Right
-                deltaX = 20;
+                deltaX = 5;
                 break;
             }
             std::vector<int> new_coordinates = cat->get_coordinates();

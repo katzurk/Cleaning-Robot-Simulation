@@ -1,5 +1,5 @@
-#include "furniture_generator.h"
-#include "furniture.h"
+#include "../models/furniture_generator.h"
+#include "../models/furniture.h"
 #include <gtest/gtest.h>
 
 TEST(FurnitureGeneratorTest, DefaultConstructor) {
@@ -10,9 +10,9 @@ TEST(FurnitureGeneratorTest, DefaultConstructor) {
     int width = furniture.getWidth();
     ASSERT_EQ(furniture.get_coordinates().size(), 2);
 
-    EXPECT_GE(length, 1);
+    EXPECT_GE(length, 10);
     EXPECT_LE(length, 100);
-    EXPECT_GE(width, 1);
+    EXPECT_GE(width, 10);
     EXPECT_LE(width, 100);
 
     for (int coord : furniture.get_coordinates()) {

@@ -1,4 +1,4 @@
-#include "furniture.h"
+#include "../models/furniture.h"
 #include <gtest/gtest.h>
 
 TEST(FurnitureTest, ConstructorTest) {

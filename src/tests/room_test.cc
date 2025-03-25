@@ -1,4 +1,4 @@
-#include "room.h"
+#include "../models/room.h"
 #include <gtest/gtest.h>
 
 

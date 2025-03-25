@@ -9,10 +9,10 @@
 #include <QGraphicsRectItem>
 #include <QTimer>
 #include <vector>
-#include "room.h"
-#include "robot.h"
-#include "furniture.h"
-#include "cat.h"
+#include "../models/room.h"
+#include "../models/robot.h"
+#include "../models/furniture.h"
+#include "../models/cat.h"
 
 class Simulation : public QGraphicsScene {
     Q_OBJECT

@@ -1,8 +1,8 @@
 #include <QApplication>
-#include "visualiser.h"
-#include "robot.h"
-#include "room.h"
-#include "furniture_generator.h"
+#include "components/visualiser.h"
+#include "models/robot.h"
+#include "models/room.h"
+#include "models/furniture_generator.h"
 #include <iostream>
 
 

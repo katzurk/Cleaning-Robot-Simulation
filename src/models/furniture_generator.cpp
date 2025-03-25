@@ -49,7 +49,9 @@ int FurnitureGenerator::generateRandomNumber(int min, int max) {
 }
 
 int FurnitureGenerator::generateRandomNumber20(int min, int max) {
-	return generateRandomNumber(std::ceil(min / 20), max / 20) * 20;
+	int randomNum = generateRandomNumber(min, max);
+	return (randomNum / 20) * 20;
+
 }
 
 std::vector<int> FurnitureGenerator::generateRandomNumbers(int min, int max) {
@@ -70,7 +72,11 @@ std::string FurnitureGenerator::generateRandomName() {
 
 Furniture FurnitureGenerator::createRandomFurniture() {
 	std::string name = generateRandomName();
-	std::vector<int> size = generateRandomNumbers(minSize, maxSize);
+	std::vector<int> size = { 0, 0 };
+	while (size[0] == 0 || size[1] == 0) {
+		size = generateRandomNumbers(minSize, maxSize);
+	}
+
 	std::vector<int> coordinates = generateRandomNumbers(minCoord, maxCoord);
 
 	return Furniture(name, size, coordinates);
@@ -78,7 +84,10 @@ Furniture FurnitureGenerator::createRandomFurniture() {
 
 Cat FurnitureGenerator::createRandomCat() {
 	std::string name = "Cat";
-	std::vector<int> size = generateRandomNumbers(minSize, maxSize);
+	std::vector<int> size = { 0, 0 };
+	while (size[0] == 0 || size[1] == 0) {
+		size = generateRandomNumbers(minSize, maxSize);
+	}
 	std::vector<int> coordinates = generateRandomNumbers(minCoord, maxCoord);
 
 	return Cat(name, size, coordinates);

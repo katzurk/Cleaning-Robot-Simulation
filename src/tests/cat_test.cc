@@ -1,4 +1,4 @@
-#include "cat.h"
+#include "../models/cat.h"
 #include <gtest/gtest.h>
 
 TEST(CatTest, ConstructorCatTest) {

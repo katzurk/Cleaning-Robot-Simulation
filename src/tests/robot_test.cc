@@ -1,4 +1,4 @@
-#include "robot.h"
+#include "../models/robot.h"
 #include <gtest/gtest.h>
 
 std::vector <int> pos = {0,1};
