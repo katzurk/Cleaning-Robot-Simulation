@@ -1,11 +1,11 @@
 # Cleaning Robot Simulator
 ## Authors
-Weronika Maślana
-Alesia Filinkova
-Katarzyna Kanicka
+- Weronika Maślana
+- Alesia Filinkova
+- Katarzyna Kanicka
 
 ## Description
-cleaning robot - roomba style.
+Cleaning robot - roomba style.
 Simulator for choosing path to clean the whole room and visualisization.
 
 ## Roadmap
