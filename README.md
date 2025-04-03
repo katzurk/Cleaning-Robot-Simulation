@@ -1,16 +1,15 @@
-# 209.1 Robot sprzatajacy
-## Project status
-beginning
-
+# Cleaning Robot Simulator
+## Authors
+Weronika Maślana
+Alesia Filinkova
+Katarzyna Kanicka
 
 ## Description
 cleaning robot - roomba style.
-symulator for choosing path to clean whole room and visualasing.
-
-
+Simulator for choosing path to clean the whole room and visualisization.
 
 ## Roadmap
-1. skeleton of Robot, Room, Furniture and Visualiser.
+1. Skeleton of Robot, Room, Furniture and Visualiser.
     - room and furniture constraction
     - robot constraction
     - visualiser can show robot in room
@@ -18,27 +17,21 @@ symulator for choosing path to clean whole room and visualasing.
     - robot movement algorithm
     - visualiser can show path and cleaned area
     - visualiser can show robot moving in room (simulation)
-3. adding Dirt, Cats and Robot avoidance of obstacles
+3. Adding Dirt, Cats and Robot avoidance of obstacles
     - showing dirt and cleaning algorithm
     - random placement of furniture and adding cats (randomly moving furniture in room)
     - robot avoiding obstacles
-4. simulate with randomly placed static (Furniture) and dynamic (Cats) obstacles in room
-
-
-## Authors
-Weronika Maślana
-Alesia Filinkova
-Katarzyna Kanicka
+4. Simulate with randomly placed static (Furniture) and dynamic (Cats) obstacles in room
 
 ## Responsibilities
 1. Weronika Maślana
-points: 1.1(Robot), 2.1(algorithm), 3.3(avoiding obstacles)
+points: 1.1(Robot), 2.1(Algorithm), 3.3(Avoiding obstacles)
 
 2. Alesia Filinkova
-points: 1.2(Room, Furniture), 2.2 (Showing path), 3.1(dirt and cleaning algorithm)
+points: 1.2(Room, Furniture), 2.2 (Showing path), 3.1(Dirt and cleaning algorithm)
 
 3. Katarzyna Kanicka
-points: 1.3(Visualiser), 2.3 (Simulation), 3.2(cats - moving Furniture)
+points: 1.3(Visualiser), 2.3 (Simulation), 3.2(Cats - moving Furniture)
 
 ## Architecture
 
