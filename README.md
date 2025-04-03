@@ -34,6 +34,7 @@ points: 1.2(Room, Furniture), 2.2 (Showing path), 3.1(Dirt and cleaning algorith
 points: 1.3(Visualiser), 2.3 (Simulation), 3.2(Cats - moving Furniture)
 
 ## Architecture
+- Used C++, Cmake and Qt for visualization
 
 ### Main objects
 - **Room** - has obstacles with coordinates, dimentions  (width, length)
