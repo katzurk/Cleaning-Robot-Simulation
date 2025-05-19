@@ -1,58 +1,91 @@
 # Cleaning Robot Simulator
+
+- [Polish](README-PL.md)
+
+---
+
 ## Authors
 - Weronika Maślana
 - Alesia Filinkova
 - Katarzyna Kanicka
 
+---
+
 ## Description
-Cleaning robot - roomba style.
-Simulator for choosing path to clean the whole room and visualisization.
+A Roomba-style cleaning robot simulator.
+This project simulates a robot that selects a path to clean an entire room and visualizes the process.
+
+## Languages and Libraries Used
+- **Languages**: C++
+- **Build System**: CMake
+- **GUI Framework**: Qt
+
+---
 
 ## Roadmap
-1. Skeleton of Robot, Room, Furniture and Visualiser.
-    - room and furniture constraction
-    - robot constraction
-    - visualiser can show robot in room
-2. Robot can generate simple path in the room
-    - robot movement algorithm
-    - visualiser can show path and cleaned area
-    - visualiser can show robot moving in room (simulation)
-3. Adding Dirt, Cats and Robot avoidance of obstacles
-    - showing dirt and cleaning algorithm
-    - random placement of furniture and adding cats (randomly moving furniture in room)
-    - robot avoiding obstacles
-4. Simulate with randomly placed static (Furniture) and dynamic (Cats) obstacles in room
+
+1. **Initial Setup**
+   - Construct room and furniture objects
+   - Construct robot object
+   - Visualizer displays robot inside the room
+
+2. **Basic Pathfinding**
+   - Implement robot movement algorithm
+   - Visualizer displays path and cleaned areas
+   - Visualizer simulates robot movement in the room
+
+3. **Advanced Features: Dirt, Cats, and Obstacles**
+   - Add dirt generation and cleaning algorithm
+   - Randomly place furniture and introduce cats (moving obstacles)
+   - Implement obstacle avoidance for the robot
+
+4. **Full Simulation**
+   - Simulate room with both static (furniture) and dynamic (cats) obstacles
+
+
+---
 
 ## Responsibilities
-1. Weronika Maślana
-points: 1.1(Robot), 2.1(Algorithm), 3.3(Avoiding obstacles)
 
-2. Alesia Filinkova
-points: 1.2(Room, Furniture), 2.2 (Showing path), 3.1(Dirt and cleaning algorithm)
+1. **Weronika Maślana**  
+   - 1.1: Robot construction  
+   - 2.1: Pathfinding algorithm  
+   - 3.3: Obstacle avoidance  
 
-3. Katarzyna Kanicka
-points: 1.3(Visualiser), 2.3 (Simulation), 3.2(Cats - moving Furniture)
+2. **Alesia Filinkova**  
+   - 1.2: Room and furniture construction  
+   - 2.2: Path visualization  
+   - 3.1: Dirt generation and cleaning algorithm  
 
-## Architecture
-- Used C++, Cmake and Qt for visualization
+3. **Katarzyna Kanicka**  
+   - 1.3: Visualizer implementation  
+   - 2.3: Simulation of movement  
+   - 3.2: Cats (moving furniture logic)  
 
-### Main objects
-- **Room** - has obstacles with coordinates, dimentions  (width, length)
-- **Furniture** - has dimentions (width, length) and coordinates
-- **Robot** - has start coordinates and size, can find path for cleaning
-- **Cat** - randomly moving furniture, has dimentions (width, length) and coordinates
+---
 
-### Helper object
-- **Visualiser** - can show room, obstacles, robot, robots path
-- **Simulation** - sets up room, obstacles, robot, dirt and cleaning
-- **Room_info** - virtual parent to Room. Can calculate if place is free and if is close to wall (south or east)
-- **Furniture_generator** - generates random furniture in room.
+## Main Objects
 
-### Methods
-- **make_path** - takes room, returns list of coordinates. It moves from left to right and top to bottom.
-- **object_detour** - takes room, path and x_direction. Moves around object down, left or right (based on x_direction) and up back to begining y pos.
-- **detour_object_below_next_to_wall** - takes room, path and x_direction. If robot can't move to front nor down go back and then down to begining y pos + size down.
-- **move_back_to_check_for_moving_object** - moves once back and forth to check if object is still there after coming back.
-- **go_to_touch_object** - takes room, path, x_direction and y_direction. Robot wants to move per size on to object. Move there pointer and go back until found free position. Now actually move robot on free pos.
-- **is_place_free_for_object** - checks if all cords with in object are inside room and not taken by other objects
-- **dust** - makes dust and shows it
+- **Room** — Defines dimensions (width, length) and holds obstacles  
+- **Furniture** — Includes dimensions and coordinates  
+- **Robot** — Has starting position and size; capable of pathfinding  
+- **Cat** — Represents dynamic, moving furniture with dimensions and coordinates  
+
+## Supporting Components
+
+- **Visualizer** — Displays the room, robot, path, and obstacles  
+- **Simulation** — Sets up the room, robot, obstacles, and cleaning process  
+- **RoomInfo** — Virtual parent of `Room`, can evaluate free space and proximity to walls (south/east)  
+- **FurnitureGenerator** — Randomly generates furniture in the room  
+
+---
+
+## Key Methods
+
+- `make_path` — Generates a path that moves from left to right, top to bottom  
+- `object_detour` — Navigates around an obstacle, then returns to the original vertical position  
+- `detour_object_below_next_to_wall` — Handles cases where the robot is trapped and must retreat and try a new route  
+- `move_back_to_check_for_moving_object` — Robot backs off to check if an obstacle has moved  
+- `go_to_touch_object` — Approaches an object, then retreats until a free position is found  
+- `is_place_free_for_object` — Verifies whether a given area is free and inside the room  
+- `dust` — Generates dust and visualizes it  
